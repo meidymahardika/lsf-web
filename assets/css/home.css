@@ -348,6 +348,52 @@ body {
     margin: 0;
 }
 
+.footer {
+    height: 123px;
+    background-color: #121865;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Mengubah ikon putih agar terlihat */
+}
+
 .btn-kirim-kontak {
     background-color: #E0C066;
     border-color: #E0C066;
