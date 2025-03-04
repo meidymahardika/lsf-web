@@ -32,8 +32,28 @@
     font-weight: 300;
 }
 
+.fw-500{
+    font-weight: 500;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+.fs-18{
+    font-size: 1.125rem;
+}
+
+.fs-20 {
+    font-size: 1.25rem;
+}
+
 .fs-32{
     font-size: 2rem;
+}
+
+.fs-30{
+    font-size: 1.875rem;
 }
 
 .fs-42{
@@ -44,8 +64,16 @@
     font-size: 1.563rem;
 }
 
+.fs-28 {
+    font-size: 1.75rem;
+}
+
 .color-blue {
     color: #141470;
+}
+
+.color-grey {
+    color: #717171;
 }
 
 .bg-blue-1{
@@ -53,8 +81,8 @@
 }
 
 .undang-undang {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
 
 .undang-undang p {
@@ -67,4 +95,165 @@
 
 .gap-1 {
     gap: 1rem;
+}
+
+.gap-2{
+    gap: 2rem;
+}
+
+.gap-3{
+    gap: 3rem;
+}
+
+.parent-golongan-umur{
+    display: flex;
+    justify-content: space-between;
+}
+
+.golongan-umur img {
+    width: 8.639rem;
+    height: auto;
+}
+
+.previous {
+    width: 2.188rem;
+    height: 2.188rem;
+    border: 1.5px solid #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.next {
+    width: 2.188rem;
+    height: 2.188rem;
+    border: 1.5px solid #39399D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.img-layanan {
+    width: 12.625rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn-custom-xl {
+    width: 14.938rem;
+    height: 3.25rem;
+}
+
+.btn-gold {
+    background-color: #E0C066;
+    border: #E0C066;
+}
+
+.btn-gold:hover {
+    background-color: #E0C066;
+    border: #E0C066;
+}
+
+.layanan p {
+    margin-bottom: 0;
+}
+
+.line {
+    border-left: 2px solid #D9D9D9;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    height: 349px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.video-title {
+    margin-bottom: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background: white;
+}
+
+.line-bottom {
+    width: 60%;
+    max-width: 648px;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+/*.banner-film .range-age {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 10px;*/
+/*    padding: 5px 10px;*/
+/*    font-size: 1rem;*/
+/*    font-weight: bold;*/
+/*    color: white;*/
+/*    border-radius: 8px;*/
+/*    text-align: center;*/
+/*}*/
+
+.banner-film {
+    position: relative;
+    display: inline-block;
+}
+
+.film {
+    width: 17.636rem;
+    height: 25.324rem;
+    object-fit: cover;
+}
+
+.range-age {
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    width: 4.125rem; /* Sesuaikan ukuran label */
+    height: auto;
 }
