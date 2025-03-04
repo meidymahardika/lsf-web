@@ -416,18 +416,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const themeToggle = document.getElementById("theme-toggle");
-        const themeIcon = document.getElementById("theme-icon");
-        const body = document.body;
-
-        themeToggle.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-            if (body.classList.contains("dark-mode")) {
-                themeIcon.src = "https://cdn-icons-png.flaticon.com/512/581/581601.png";
-                themeIcon.alt = "Dark Mode";
+        document.getElementById("themeToggle").addEventListener("change", function() {
+            let themeText = document.getElementById("themeText");
+            if (this.checked) {
+                themeText.textContent = "light";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.right = "8px"; // Add 'px' to make it work
+                themeText.style.left = ""; // Correct way to remove 'left' style
+    
+    
             } else {
-                themeIcon.src = "https://cdn-icons-png.flaticon.com/512/1163/1163661.png";
-                themeIcon.alt = "Light Mode";
+                themeText.textContent = "dark";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.left = "5px"; // Add 'px' to make it work
+    
             }
         });
     </script>
