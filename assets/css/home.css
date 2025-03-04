@@ -1,3 +1,7 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 .logo {
     width: 10.875rem;
     height: auto;
@@ -74,6 +78,10 @@
 
 .color-grey {
     color: #717171;
+}
+
+.color-green {
+    color: #519B44;
 }
 
 .bg-blue-1{
@@ -256,4 +264,86 @@
     right: -26px;
     width: 4.125rem; /* Sesuaikan ukuran label */
     height: auto;
+}
+
+/* Berita Utama */
+.main-news {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.news-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #00000099;
+    color: white;
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    display: block;
+}
+
+.news-tag {
+    background: #4CAF50;
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Berita Lainnya */
+.side-news {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.news-item.active {
+    border: 2px solid #2979FF;
+    border-radius: 8px;
+}
+
+.news-thumb {
+    width: 220.02px;
+    height: 141.04px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-title {
+    margin: 0;
+}
+
+.news-desc {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
 }
