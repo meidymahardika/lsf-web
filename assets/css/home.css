@@ -393,3 +393,10 @@ body {
     height: 20px;
     filter: invert(1); /* Mengubah ikon putih agar terlihat */
 }
+
+.btn-kirim-kontak {
+    background-color: #E0C066;
+    border-color: #E0C066;
+    height: 50px;
+    width: 80px;
+}
