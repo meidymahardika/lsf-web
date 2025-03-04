@@ -347,3 +347,10 @@ body {
     color: #666;
     margin: 0;
 }
+
+.btn-kirim-kontak {
+    background-color: #E0C066;
+    border-color: #E0C066;
+    height: 50px;
+    width: 80px;
+}
