@@ -1,0 +1,36 @@
+.card-custom {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 0;
+}
+
+.card-header {
+    background-color: #4C45A0; /* Warna ungu */
+    padding: 15px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.tugas-fungsi {
+    padding: 1rem 3rem;
+    text-align: center;
+    background-color: #39399D;
+    width: 12rem;
+    margin: 0;
+    transform: skew(20deg);
+}
+
+.tugas-fungsi p {
+    transform: skew(-20deg);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.desc-list {
+    margin: 1rem 3rem;
+    color: #52575C;
+}

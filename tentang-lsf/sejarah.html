@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tentang LSF - </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/navbar-custom.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/tentang/sejarah.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                </a>
+                <div class="age d-flex flex-column justify-content-start">
+                    <div class="age d-flex justify-content-between align-items-center w-100">
+                        <div class="age d-flex">
+                            <div class="border-blue"></div>
+                            <div class="rating-icons d-flex justify-content-start">
+                                <img src="../assets/img/navbar/su.png" alt="">
+                                <img src="../assets/img/navbar/13.png" alt="">
+                                <img src="../assets/img/navbar/17.png" alt="">
+                                <img src="../assets/img/navbar/21.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Dropdown Language Select & Switch -->
+                        <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                            <select class="language-select">
+                                <option value="id">🇮🇩 Indonesia</option>
+                                <option value="en">🇬🇧 English</option>
+                            </select>
+                            <label class="switch d-flex align-items-center justify-content-center gap-1">
+                                <input type="checkbox" id="themeToggle" checked>
+                                <span class="slider round"></span>
+                                <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                            </label>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                        </ul>
+                        <form class="d-flex" style="width: 265px">
+                            <div class="position-relative">
+                                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                        🔍
+                                    </span>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-light-blue">
+        <div class="container py-5">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sejarah Dan Dasar Hukum</li>
+                </ol>
+            </nav>
+
+
+            <ul class="nav nav-tabs my-4" id="historyTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="sejarah-tab" data-bs-toggle="tab" data-bs-target="#sejarah" type="button" role="tab">Sejarah</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="dasar-hukum-tab" data-bs-toggle="tab" data-bs-target="#dasar-hukum" type="button" role="tab">Dasar Hukum</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="historyTabsContent">
+                <div class="tab-pane fade show active" id="sejarah" role="tabpanel">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="card mb-3 border-0 card-history">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body pe-5">
+                                            <h5 class="card-title fw-800 fs-25">Lorem ipsum dolor sit amet 2025</h5>
+                                            <p class="card-text fw-600 fs-18">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.</p>
+                                            <p class="card-text fw-600 fs-18">Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center">
+                                        <img src="../assets/img/tentang/e14a7260025f1852f8781051021f76b3.jpeg" class="img-history" alt="Placeholder Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card mb-3 border-0 card-history">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body pe-5">
+                                            <h5 class="card-title fw-800 fs-25">Lorem ipsum dolor sit amet 2025</h5>
+                                            <p class="card-text fw-600 fs-18">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.</p>
+                                            <p class="card-text fw-600 fs-18">Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                            <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                                    data-bs-toggle="modal" data-bs-target="#historyModal">
+                                                SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center">
+                                        <img src="../assets/img/tentang/e14a7260025f1852f8781051021f76b3.jpeg" class="img-history" alt="Placeholder Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card mb-3 border-0 card-history">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body pe-5">
+                                            <h5 class="card-title fw-800 fs-25">Lorem ipsum dolor sit amet 2025</h5>
+                                            <p class="card-text fw-600 fs-18">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.</p>
+                                            <p class="card-text fw-600 fs-18">Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                            <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                                    data-bs-toggle="modal" data-bs-target="#historyModal">
+                                                SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center">
+                                        <img src="../assets/img/tentang/e14a7260025f1852f8781051021f76b3.jpeg" class="img-history" alt="Placeholder Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card mb-3 border-0 card-history">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body pe-5">
+                                            <h5 class="card-title fw-800 fs-25">Lorem ipsum dolor sit amet 2025</h5>
+                                            <p class="card-text fw-600 fs-18">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.</p>
+                                            <p class="card-text fw-600 fs-18">Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                            <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                                    data-bs-toggle="modal" data-bs-target="#historyModal">
+                                                SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center">
+                                        <img src="../assets/img/tentang/e14a7260025f1852f8781051021f76b3.jpeg" class="img-history" alt="Placeholder Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dasar-hukum" role="tabpanel">
+                    <div class="dasar-hukum">
+                        <div class="card border-0">
+                            <div class="card-header border-0 fs-25 fw-800">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, omnis iste natus error sit voluptatem accusantium..
+                            </div>
+                            <div class="card-body">
+                                <p class="fs-18 fw-600">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.<br>
+                                    Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                        data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0 fs-25 fw-800">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, omnis iste natus error sit voluptatem accusantium..
+                            </div>
+                            <div class="card-body">
+                                <p class="fs-18 fw-600">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.<br>
+                                    Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                        data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0 fs-25 fw-800">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, omnis iste natus error sit voluptatem accusantium..
+                            </div>
+                            <div class="card-body">
+                                <p class="fs-18 fw-600">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.<br>
+                                    Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                        data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0 fs-25 fw-800">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, omnis iste natus error sit voluptatem accusantium..
+                            </div>
+                            <div class="card-body">
+                                <p class="fs-18 fw-600">Surat Tanda Lulus Sensor (STLS) adalah surat yang dikeluarkan oleh Lembaga Sensor Film (LSF) untuk setiap film dan iklan film yang dinyatakan telah lulus sensor dan dapat dipertunjukkan.<br>
+                                    Itulah definisi yang disebutkan di dalam Peraturan Lembaga Sensor Film Republik Indonesia Nomor 5 Tahun 2016 tentang Pedoman Penetapan Klasifikasi Film dan Iklan Film Berdasarkan Penggolongan Usia Penonton. Artinya, seperti yang dimaksud Pasal 57 Ayat 1 Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman, sebuah film atau iklan film tak boleh beredar tanpa STLS.</p>
+                                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18"
+                                        data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content rounded-4 p-4">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title fw-bold fs-25 color-blue" id="historyModalLabel">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 2010-2016
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-scroll">
+                                <img src="../assets/img/tentang/e14a7260025f1852f8781051021f76b3.jpeg" class="img-fluid rounded mb-3" alt="Sejarah">
+                                <p class="fw-600 fs-18">
+                                    Masa penjajahan Belanda yang cukup lama di Indonesia meninggalkan pengaruh besar. Salah satunya di bidang kebudayaan, terutama film. Ordonansi Film 1916 pada 18 Maret 1916 merupakan undang-undang film yang mengatur tentang film dan penyelenggaraan usaha bioskop seiring dengan semakin banyaknya gambar idoep di Indonesia masa itu.
+                                </p>
+                                <p class="fw-600 fs-18">
+                                    Dalam buku Bunga Rampai 100 Tahun Sensor Film di Indonesia (2016:26-27), dijelaskan bahwa pemerintah kolonial Belanda kemudian membentuk Komisi Pemeriksaan Film (Commissie voor de Keuring van Films), untuk menanggulangi pertunjukan gambar idoep yang tidak bermutu.
+                                </p>
+                                <p class="fw-600 fs-18">
+                                    Pembentukan Komisi Pemeriksaan Film tersebut sesuai dengan Ordonansi Film 1916 yang menyebutkan: “Gubernur Jenderal dapat menunjuk tempat di Hindia Belanda bagi pendirian Komisi Sensor Film dan Lembaga Komisi Sensor Film..."
+                                </p>
+                                <p class="fw-600 fs-18">
+                                    Masa penjajahan Belanda yang cukup lama di Indonesia meninggalkan pengaruh besar. Salah satunya di bidang kebudayaan, terutama film. Ordonansi Film 1916 pada 18 Maret 1916 merupakan undang-undang film yang mengatur tentang film dan penyelenggaraan usaha bioskop seiring dengan semakin banyaknya gambar idoep di Indonesia masa itu.
+                                </p>
+                                <p class="fw-600 fs-18">
+                                    Dalam buku Bunga Rampai 100 Tahun Sensor Film di Indonesia (2016:26-27), dijelaskan bahwa pemerintah kolonial Belanda kemudian membentuk Komisi Pemeriksaan Film (Commissie voor de Keuring van Films), untuk menanggulangi pertunjukan gambar idoep yang tidak bermutu.
+                                </p>
+                                <p class="fw-600 fs-18">
+                                    Pembentukan Komisi Pemeriksaan Film tersebut sesuai dengan Ordonansi Film 1916 yang menyebutkan: “Gubernur Jenderal dapat menunjuk tempat di Hindia Belanda bagi pendirian Komisi Sensor Film dan Lembaga Komisi Sensor Film..."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#"><i class="text-white bi bi-globe"></i></a>
+                <a href="#"><i class="text-white bi bi-instagram"></i></a>
+                <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
+                <a href="#"><i class="text-white bi bi-tiktok"></i></a>
+                <a href="#"><i class="text-white bi bi-youtube"></i></a>
+                <a href="#"><i class="text-white bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("themeToggle").addEventListener("change", function() {
+        let themeText = document.getElementById("themeText");
+        if (this.checked) {
+            themeText.textContent = "light";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.right = "8px"; // Add 'px' to make it work
+            themeText.style.left = ""; // Correct way to remove 'left' style
+
+
+        } else {
+            themeText.textContent = "dark";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.left = "5px"; // Add 'px' to make it work
+
+        }
+    });
+</script>
+</html>

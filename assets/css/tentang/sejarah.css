@@ -1,0 +1,121 @@
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 70px; /* Start lower to avoid first dot's top line */
+    bottom: 0;
+    width: 2px;
+    background-color: #39399D; /* Light gray line */
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 80px;
+}
+.timeline-item:first-child::before {
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    box-shadow: none;
+    background-color: #E0C066; /* Blue for first dot */
+}
+.timeline-item:last-child::before {
+    box-shadow: none;
+    background-color: #E0C066; /* Blue for last dot */
+}
+.timeline-item:last-child::after {
+    content: none; /* Remove bottom line for last item */
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #E0C066; /* Blue dots */
+    z-index: 1;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 49px;
+    top: 50%;
+    bottom: -100%;
+    background-color: #39399D; /* Light gray line */
+}
+.nav-tabs .nav-link.active {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.card-history {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 3rem;
+}
+
+.img-history {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dasar-hukum {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dasar-hukum .card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.dasar-hukum .card-header {
+    background-color: #70BA92;
+    color: #fff;
+    padding: 2rem 2.5rem;
+}
+
+.dasar-hukum .card-body {
+    background-color: #fff;
+    color: #717171;
+    padding: 2rem 2.5rem;
+}
+
+.modal-body.custom-scroll {
+    max-height: 60vh; /* Batasi tinggi modal agar tidak memenuhi layar penuh */
+    overflow-y: auto; /* Aktifkan scroll hanya vertikal */
+    padding-right: 10px; /* Hindari tumpang tindih dengan scrollbar */
+}
+
+/* Custom Scrollbar untuk Webkit Browsers (Chrome, Edge, Safari) */
+.modal-body.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body.custom-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-body.custom-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal-body.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Untuk Firefox */
+.modal-body.custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
