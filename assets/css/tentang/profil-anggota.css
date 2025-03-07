@@ -29,6 +29,17 @@
     padding: 0 1rem;
 }
 
+.profile-img-rotate {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Memastikan gambar mengisi seluruh kotak */
+    object-position: top; /* Menampilkan bagian atas gambar */
+    z-index: 1; /* Supaya gambar tidak tertutup */
+    position: relative; /* Supaya z-index bisa bekerja */
+    padding: 0 1rem;
+}
+
 .name-box {
     position: absolute;
     bottom: 20px;
@@ -102,4 +113,29 @@
     font-size: 1rem;
     font-weight: 500;
     color: #fff;
+}
+
+.modal-dialog {
+    height: 500px; /* Modal fixed 500px */
+}
+
+.modal-content {
+    height: 500px;
+    display: flex;
+    flex-direction: column; /* Supaya modal-body bisa mengisi ruang tersisa */
+}
+
+.modal-body {
+    flex: 1; /* Membuat modal-body mengambil ruang tersisa */
+    overflow-y: auto; /* Scroll jika kontennya panjang */
+    max-height: calc(100% - 120px); /* 100% modal - header/footer */
+}
+
+.modal-content .col-md-9 {
+    max-height: 100%; /* Sesuaikan dengan modal-body */
+}
+
+.modal-content .col-md-12 {
+    max-height: 300px;
+    overflow-y: auto; /* Supaya hanya bagian ini yang bisa scroll */
 }
