@@ -188,13 +188,28 @@
             <div class="swiper headerSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                        <!-- Show only on desktop (lg and up) -->
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover d-none d-lg-block" alt="">
+
+                        <!-- Show only on mobile (md and below) -->
+                        <img src="assets/img/home/slider/img-slider-mobile-1.png" class="w-100 img-fluid object-cover d-lg-none" alt="">
+
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                        <!-- Show only on desktop (lg and up) -->
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover d-none d-lg-block" alt="">
+
+                        <!-- Show only on mobile (md and below) -->
+                        <img src="assets/img/home/slider/img-slider-mobile-1.png" class="w-100 img-fluid object-cover d-lg-none" alt="">
+
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                        <!-- Show only on desktop (lg and up) -->
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover d-none d-lg-block" alt="">
+
+                        <!-- Show only on mobile (md and below) -->
+                        <img src="assets/img/home/slider/img-slider-mobile-1.png" class="w-100 img-fluid object-cover d-lg-none" alt="">
+
                     </div>
                 </div>
                 <div class="swiper-button-next header-next"></div>
@@ -208,13 +223,13 @@
             <div class="row">
                 <div class="col-md-6 border-end border-2 pe-4">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-8">
                             <div class="title-layanan">
                                 <h1 class="text-blue">Layanan</h1>
                                 <h5>Layanan resmi LSF</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 d-flex align-items-center justify-content-end gap-2">
+                        <div class="col-md-4 col-4 d-flex align-items-center justify-content-end gap-2">
                             <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="service-prev">
                             <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="service-next">
                         </div>
@@ -246,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ps-4">
+                <div class="col-md-6 ps-md-4 pt-5 pt-md-0">
                     <div class="video-container">
                         <div class="video-overlay">
                             <p class="video-title">Iklan Layanan Masyarakat</p>
@@ -264,10 +279,20 @@
 
         <div class="container-fluid py-5 bg-white">
             <div class="container section-title">
-                <div class="film-title d-flex justify-content-between align-items-center">
+
+                <div class="film-title d-flex justify-content-between align-items-center d-lg-none">
                     <h1 class="text-blue">Panduan Film</h1>
-                    <hr class="w-50" >
-                    <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="film-slider-button d-flex align-items-center justify-content-end gap-2">
+                        <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="film-prev-mobile">
+                        <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="film-next-mobile">
+                    </div>
+                </div>
+                <div class="d-none d-lg-block">
+                    <div class="film-title d-flex justify-content-between align-items-center ">
+                        <h1 class="text-blue">Panduan Film</h1>
+                        <hr class="w-50" >
+                        <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </div>
 
                 <div class="body-film">
@@ -319,13 +344,17 @@
                         </div>
 
                         <!-- Navigation Buttons -->
-                        <div class="film-slider-button d-flex align-items-center justify-content-end gap-2 w-100">
-                            <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="film-prev">
-                            <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="film-next">
+                        <div class="d-none d-lg-block">
+                            <div class="film-slider-button d-flex align-items-center justify-content-end gap-2 w-100">
+                                <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="film-prev">
+                                <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="film-next">
+                            </div>
                         </div>
                     </div>
+                </div>
 
-
+                <div class="film-title d-flex justify-content-center align-items-center d-lg-none pt-4">
+                    <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 
             </div>
@@ -334,13 +363,18 @@
 
         <!-- section 4 -->
         <div class="container py-5">
-            <div class="berita-title d-flex justify-content-between align-items-center">
+            <div class="film-title d-flex justify-content-between align-items-center d-lg-none">
                 <h1 class="text-blue">Berita</h1>
-                <hr class="w-50" >
-                <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="film-title d-flex justify-content-between align-items-center ">
+                    <h1 class="text-blue">Berita</h1>
+                    <hr class="w-50" >
+                    <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
             <div class="berita-body row py-5">
-                <div class="col-md-7">
+                <div class="col-lg-7 col-md-12">
                     <div class="main-news">
                         <img src="assets/img/news/7a51bbd2d87c176b13b7bab734b278ba.jpeg" class="main-image" alt="Berita Utama">
                         <div class="news-overlay d-flex flex-column gap-2">
@@ -353,27 +387,33 @@
                     </div>
                 </div>
 
-                <div class="col-md-5">
-                    <div class="side-news">
-                        <div class="news-item">
-                            <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="news-thumb" alt="Film Mama">
-                            <div class="news-content">
+                <div class="col-lg-5 col-md-12 pt-lg-0 pt-5">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="w-100 rounded" alt="Film Mama">
+                            </div>
+                            <div class="col-md-6">
                                 <span class="news-date color-green">Selasa, 17/01/2025</span>
                                 <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
                                 <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
                             </div>
                         </div>
-                        <div class="news-item">
-                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
-                            <div class="news-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="w-100 rounded" alt="Film Mama">
+                            </div>
+                            <div class="col-md-6">
                                 <span class="news-date color-green">Selasa, 17/01/2025</span>
                                 <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
                                 <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
                             </div>
                         </div>
-                        <div class="news-item">
-                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
-                            <div class="news-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="w-100 rounded" alt="Film Mama">
+                            </div>
+                            <div class="col-md-6">
                                 <span class="news-date color-green">Selasa, 17/01/2025</span>
                                 <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
                                 <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
@@ -381,6 +421,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="film-title d-flex justify-content-center align-items-center d-lg-none pt-4">
+                <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
 
@@ -394,7 +437,7 @@
                 </div>
                 <div class="pt-5">
                     <div class="row g-3">
-                        <div class="col-4 pe-4">
+                        <div class="col-lg-4 col-md-12 col-12 pe-4">
                             <form>
                                 <div class="mb-3">
                                     <input type="text" class="form-control bg-light-blue" id="name" placeholder="Nama">
@@ -413,10 +456,10 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-4 px-4">
+                        <div class="col-lg-4 col-md-12 col-12 px-4">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4017.939764944299!2d106.80014167504946!3d-6.224740693763333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1b8e4d34bfb%3A0xafaf497a99e6af45!2sLembaga%20Sensor%20Film%20RI!5e1!3m2!1sen!2sid!4v1741112890751!5m2!1sen!2sid" width="100%" height="335" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div class="col-4 ps-4">
+                        <div class="col-lg-4 col-md-12 col-12 ps-4">
                             <div class="d-flex align-items-center gap-2">
                                 <i class="color-blue bi bi-envelope fs-4"></i> <!-- Bootstrap Icon -->
                                 <div class="d-flex flex-column">
@@ -550,7 +593,22 @@
         slidesPerView: 4, // Adjust to show multiple slides
         spaceBetween: 20, // Space between slides
         breakpoints: {
-            768: { slidesPerView: 4 }, // Medium screens
+            1024: { slidesPerView: 4 }, // Medium screens
+            576: { slidesPerView: 2 }, // Small screens
+            320: { slidesPerView: 1 }, // Mobile screens
+        },
+    });
+
+    var filmSwiper = new Swiper(".filmSwiper", {
+        navigation: {
+            nextEl: ".film-next-mobile",
+            prevEl: ".film-prev-mobile",
+        },
+        loop: true,
+        slidesPerView: 4, // Adjust to show multiple slides
+        spaceBetween: 20, // Space between slides
+        breakpoints: {
+            1024: { slidesPerView: 4 }, // Medium screens
             576: { slidesPerView: 2 }, // Small screens
             320: { slidesPerView: 1 }, // Mobile screens
         },
