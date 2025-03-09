@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembaga Sensor Film - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/navbar-custom.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fonts-nunito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Hide Swiper default icons */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            background-image: url('/assets/img/home/icon/icon-slider-right.svg'); 
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            background-image: url('/assets/img/home/icon/icon-slider-left.svg'); 
+        }
+
+        .service-next, .service-prev{
+            position: inherit;
+        }
+
+        .film-next, .film-prev{
+            display: flex;
+            position: inherit;
+        }
+
+
+        .swiper-slide{
+            background-color: transparent;
+        }
+
+        .body-service .swiper-slide {
+            display: flex;
+            justify-content: flex-start; /* Align content to the left */
+            align-items: flex-start; /* Align items at the top */
+            text-align: left; /* Align text to the left */
+        }
+
+        .body-film .swiper-slide {
+            display: flex;
+            justify-content: flex-start; /* Align content to the left */
+            align-items: flex-start; /* Align items at the top */
+            text-align: left; /* Align text to the left */
+        }
+        .title-body {
+            width: 100%; /* Ensure content takes full width */
+            max-width: 500px; /* Optional: Set a max width for better readability */
+        }
+
+        .bg-brown{
+            background-color: #E0C066 !important;
+        }
+
+        .btn{
+            text-transform: uppercase;
+            color: #000080;
+            border: none;
+        }
+
+        .border-end{
+            border: 2px;
+        }
+
+        .text-blue{
+            color: #000080;
+        }
+
+
+
+        .icon-top-right {
+            width: 25%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(20%, -20%);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                </a>
+                <div class="age d-flex flex-column justify-content-start">
+                    <div class="age d-flex justify-content-between align-items-center w-100">
+                        <div class="age d-flex">
+                            <div class="border-blue"></div>
+                            <div class="rating-icons d-flex justify-content-start">
+                                <img src="assets/img/navbar/su.png" alt="">
+                                <img src="assets/img/navbar/13.png" alt="">
+                                <img src="assets/img/navbar/17.png" alt="">
+                                <img src="assets/img/navbar/21.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Dropdown Language Select & Switch -->
+                        <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                            <select class="language-select">
+                                <option value="id">🇮🇩 Indonesia</option>
+                                <option value="en">🇬🇧 English</option>
+                            </select>
+                            <label class="switch d-flex align-items-center justify-content-center gap-1">
+                                <input type="checkbox" id="themeToggle" checked>
+                                <span class="slider round"></span>
+                                <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                            </label>
+                            
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                        </ul>
+                        <form class="d-flex" style="width: 265px">
+                            <div class="position-relative">
+                                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                    🔍
+                                </span>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-0 m-0 bg-light-blue">
+
+        <!-- Header -->
+        <div class="container py-5">
+            <div class="swiper headerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/home/slider/img-slider-1.png" class="w-100 img-fluid object-cover" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next header-next"></div>
+                <div class="swiper-button-prev header-prev"></div>
+                <div class="swiper-pagination mt-5"></div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 border-end border-2 pe-4">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="title-layanan">
+                                <h1 class="text-blue">Layanan</h1>
+                                <h5>Layanan resmi LSF</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-end gap-2">
+                            <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="service-prev">
+                            <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="service-next">
+                        </div>
+                    </div>
+
+                    <!-- Service Swiper -->
+                    <div class="body-service">
+                        <div class="swiper serviceSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class=" title-body">
+                                        <img src="assets/img/home/logo/logo-esias.png" alt="" class="w-50 img-fluid">
+                                        <p class="py-4">
+                                            Aplikasi Administrasi Sensor Berbasis Elektronik (e-SiAS) merupakan langkah nyata untuk meningkatkan pelayanan publik...
+                                        </p>
+                                        <button class="btn btn-primary bg-brown p-3 px-4">Detail Informasi <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class=" title-body">
+                                        <img src="assets/img/home/logo/logo-esias.png" alt="" class="w-50 img-fluid">
+                                        <p class="py-4">
+                                            Aplikasi Administrasi Sensor Berbasis Elektronik (e-SiAS) merupakan langkah nyata untuk meningkatkan pelayanan publik...
+                                        </p>
+                                        <button class="btn btn-primary bg-brown p-3 px-4">Detail Informasi <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ps-4">
+                    <div class="video-container">
+                        <div class="video-overlay">
+                            <p class="video-title">Iklan Layanan Masyarakat</p>
+                        </div>
+                        <video src="https://cdn.animaapp.com/projects/60d876f00b85a9c710f9b3a3/files/pexels-yaroslav-shuraev-9632184.mp4" anima-src="https://cdn.animaapp.com/projects/60d876f00b85a9c710f9b3a3/files/pexels-yaroslav-shuraev-9632184.mp4" loop="" controls="" autoplay="autoplay" playsinline="" muted=""></video>
+                        <button class="play-button" onclick="togglePlay()">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section 3 -->
+
+        <div class="container-fluid py-5 bg-white">
+            <div class="container section-title">
+                <div class="film-title d-flex justify-content-between align-items-center">
+                    <h1 class="text-blue">Panduan Film</h1>
+                    <hr class="w-50" >
+                    <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="body-film">
+                    <h3 class="pt-5">Informasi Film Terbaru</h3>
+                
+                    <!-- Swiper Container -->
+                    <div class="swiper filmSwiper py-4 pe-3">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-1.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/SU 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-2.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/13+ 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-3.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/17+ 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-4.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/21+ 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-1.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/SU 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-2.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/13+ 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-3.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/17+ 1.png" class="icon-top-right">
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide position-relative">
+                                <img src="assets/img/home/img/img-film-4.png" alt="" class="w-100 img-fluid object-cover">
+                                <img src="assets/img/home/icon/21+ 1.png" class="icon-top-right">
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="film-slider-button d-flex align-items-center justify-content-end gap-2 w-100">
+                            <img src="assets/img/home/icon/icon-slider2-left.svg" alt="" class="film-prev">
+                            <img src="assets/img/home/icon/icon-slider2-right.svg" alt="" class="film-next">
+                        </div>
+                    </div>
+
+
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- section 4 -->
+        <div class="container py-5">
+            <div class="berita-title d-flex justify-content-between align-items-center">
+                <h1 class="text-blue">Berita</h1>
+                <hr class="w-50" >
+                <button class="btn btn-primary bg-brown p-3 px-4">SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="berita-body row py-5">
+                <div class="col-md-7">
+                    <div class="main-news">
+                        <img src="assets/img/news/7a51bbd2d87c176b13b7bab734b278ba.jpeg" class="main-image" alt="Berita Utama">
+                        <div class="news-overlay d-flex flex-column gap-2">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="news-date">Selasa, 17/01/2025</span>
+                                <span class="news-tag">Terkini</span>
+                            </div>
+                            <h2 class="news-title">Sineas Lokal Kritik Ide Fadli Zon Bangun Bioskop Di Aceh</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="side-news">
+                        <div class="news-item">
+                            <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- section 5 -->
+
+        <div class="container-fluid bg-white py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                    <p class="fs-32 color-blue fw-600 m-0">Kontak Info</p>
+                </div>
+                <div class="pt-5">
+                    <div class="row g-3">
+                        <div class="col-4 pe-4">
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control bg-light-blue" id="name" placeholder="Nama">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <input type="email" class="form-control bg-light-blue" id="email" placeholder="Email">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <textarea class="form-control bg-light-blue" id="message" rows="6" placeholder="Pesan.."></textarea>
+                                </div>
+    
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-primary btn-kirim-kontak">Kirim</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-4 px-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4017.939764944299!2d106.80014167504946!3d-6.224740693763333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1b8e4d34bfb%3A0xafaf497a99e6af45!2sLembaga%20Sensor%20Film%20RI!5e1!3m2!1sen!2sid!4v1741112890751!5m2!1sen!2sid" width="100%" height="335" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-4 ps-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-envelope fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>sekretariat@lsf.go.id</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-telephone fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>(021) 2524845</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-browser-chrome fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>lsf_ri</span>
+                                </div>
+                            </div>
+                            <p class="pt-3">Media Social:</p>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-instagram fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>lsf_ri</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-twitter-x fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>lsf_ri</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-tiktok fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>lsf_ri</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-youtube fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>lsf_rid</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="color-blue bi bi-facebook fs-4"></i> <!-- Bootstrap Icon -->
+                                <div class="d-flex flex-column">
+                                    <span>Lembaga Sensor Film Republik Indonesia</span>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#"><i class="text-white bi bi-globe"></i></a>
+                <a href="#"><i class="text-white bi bi-instagram"></i></a>
+                <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
+                <a href="#"><i class="text-white bi bi-tiktok"></i></a>
+                <a href="#"><i class="text-white bi bi-youtube"></i></a>
+                <a href="#"><i class="text-white bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById("themeToggle").addEventListener("change", function() {
+            let themeText = document.getElementById("themeText");
+            if (this.checked) {
+                themeText.textContent = "light";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.right = "8px"; // Add 'px' to make it work
+                themeText.style.left = ""; // Correct way to remove 'left' style
+    
+    
+            } else {
+                themeText.textContent = "dark";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.left = "5px"; // Add 'px' to make it work
+    
+            }
+        });
+    </script>
+    <script>
+        // Header Swiper
+  var headerSwiper = new Swiper(".headerSwiper", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    navigation: {
+      nextEl: ".header-next",
+      prevEl: ".header-prev",
+    },
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+  });
+
+  // Service Swiper
+  var serviceSwiper = new Swiper(".serviceSwiper", {
+    navigation: {
+      nextEl: ".service-next",
+      prevEl: ".service-prev",
+    },
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+  });
+
+  // Film Swiper
+  var filmSwiper = new Swiper(".filmSwiper", {
+        navigation: {
+            nextEl: ".film-next",
+            prevEl: ".film-prev",
+        },
+        loop: true,
+        slidesPerView: 4, // Adjust to show multiple slides
+        spaceBetween: 20, // Space between slides
+        breakpoints: {
+            768: { slidesPerView: 4 }, // Medium screens
+            576: { slidesPerView: 2 }, // Small screens
+            320: { slidesPerView: 1 }, // Mobile screens
+        },
+    });
+    </script>
+</body>
+</html>
