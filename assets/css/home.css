@@ -200,15 +200,18 @@ body {
 
 /* Berita Utama */
 .main-news {
-    position: relative;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure it takes full height */
+    position: relative; /* To position overlay correctly */
+    border-radius: 12px;
     overflow: hidden;
 }
 
 .main-image {
+    object-fit: cover; /* Make the image cover the div */
     width: 100%;
-    height: 100%;
-    border-radius: 8px;
+    height: 100%; /* Match the height of .main-news */
 }
 
 .news-overlay {
@@ -254,6 +257,7 @@ body {
     transition: 0.3s;
 }
 
+
 .news-item.active {
     border: 2px solid #2979FF;
     border-radius: 8px;
@@ -278,6 +282,23 @@ body {
     font-size: 0.875rem;
     color: #666;
     margin: 0;
+}
+
+@media (max-width: 991px) { /* Target screens smaller than lg (992px) */
+    .main-news {
+        display: flex;
+        flex-direction: column;
+        height: 24rem; /* Ensure it takes full height */
+        position: relative; /* To position overlay correctly */
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .main-image {
+        object-fit: cover; /* Make the image cover the div */
+        width: 100%;
+        height: 24rem; /* Match the height of .main-news */
+    }
 }
 
 .footer {
@@ -313,7 +334,7 @@ body {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 
 .social-icons a:hover {
