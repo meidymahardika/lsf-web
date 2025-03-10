@@ -476,3 +476,22 @@ body {
     margin: 0; /* Remove unwanted margins */
     padding: 0; /* Remove unwanted padding */
 }
+
+.body-content{
+    padding-top: 8%;
+}
+
+/* mobile */
+
+@media (max-width: 767.98px) {
+    .body-content{
+        padding-top: 30%;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .body-content{
+        padding-top: 10%;
+    }
+}
