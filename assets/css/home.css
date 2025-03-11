@@ -353,3 +353,145 @@ body {
     height: 50px;
     width: 80px;
 }
+
+
+/* New CSS */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Hide Swiper default icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    position: absolute;
+    background-image: url('/assets/img/home/icon/icon-slider-right.svg'); 
+}
+
+.swiper-button-prev {
+    position: absolute;
+    background-image: url('/assets/img/home/icon/icon-slider-left.svg'); 
+}
+
+.service-next, .service-prev{
+    position: inherit;
+}
+
+.film-next, .film-prev{
+    display: flex;
+    position: inherit;
+}
+
+
+.swiper-slide{
+    background-color: transparent;
+}
+
+.body-service .swiper-slide {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align items at the top */
+    text-align: left; /* Align text to the left */
+}
+
+.body-film .swiper-slide {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align items at the top */
+    text-align: left; /* Align text to the left */
+}
+.title-body {
+    width: 100%; /* Ensure content takes full width */
+    max-width: 500px; /* Optional: Set a max width for better readability */
+}
+
+.bg-brown{
+    background-color: #E0C066 !important;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #000080;
+    border: none;
+}
+
+.border-end{
+    border: 2px;
+}
+
+.text-blue{
+    color: #000080;
+}
+
+
+
+.icon-top-right {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -20%);
+}
+.navbar-toggler{
+    padding: 8px;
+    border: none;
+    color: black;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+
+.navbar-collapse {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.navbar.fixed-top {
+    width: 100vw; /* Ensure full width */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    margin: 0; /* Remove unwanted margins */
+    padding: 0; /* Remove unwanted padding */
+}
+
+.body-content{
+    padding-top: 8%;
+}
+
+/* mobile */
+
+@media (max-width: 767.98px) {
+    .body-content{
+        padding-top: 30%;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .body-content{
+        padding-top: 10%;
+    }
+}
