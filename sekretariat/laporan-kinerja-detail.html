@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/navbar-custom.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/sekretariat/styles.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: 100vh; /* Sesuaikan tinggi sesuai kebutuhan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f7fa;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .container-download a{
+            font-size: 1rem;
+            font-weight: 500;
+            color: #0188CE;
+            line-height: 150%;
+            text-decoration: none;
+        }
+
+        .container-download p{
+            color: #012F6D;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar Desktop -->
+<nav class="navbar navbar-expand-lg d-none d-md-flex fixed-top bg-white">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+        <div class="d-flex justify-content-center flex-grow-1">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+            </a>
+            <div class="age d-flex flex-column justify-content-start">
+                <div class="age d-flex justify-content-between align-items-center w-100">
+                    <div class="age d-flex">
+                        <div class="border-blue"></div>
+                        <div class="rating-icons d-flex justify-content-start">
+                            <img src="../assets/img/navbar/su.png" alt="">
+                            <img src="../assets/img/navbar/13.png" alt="">
+                            <img src="../assets/img/navbar/17.png" alt="">
+                            <img src="../assets/img/navbar/21.png" alt="">
+                        </div>
+                    </div>
+                    <!-- Dropdown Language Select & Switch -->
+                    <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                        <select class="language-select">
+                            <option value="id">🇮🇩 Indonesia</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                        <label class="switch d-flex align-items-center justify-content-center gap-1">
+                            <input type="checkbox" id="themeToggle" checked>
+                            <span class="slider round"></span>
+                            <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                        </label>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                    </ul>
+                    <form class="d-flex" style="width: 265px">
+                        <div class="position-relative">
+                            <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                            🔍
+                                        </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Navbar Mobile -->
+<nav class="navbar navbar-expand-lg d-block d-md-none fixed-top bg-white shadow pt-2">
+    <div class="container-fluid px-0">
+        <!-- Logo Section and Toggle Button -->
+        <div class="d-flex justify-content-between align-items-center w-100 px-3">
+            <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
+                <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                <img src="../assets/img/navbar/umur.png" class="img-fluid" style="max-width: 65%;" alt="Age Rating">
+            </a>
+
+            <!-- Navbar Toggle Button -->
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- Search Form - Outside the collapse menu -->
+        <form class="d-flex px-3 py-2 border-bottom w-100">
+            <div class="position-relative w-100">
+                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+            </div>
+        </form>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+
+                <!-- Language Select -->
+                <li class="nav-item w-100">
+                    <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
+                    <select id="languageSelect" class="form-select">
+                        <option value="id">🇮🇩 Indonesia</option>
+                        <option value="en">🇬🇧 English</option>
+                    </select>
+                </li>
+
+                <!-- Theme Toggle -->
+                <li class="nav-item w-100 d-flex align-items-center gap-2">
+                    <label class="switch d-flex align-items-center">
+                        <input type="checkbox" id="themeToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="themeText" class="fw-normal">Light</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid bg-light-blue">
+    <div class="container py-5 mt-5">
+        <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Laporan Kinerja Sekretariat</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Detail Laporan Kinerja Sekretariat</li>
+            </ol>
+        </nav>
+
+        <div class="pdf-container my-5">
+            <iframe src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf" frameborder="0"></iframe>
+        </div>
+        <div class="container-download">
+            <p>Laporan dapat diunduh melalui link dibawah ini:</p>
+            <a href="#" class="">Unduh Laporan Tahunan Kinerja Lembaga Sensor Film Republik Indonesia Tahun 2024 <i class="bi bi-file-earmark-arrow-down"></i></a>
+        </div>
+
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#"><i class="text-white bi bi-globe"></i></a>
+            <a href="#"><i class="text-white bi bi-instagram"></i></a>
+            <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
+            <a href="#"><i class="text-white bi bi-tiktok"></i></a>
+            <a href="#"><i class="text-white bi bi-youtube"></i></a>
+            <a href="#"><i class="text-white bi bi-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("themeToggle").addEventListener("change", function() {
+        let themeText = document.getElementById("themeText");
+        if (this.checked) {
+            themeText.textContent = "light";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.right = "8px"; // Add 'px' to make it work
+            themeText.style.left = ""; // Correct way to remove 'left' style
+
+
+        } else {
+            themeText.textContent = "dark";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.left = "5px"; // Add 'px' to make it work
+
+        }
+    });
+</script>
+</html>

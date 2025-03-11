@@ -15,22 +15,50 @@
 }
 
 .tugas-fungsi {
-    padding: 1rem 3rem;
+    padding: .5rem 3rem;
     text-align: center;
     background-color: #39399D;
     width: 12rem;
     margin: 0;
-    transform: skew(20deg);
+    border-radius: .5rem .5rem 0 0;
 }
 
 .tugas-fungsi p {
-    transform: skew(-20deg);
     font-size: 1rem;
     font-weight: 500;
     color: #fff;
 }
 
 .desc-list {
-    margin: 1rem 3rem;
+    padding: 2rem 3rem;
     color: #52575C;
+    background-color: #fff;
+    border-radius: 0 .5rem .5rem .5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-custom .card-header {
+        font-size: 1rem;
+    }
+
+    .card-custom .card-header .fs-16 {
+        font-size: 1rem;
+    }
+
+    .desc-list {
+        padding: 1rem 2.5rem;
+    }
+
+    .desc-list li {
+        font-size: 0.875rem;
+        line-height: 160%;
+    }
+
+    .title-struktur-tugas{
+        font-size: 1.135rem;
+    }
+
+    .tugas-fungsi {
+        font-size: 1rem;
+    }
 }
