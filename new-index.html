@@ -23,18 +23,23 @@
 </head>
 <body>
     <!-- Navbar Desktop -->
-    <nav class="navbar navbar-expand-lg d-none d-md-flex fixed-top bg-white">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
+    <nav class="navbar navbar-expand-lg d-none d-lg-flex fixed-top bg-white pb-4">
+        <div class="container d-flex justify-content-center align-items-center">
             <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
             <div class="d-flex justify-content-center flex-grow-1">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
                 </a>
-                <div class="age d-flex flex-column justify-content-start">
+                <div class="age d-flex flex-column justify-content-start w-100">
                     <div class="age d-flex justify-content-between align-items-center w-100">
-                        <div class="age d-flex">
-                            <img src="assets/img/navbar/umur.png" class="img-fluid w-75" alt="Age Rating">
+                       <div class="border-blue"></div>
+                       <div class="rating-icons d-flex justify-content-start">
+                            <img src="assets/img/navbar/su.png" alt="SU" data-bs-toggle="modal" data-bs-target="#modalSU" style="cursor: pointer;">
+                            <img src="assets/img/navbar/13.png" alt="13+" data-bs-toggle="modal" data-bs-target="#modal13Plus" style="cursor: pointer;">
+                            <img src="assets/img/navbar/17.png" alt="17+" data-bs-toggle="modal" data-bs-target="#modal17Plus" style="cursor: pointer;">
+                            <img src="assets/img/navbar/21.png" alt="21+" data-bs-toggle="modal" data-bs-target="#modal21Plus" style="cursor: pointer;">
                         </div>
+                    
                         <!-- Dropdown Language Select & Switch -->
                         <div class="d-flex align-items-center justify-content-end gap-4 w-100">
                             <select class="language-select">
@@ -46,42 +51,85 @@
                                 <span class="slider round"></span>
                                 <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
                             </label>
-                            
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
                         </div>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                    <div class="collapse navbar-collapse d-flex justify-content-between w-100 pt-1 ps-4 relative" id="navbarNav" >
                         <ul class="navbar-nav">
                             <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
-                            <li class="nav-item "><a class="nav-link" href="#">Tentang LSF</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                            <!-- Tentang Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tentang LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="tentangDropdown">
+                                    <li><a class="dropdown-item" href="#">Sejarah dan Dasar Hukum</a></li>
+                                    <li><a class="dropdown-item" href="#">Struktur Organisasi, Tugas dan Fungsi LSF</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Anggota</a></li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Layanan Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Layanan LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="layananDropdown">
+                                    <li><a class="dropdown-item" href="#">Mekanisme Penyensoran (Web ESIAS)Dasar Hukum</a></li>
+                                    <li><a class="dropdown-item" href="#">Panduan Film</a></li>
+                                    <li><a class="dropdown-item" href="#">Film Lulus Sensor</a></li>
+                                    <li><a class="dropdown-item" href="#">Data dan Informasi Film</a></li>
+                                    <li><a class="dropdown-item" href="#">Publikasi dan Penelitian</a></li>
+                                    <li><a class="dropdown-item" href="#">Majalah</a></li>
+                                    <li><a class="dropdown-item" href="#">Berita</a></li>
+                                    <li><a class="dropdown-item" href="#">Siaran Pers</a></li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Sekretariat Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sekretariat LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="sekretariatDropdown">
+                                    <li><a class="dropdown-item" href="#">Laporan Kinerja Sekretariat</a></li>
+                                    <li><a class="dropdown-item" href="#">Perjanjian Kinerja</a></li>
+                                    <li><a class="dropdown-item" href="#">Rencana Strategis</a></li>
+                                    <li><a class="dropdown-item" href="#">Electronik LHKPN</a></li>
+                                    <li><a class="dropdown-item" href="#">Zi - WBK/WBBM</a></li>
+                                    <li><a class="dropdown-item" href="#">PPID</a></li>
+                                </ul>
+                            </li>
+                    
                         </ul>
-                        <form class="d-flex" style="width: 265px">
+                    
+                        <form class="d-flex justify-content-end rounded-pill w-25">
                             <div class="position-relative">
                                 <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                                 <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                    🔍
+                                    <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
                             </div>
                         </form>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </nav>
     
     <!-- Navbar Mobile -->
-    <nav class="navbar navbar-expand-lg d-block d-md-none fixed-top bg-white shadow pt-2">
+    <nav class="navbar navbar-expand-lg d-block d-lg-none fixed-top bg-white shadow pt-2">
         <div class="container-fluid px-0">
             <!-- Logo Section and Toggle Button -->
             <div class="d-flex justify-content-between align-items-center w-100 px-3">
                 <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
                     <img src="assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
-                    <img src="assets/img/navbar/umur-mobile.png" class="img-fluid" style="max-width: 65%;" alt="Age Rating">
+                    <div class="d-flex justify-content-start" style="max-width: 65%;" >
+                        <img src="assets/img/navbar/su.png" alt="SU" class="w-25" data-bs-toggle="modal" data-bs-target="#modalSU" >
+                        <img src="assets/img/navbar/13.png" alt="13+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal13Plus" >
+                        <img src="assets/img/navbar/17.png" alt="17+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal17Plus" >
+                        <img src="assets/img/navbar/21.png" alt="21+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal21Plus" >
+                    </div>
                 </a>
                 
                 <!-- Navbar Toggle Button -->
@@ -105,22 +153,62 @@
             <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
                 <ul class="navbar-nav w-100">
                     <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
-                
+            
+                    <!-- Tentang Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tentangDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Sejarah dan Dasar Hukum</a></li>
+                            <li><a class="dropdown-item" href="#">Struktur Organisasi, Tugas dan Fungsi LSF</a></li>
+                            <li><a class="dropdown-item" href="#">Profile Anggota</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Layanan Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="layananDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Mekanisme Penyensoran (Web ESIAS)</a></li>
+                            <li><a class="dropdown-item" href="#">Panduan Film</a></li>
+                            <li><a class="dropdown-item" href="#">Film Lulus Sensor</a></li>
+                            <li><a class="dropdown-item" href="#">Data dan Informasi Film</a></li>
+                            <li><a class="dropdown-item" href="#">Publikasi dan Penelitian</a></li>
+                            <li><a class="dropdown-item" href="#">Majalah</a></li>
+                            <li><a class="dropdown-item" href="#">Berita</a></li>
+                            <li><a class="dropdown-item" href="#">Siaran Pers</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Sekretariat Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sekretariat LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="sekretariatDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Laporan Kinerja Sekretariat</a></li>
+                            <li><a class="dropdown-item" href="#">Perjanjian Kinerja</a></li>
+                            <li><a class="dropdown-item" href="#">Rencana Strategis</a></li>
+                            <li><a class="dropdown-item" href="#">Elektronik LHKPN</a></li>
+                            <li><a class="dropdown-item" href="#">Zi - WBK/WBBM</a></li>
+                            <li><a class="dropdown-item" href="#">PPID</a></li>
+                        </ul>
+                    </li>
+            
                     <!-- Language Select -->
-                    <li class="nav-item w-100">
+                    <li class="nav-item w-100 mt-2">
                         <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
                         <select id="languageSelect" class="form-select">
                             <option value="id">🇮🇩 Indonesia</option>
                             <option value="en">🇬🇧 English</option>
                         </select>
                     </li>
-                
+            
                     <!-- Theme Toggle -->
-                    <li class="nav-item w-100 d-flex align-items-center gap-2">
+                    <li class="nav-item w-100 d-flex align-items-center gap-2 mt-3">
                         <label class="switch d-flex align-items-center">
                             <input type="checkbox" id="themeToggle" checked>
                             <span class="slider round"></span>
@@ -129,6 +217,8 @@
                     </li>
                 </ul>
             </div>
+            
+            
         </div>
     </nav>
     
@@ -493,6 +583,107 @@
         </div>
     </footer>
 
+    <!-- Modal Popup -->
+    <!-- SU Modal -->
+    <div class="modal fade" id="modalSU" tabindex="-1" aria-labelledby="modalSULabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center pb-5">
+                    <img src="assets/img/navbar/su.png" class="img-fluid" style="width: 20%;" alt="">
+                    <img src="assets/img/home/img/img-su.png" class="img-fluid w-75" alt="">
+                    <div class="container p-4 mt-4 modal-body-content border-green">
+                        <h3>Klasifikasi Semua umur (SU)</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu malesuada enim, ac sagittis lacus. Fusce turpis tellus, interdum vitae tellus id, congue mattis nisl. Cras interdum consectetur turpis, sit amet auctor arcu lacinia ac. Nulla sollicitudin, augue ac vulputate sollicitudin, lectus ante consectetur risus, ut vulputate metus justo nec massa. Vestibulum feugiat maximus massa, a convallis magna suscipit vel. In ac efficitur ante, maximus tincidunt lorem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis dolores consequuntur natus dignissimos eius eos tenetur, placeat porro cupiditate officiis a enim velit vel fuga sint labore. Id, voluptatem?
+                            Cumque sapiente id vero beatae veniam, dignissimos incidunt praesentium odit? Qui neque aut quisquam veniam vitae beatae commodi pariatur fuga ut vel quidem ab, soluta error amet tempora deleniti dolore?
+                            Ut maxime, corporis reiciendis iste facere quas laborum obcaecati nam voluptate tenetur similique recusandae? Officia numquam rem quod earum tenetur est nobis. Blanditiis magni iusto dolore rerum eveniet maiores facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13+ Modal -->
+    <div class="modal fade" id="modal13Plus" tabindex="-1" aria-labelledby="modal13PlusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center pb-5">
+                    <img src="assets/img/navbar/13.png" class="img-fluid" style="width: 20%;" alt="">
+                    <img src="assets/img/home/img/img-13+.png" class="img-fluid w-75" alt="">
+                    <div class="container p-4 mt-4 modal-body-content border-yellow">
+                        <h3>Klasifikasi Remaja 13 Tahun (R13)</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu malesuada enim, ac sagittis lacus. Fusce turpis tellus, interdum vitae tellus id, congue mattis nisl. Cras interdum consectetur turpis, sit amet auctor arcu lacinia ac. Nulla sollicitudin, augue ac vulputate sollicitudin, lectus ante consectetur risus, ut vulputate metus justo nec massa. Vestibulum feugiat maximus massa, a convallis magna suscipit vel. In ac efficitur ante, maximus tincidunt lorem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis dolores consequuntur natus dignissimos eius eos tenetur, placeat porro cupiditate officiis a enim velit vel fuga sint labore. Id, voluptatem?
+                            Cumque sapiente id vero beatae veniam, dignissimos incidunt praesentium odit? Qui neque aut quisquam veniam vitae beatae commodi pariatur fuga ut vel quidem ab, soluta error amet tempora deleniti dolore?
+                            Ut maxime, corporis reiciendis iste facere quas laborum obcaecati nam voluptate tenetur similique recusandae? Officia numquam rem quod earum tenetur est nobis. Blanditiis magni iusto dolore rerum eveniet maiores facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17+ Modal -->
+    <div class="modal fade" id="modal17Plus" tabindex="-1" aria-labelledby="modal17PlusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-nd modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center pb-5">
+                    <img src="assets/img/navbar/17.png" class="img-fluid" style="width: 20%;" alt="">
+                    <img src="assets/img/home/img/img-17+.png" class="img-fluid w-75" alt="">
+                    <div class="container p-4 mt-4 modal-body-content border-red">
+                        <h3>Klasifikasi Dewasa 17 Tahun (D17)</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu malesuada enim, ac sagittis lacus. Fusce turpis tellus, interdum vitae tellus id, congue mattis nisl. Cras interdum consectetur turpis, sit amet auctor arcu lacinia ac. Nulla sollicitudin, augue ac vulputate sollicitudin, lectus ante consectetur risus, ut vulputate metus justo nec massa. Vestibulum feugiat maximus massa, a convallis magna suscipit vel. In ac efficitur ante, maximus tincidunt lorem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis dolores consequuntur natus dignissimos eius eos tenetur, placeat porro cupiditate officiis a enim velit vel fuga sint labore. Id, voluptatem?
+                            Cumque sapiente id vero beatae veniam, dignissimos incidunt praesentium odit? Qui neque aut quisquam veniam vitae beatae commodi pariatur fuga ut vel quidem ab, soluta error amet tempora deleniti dolore?
+                            Ut maxime, corporis reiciendis iste facere quas laborum obcaecati nam voluptate tenetur similique recusandae? Officia numquam rem quod earum tenetur est nobis. Blanditiis magni iusto dolore rerum eveniet maiores facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 21+ Modal -->
+    <div class="modal fade" id="modal21Plus" tabindex="-1" aria-labelledby="modal21PlusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center pb-5">
+                    <img src="assets/img/navbar/21.png" class="img-fluid" style="width: 20%;" alt="">
+                    <img src="assets/img/home/img/img-21+.png" class="img-fluid w-75" alt="">
+                    <div class="container p-4 mt-4 modal-body-content border-black">
+                        <h3>Klasifikasi Dewasa 21 Tahun (D21)</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu malesuada enim, ac sagittis lacus. Fusce turpis tellus, interdum vitae tellus id, congue mattis nisl. Cras interdum consectetur turpis, sit amet auctor arcu lacinia ac. Nulla sollicitudin, augue ac vulputate sollicitudin, lectus ante consectetur risus, ut vulputate metus justo nec massa. Vestibulum feugiat maximus massa, a convallis magna suscipit vel. In ac efficitur ante, maximus tincidunt lorem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis dolores consequuntur natus dignissimos eius eos tenetur, placeat porro cupiditate officiis a enim velit vel fuga sint labore. Id, voluptatem?
+                            Cumque sapiente id vero beatae veniam, dignissimos incidunt praesentium odit? Qui neque aut quisquam veniam vitae beatae commodi pariatur fuga ut vel quidem ab, soluta error amet tempora deleniti dolore?
+                            Ut maxime, corporis reiciendis iste facere quas laborum obcaecati nam voluptate tenetur similique recusandae? Officia numquam rem quod earum tenetur est nobis. Blanditiis magni iusto dolore rerum eveniet maiores facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -590,6 +781,32 @@ document.addEventListener("DOMContentLoaded", function() {
             320: { slidesPerView: 1 }, // Mobile screens
         },
     });
+
+    function resizeMap() {
+        let img = document.getElementById("ageImage");
+        let map = document.getElementsByTagName("map")[0];
+        let areas = map.getElementsByTagName("area");
+
+        // Original dimensions (update these based on your image's actual size)
+        let originalWidth = 400; // Example: original width of the image
+        let scaleFactor = img.clientWidth / originalWidth;
+
+        let originalCoords = [
+            [70, 30, 30],  // SU
+            [170, 30, 30], // 13+
+            [250, 30, 30], // 17+
+            [330, 30, 30]  // 21+
+        ];
+
+        for (let i = 0; i < areas.length; i++) {
+            let newCoords = originalCoords[i].map(coord => Math.round(coord * scaleFactor));
+            areas[i].coords = newCoords.join(",");
+        }
+    }
+
+    // Run on load and resize
+    window.onload = resizeMap;
+    window.onresize = resizeMap;
     </script>
         
 </body>
