@@ -386,15 +386,15 @@ body {
     display: none;
 }
 
-.swiper-button-next {
+/* .swiper-button-next {
     position: absolute;
     background-image: url('assets/img/home/icon/icon-slider-right.svg'); 
 }
 
 .swiper-button-prev {
     position: absolute;
-    background-image: url('assets/img/home/icon/icon-slider-left.svg'); 
-}
+    background-image: url('/assets/img/home/icon/icon-slider-left.svg'); 
+} */
 
 .service-next, .service-prev{
     position: inherit;
