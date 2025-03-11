@@ -1,0 +1,96 @@
+.divider-to-filter {
+    width: 90%;
+    max-width: 90%;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.divider {
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.btn-filter-panduan {
+    background-color: #141470;
+    color: #fff;
+}
+
+#modal-filter {
+    border-radius: 5% !important;
+}
+
+.btn-outline-filter.active{
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #141470;
+    color: #141470;
+    background-color: #fff;
+    padding: 3px 40px;
+}
+
+.btn-outline-filter {
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    color: grey;
+    background-color: #fff;
+    padding: 3px 40px;
+}
+
+.container-fluid {
+    width: 100% !important;
+    max-width: 100vw;
+}
+
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important; /* Prevent unwanted horizontal scrolling */
+}
+
+.film-desc {
+    line-height: 2;
+}
+
+.film-sinopsis {
+    line-height: 2;
+}
+
+.keterangan-film > div > p {
+    font-size: 14px;
+    color: #578FCA;
+}
+
+.img-header-news {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.rectangle-terkini {
+    width: 100px;
+    height: 50px;
+    background-color: #70BA92;
+    color: #fff;
+}
+
+.rectangle-populer {
+    width: 100px;
+    height: 50px;
+    background-color: #E0C066;
+    color: #000;
+}
+
+.title-news {
+    color: #70BA92;
+}
+
+.title-berita-populer {
+    border-left: 2px solid #000080;
+}
+
+.view-berita {
+    color: #70BA92;
+}
+
+/* .share-detail > div > p {
+    font-size: 20px;
+} */
