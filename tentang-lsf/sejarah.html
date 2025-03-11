@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <!-- Navbar Desktop -->
+    <nav class="navbar navbar-expand-lg d-none d-md-flex fixed-top bg-white">
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
             <div class="d-flex justify-content-center flex-grow-1">
@@ -65,16 +66,73 @@
                                         🔍
                                     </span>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Navbar Mobile -->
+    <nav class="navbar navbar-expand-lg d-block d-md-none fixed-top bg-white shadow pt-2">
+        <div class="container-fluid px-0">
+            <!-- Logo Section and Toggle Button -->
+            <div class="d-flex justify-content-between align-items-center w-100 px-3">
+                <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
+                    <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/umur.png" class="img-fluid" style="max-width: 65%;" alt="Age Rating">
+                </a>
+
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Search Form - Outside the collapse menu -->
+            <form class="d-flex px-3 py-2 border-bottom w-100">
+                <div class="position-relative w-100">
+                    <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                </div>
+            </form>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+
+                    <!-- Language Select -->
+                    <li class="nav-item w-100">
+                        <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
+                        <select id="languageSelect" class="form-select">
+                            <option value="id">🇮🇩 Indonesia</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item w-100 d-flex align-items-center gap-2">
+                        <label class="switch d-flex align-items-center">
+                            <input type="checkbox" id="themeToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="themeText" class="fw-normal">Light</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid bg-light-blue">
-        <div class="container py-5">
-            <nav aria-label="breadcrumb">
+        <div class="container py-5 mt-5">
+            <nav class="mt-5 pt-2" aria-label="breadcrumb">
                 <ol class="breadcrumb mb-xl">
                     <li class="breadcrumb-item">
                         <a href="#" class="">Home</a>

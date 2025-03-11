@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <!-- Navbar Desktop -->
+    <nav class="navbar navbar-expand-lg d-none d-md-flex fixed-top bg-white">
         <div class="container-fluid d-flex justify-content-center align-items-center">
-          <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
             <div class="d-flex justify-content-center flex-grow-1">
                 <a class="navbar-brand" href="#">
-                  <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
                 </a>
                 <div class="age d-flex flex-column justify-content-start">
                     <div class="age d-flex justify-content-between align-items-center w-100">
@@ -37,7 +38,7 @@
                             <select class="language-select">
                                 <option value="id">🇮🇩 Indonesia</option>
                                 <option value="en">🇬🇧 English</option>
-                              </select>
+                            </select>
                             <label class="switch d-flex align-items-center justify-content-center gap-1">
                                 <input type="checkbox" id="themeToggle" checked>
                                 <span class="slider round"></span>
@@ -61,10 +62,9 @@
                             <div class="position-relative">
                                 <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                                 <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                                          🔍
-                                                      </span>
+                                            🔍
+                                        </span>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -72,9 +72,67 @@
         </div>
     </nav>
 
+    <!-- Navbar Mobile -->
+    <nav class="navbar navbar-expand-lg d-block d-md-none fixed-top bg-white shadow pt-2">
+        <div class="container-fluid px-0">
+            <!-- Logo Section and Toggle Button -->
+            <div class="d-flex justify-content-between align-items-center w-100 px-3">
+                <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
+                    <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/umur.png" class="img-fluid" style="max-width: 65%;" alt="Age Rating">
+                </a>
+
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Search Form - Outside the collapse menu -->
+            <form class="d-flex px-3 py-2 border-bottom w-100">
+                <div class="position-relative w-100">
+                    <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                </div>
+            </form>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+
+                    <!-- Language Select -->
+                    <li class="nav-item w-100">
+                        <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
+                        <select id="languageSelect" class="form-select">
+                            <option value="id">🇮🇩 Indonesia</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item w-100 d-flex align-items-center gap-2">
+                        <label class="switch d-flex align-items-center">
+                            <input type="checkbox" id="themeToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="themeText" class="fw-normal">Light</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container-fluid bg-light-blue">
-        <div class="container py-5">
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <div class="container py-5 mt-5">
+            <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Struktur Organisasi Tugas & Fungsi</li>
