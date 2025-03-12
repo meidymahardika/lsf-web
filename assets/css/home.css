@@ -481,17 +481,74 @@ body {
     padding-top: 8%;
 }
 
+.modal-header{
+    border: none;
+}
+
+.border-green{
+    border: 3px solid #7BAE5A; 
+}
+
+.border-yellow{
+    border: 3px solid #E2D759; 
+}
+
+.border-red{
+    border: 3px solid #B03222; 
+}
+
+.border-black{
+    border: 3px solid #1A1A1A; 
+}
+
+.modal-body-content {
+    border-radius: 1.5rem;
+    height: 30vh; /* Fixed height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 1rem; /* Adds padding inside the border */
+    background-color: white;
+}
+
+
+.modal-body-container {
+    position: relative; /* Ensures proper layering */
+}
 /* mobile */
 
 @media (max-width: 767.98px) {
     .body-content{
         padding-top: 30%;
     }
+
+    /* Ensure text wraps inside the dropdown items */
+    .dropdown-menu {
+        max-width: 90vw; /* Keep dropdown width responsive */
+        min-width: 200px; /* Minimum width to maintain layout */
+        white-space: normal; /* Allow text to wrap */
+        word-wrap: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Ensures word breaking */
+    }
+    .dropdown-menu {
+        width: 100% !important; /* Make dropdown full width */
+        left: 0 !important; /* Align properly */
+        right: auto !important;
+    }
+
+    /* Ensure dropdown items wrap properly */
+    .dropdown-item {
+        white-space: normal !important; /* Override Bootstrap default */
+        word-wrap: break-word !important; /* Force word wrapping */
+        overflow-wrap: break-word !important; /* Ensures no overflow */
+        padding: 8px 12px; /* Adjust padding for better spacing */
+    }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .body-content{
-        padding-top: 10%;
+        padding-top: 20%;
+    }
+    .container{
+        max-width: fit-content;
     }
 }
