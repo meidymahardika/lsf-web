@@ -105,18 +105,21 @@
             font-size: 1.125rem;
         }
 
+        /* Responsive Pagination Container */
         .pagination-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
             font-family: Arial, sans-serif;
+            flex-wrap: wrap;
         }
 
         .pagination-info {
             color: #2F2E7B;
             font-size: 1rem;
             font-weight: 500;
+            text-align: center;
         }
 
         .pagination-nav {
@@ -131,6 +134,8 @@
             gap: 0.5rem;
             padding: 0;
             margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .pagination-list li a {
@@ -156,6 +161,9 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .pagination-btn:hover {
@@ -170,7 +178,7 @@
             color: #ccc;
         }
 
-        .pagination-btn.btn-next, .prev {
+        .pagination-btn.btn-next, .pagination-btn.prev {
             width: 2.188rem;
             height: 2.188rem;
             border: 1.5px solid #39399D;
@@ -185,9 +193,65 @@
             font-weight: bold;
         }
 
-        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-            font-size: 20px !important;
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .search-input {
+                width: 100%;
+                padding: 4px 40px 4px 15px;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                outline: none;
+                font-size: 16px;
+            }
+            
+            .pagination-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .pagination-list {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.875rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pagination-btn {
+                padding: 0.4rem;
+                font-size: 0.875rem;
+            }
         }
+
+        @media (max-width: 480px) {
+            .search-input {
+                width: 100%;
+                padding: 4px 40px 4px 15px;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                outline: none;
+                font-size: 16px;
+            }
+            .pagination-list {
+                gap: 0.2rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .pagination-btn {
+                padding: 0.3rem;
+                font-size: 0.75rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -316,7 +380,7 @@
             </ol>
         </nav>
 
-        <div class="search-wrapper my-5 pb-5">
+        <div class="search-wrapper my-2 my-xl-5 pb-2 pb-xl-5">
             <div class="underlined"></div>
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Cari">
@@ -324,8 +388,8 @@
             </div>
         </div>
 
-        <div class="row py-5">
-            <div class="col-md-6 px-5">
+        <div class="row pt-2 pt-xl-5">
+            <div class="col-md-6 px-1 px-xl-5">
                 <div class="d-flex align-items-start">
                     <!-- Gambar di Kiri -->
                     <div>
@@ -336,20 +400,23 @@
                     <div class="ms-3">
                         <p class="pdf-title">Pasutri Gaje</p>
                         <br>
-                        <p class="fs-14 text-secondary">
+                        <p class="fs-14 text-secondary d-none d-xl-block">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                         </p>
                         <br>
                         <br>
                         <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 px-5">
+            <div class="col-md-6 px-1 px-xl-5 pt-2">
                 <div class="d-flex align-items-start">
                     <!-- Gambar di Kiri -->
                     <div>
@@ -360,72 +427,25 @@
                     <div class="ms-3">
                         <p class="pdf-title">Pasutri Gaje</p>
                         <br>
-                        <p class="fs-14 text-secondary">
+                        <p class="fs-14 text-secondary d-none d-xl-block">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                         </p>
                         <br>
                         <br>
                         <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row py-5">
-            <div class="col-md-6 px-5">
-                <div class="d-flex align-items-start">
-                    <!-- Gambar di Kiri -->
-                    <div>
-                        <img src="../assets/img/informasi-film/informasi-film.png" alt="">
-                    </div>
-            
-                    <!-- Teks di Kanan -->
-                    <div class="ms-3">
-                        <p class="pdf-title">Pasutri Gaje</p>
-                        <br>
-                        <p class="fs-14 text-secondary">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-                        </p>
-                        <br>
-                        <br>
-                        <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 px-5">
-                <div class="d-flex align-items-start">
-                    <!-- Gambar di Kiri -->
-                    <div>
-                        <img src="../assets/img/informasi-film/informasi-film.png" alt="">
-                    </div>
-            
-                    <!-- Teks di Kanan -->
-                    <div class="ms-3">
-                        <p class="pdf-title">Pasutri Gaje</p>
-                        <br>
-                        <p class="fs-14 text-secondary">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-                        </p>
-                        <br>
-                        <br>
-                        <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row py-5">
-            <div class="col-md-6 px-5">
+        <div class="row pt-2 pt-xl-5">
+            <div class="col-md-6 px-1 px-xl-5">
                 <div class="d-flex align-items-start">
                     <!-- Gambar di Kiri -->
                     <div>
@@ -436,20 +456,23 @@
                     <div class="ms-3">
                         <p class="pdf-title">Pasutri Gaje</p>
                         <br>
-                        <p class="fs-14 text-secondary">
+                        <p class="fs-14 text-secondary d-none d-xl-block">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                         </p>
                         <br>
                         <br>
                         <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 px-5">
+            <div class="col-md-6 px-1 px-xl-5 pt-2">
                 <div class="d-flex align-items-start">
                     <!-- Gambar di Kiri -->
                     <div>
@@ -460,14 +483,73 @@
                     <div class="ms-3">
                         <p class="pdf-title">Pasutri Gaje</p>
                         <br>
-                        <p class="fs-14 text-secondary">
+                        <p class="fs-14 text-secondary d-none d-xl-block">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                         </p>
                         <br>
                         <br>
                         <p class="d-flex justify-content-between">
-                            <span class="fw-bold text-secondary">RAW Data</span>
-                            <span><a href="#" class="text-decoration-none">Unduh <i class="bi bi-download"></i></a></span>
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-2 pt-xl-5">
+            <div class="col-md-6 px-1 px-xl-5">
+                <div class="d-flex align-items-start">
+                    <!-- Gambar di Kiri -->
+                    <div>
+                        <img src="../assets/img/informasi-film/informasi-film.png" alt="">
+                    </div>
+            
+                    <!-- Teks di Kanan -->
+                    <div class="ms-3">
+                        <p class="pdf-title">Pasutri Gaje</p>
+                        <br>
+                        <p class="fs-14 text-secondary d-none d-xl-block">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
+                        </p>
+                        <br>
+                        <br>
+                        <p class="d-flex justify-content-between">
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 px-1 px-xl-5 pt-2">
+                <div class="d-flex align-items-start">
+                    <!-- Gambar di Kiri -->
+                    <div>
+                        <img src="../assets/img/informasi-film/informasi-film.png" alt="">
+                    </div>
+            
+                    <!-- Teks di Kanan -->
+                    <div class="ms-3">
+                        <p class="pdf-title">Pasutri Gaje</p>
+                        <br>
+                        <p class="fs-14 text-secondary d-none d-xl-block">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                        </p>
+                        <p class="fs-14 text-secondary d-block d-xl-none">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
+                        </p>
+                        <br>
+                        <br>
+                        <p class="d-flex justify-content-between">
+                            <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                            <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                         </p>
                     </div>
                 </div>
