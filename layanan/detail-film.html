@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/layanan/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar-custom.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+        <div class="d-flex justify-content-center flex-grow-1">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+            </a>
+            <div class="age d-flex flex-column justify-content-start">
+                <div class="age d-flex justify-content-between align-items-center w-100">
+                    <div class="age d-flex">
+                        <div class="border-blue"></div>
+                        <div class="rating-icons d-flex justify-content-start">
+                            <img src="../assets/img/navbar/su.png" alt="">
+                            <img src="../assets/img/navbar/13.png" alt="">
+                            <img src="../assets/img/navbar/17.png" alt="">
+                            <img src="../assets/img/navbar/21.png" alt="">
+                        </div>
+                    </div>
+                    <!-- Dropdown Language Select & Switch -->
+                    <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                        <select class="language-select">
+                            <option value="id">🇮🇩 Indonesia</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                        <label class="switch d-flex align-items-center justify-content-center gap-1">
+                            <input type="checkbox" id="themeToggle" checked>
+                            <span class="slider round"></span>
+                            <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                        </label>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                    </ul>
+                    <form class="d-flex" style="width: 265px">
+                        <div class="position-relative">
+                            <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                                          🔍
+                                                      </span>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid bg-light-blue">
+    <div class="container py-5">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Layanan LSF</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Detail Film</li>
+            </ol>
+        </nav>
+
+        <!-- <div class="container-fluid"> -->
+            <div class="row pt-5">
+                <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xl-3">
+                    <img src="../assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
+                    <div class="ps-4 pt-4 keterangan-film">
+                        <div>
+                            <h6>Penggolongan Usia</h6>
+                            <img src="../assets/img/navbar/su.png" height="50" alt=""><span class="fs-14">Semua Umur</span>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Sutradara</h6>
+                            <p>Muhadkly Acho</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Produser</h6>
+                            <p>Dipa Andika <br />Ernest Prakasa</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Skenario</h6>
+                            <p>Muhadkly Acho</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Penyunting</h6>
+                            <p>Ryan Purwoko</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Perusahaan</h6>
+                            <p>Imajinari</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Tanggal Rilis</h6>
+                            <p>1 Februari 2024 (Indonesia)<br />
+                                7 Maret 2024 (Malaysia & Brunei Darussalam)<br />
+                                14 Maret 2024 (Singapura)<br />
+                                22 Maret 2024 (Amerika Serikat)<br />
+                                31 Mei 2024 (Netflix)</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Durasi</h6>
+                            <p>119 menit</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h6>Kategori</h6>
+                            <p>Horor, Komedi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9">
+                    <div>
+                        <h2>Agak Laen</h2>
+                    </div>
+                    <div class="py-4">
+                        <p class="film-desc fs-14 pe-5">
+                            Agak Laen adalah film horor komedi Indonesia tahun 2024 yang disutradarai dan ditulis oleh Muhadkly Acho berdasarkan siniar Agak Laen. Film produksi Imajinari serta Jagartha ini dibintangi oleh personel siniar Agak Laen, yaitu Bene Dion, Oki Rengga, Boris Bokir, dan Indra Jegel. Agak Laen tayang perdana di bioskop Indonesia pada 1 Februari 2024.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Sinopsis</h3>
+                    </div>
+                    <div class="pt-3">
+                        <p class="film-sinopsis fs-14 pe-xl-5">
+                            Bene, Boris, Jegel, dan Oki merupakan empat sekawan yang telah berteman sejak lama. Namun, kondisi ekonomi mereka masih terpuruk meski sudah lama merantau. Keempat sahabat itu akhirnya melihat peluang baru saat pasar malam baru didirikan di dekat kediaman mereka. Bene, Boris, Jegel, dan Oki memutuskan membuat wahana rumah hantu di pasar malam tersebut. Mereka tidak hanya mengelola rumah hantu itu, tetapi juga menyiapkan konsep hingga menjadi hantu untuk menakut-nakuti pengunjung.
+                            Namun, usaha mereka semula gagal karena tak ada pengunjung yang merasa ketakutan ketika memasuki rumah hantu. Empat sekawan itu lantas memutar otak untuk menyelamatkan bisnis tersebut. Mereka akhirnya mendapat sebuah ide, yakni merenovasi rumah hantu agar menjadi lebih menyeramkan. Renovasi itu cukup berhasil karena nuansa mistis di sepanjang ruangan rumah hantu benar-benar terasa. Seorang pengunjung bernama Basuki memasuki rumah hantu versi terbaru itu sebagai pengunjung pertama.
+                            Alasan Basuki memasuki rumah hantu tersebut bukan untuk merasakan nuansa mistis, melainkan untuk menghindari sang istri lantaran saat itu ia tengah jalan dengan bersama selingkuhannya. Masalah muncul ketika Basuki mulai menyusuri rumah hantu, terus-menerus dikagetkan hingga akhirnya meninggal di tempat karena serangan jantung. Kematian tersebut membuat panik Bene, Boris, Jegel, dan Oki. Mereka pun memutuskan mengubur jenazah Basuki di dalam rumah hantu dan merahasiakan kematiannya. Namun, arwah Basuki justru gentayangan di rumah hantu tersebut.
+                            Situasi ini ternyata membuat rumah hantu tersebut semakin menyeramkan. Usaha mereka semakin diminati pengunjung hingga mendatangkan banyak uang bagi mereka. Di sisi lain, Basuki yang sesungguhnya telah meninggal dinyatakan hilang secara misterius. Polisi akhirnya turun tangan menyelidiki kasus itu dikarenakan Basuki adalah seorang calon anggota legislatif. Penyelidikan dimulai dengan mendatangi tempat di mana Basuki terakhir terlihat.
+                            Setelah menemukan keanehan usai berkunjung ke wahana rumah hantu, polisi akhirnya berhasil menguak rahasia empat sekawan. Mereka berempat akhirnya ditangkap untuk mempertanggungjawabkan perbuatannya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+            
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#"><i class="text-white bi bi-globe"></i></a>
+            <a href="#"><i class="text-white bi bi-instagram"></i></a>
+            <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
+            <a href="#"><i class="text-white bi bi-tiktok"></i></a>
+            <a href="#"><i class="text-white bi bi-youtube"></i></a>
+            <a href="#"><i class="text-white bi bi-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("themeToggle").addEventListener("change", function() {
+        let themeText = document.getElementById("themeText");
+        if (this.checked) {
+            themeText.textContent = "light";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.right = "8px"; // Add 'px' to make it work
+            themeText.style.left = ""; // Correct way to remove 'left' style
+
+
+        } else {
+            themeText.textContent = "dark";
+            themeText.style.zIndex = "1"; // Ensure it's a string
+            themeText.style.position = "relative";
+            themeText.style.left = "5px"; // Add 'px' to make it work
+
+        }
+    });
+</script>
+</html>
