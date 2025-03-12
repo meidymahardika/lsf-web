@@ -1,0 +1,17 @@
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #f6f8ff;
+    box-shadow: unset;
+}
+
+button.accordion-button.collapsed {
+    background: #f6f8ff;
+}
+
+.accordion-body {
+    background: #f6f8ff;
+}
+
+.accordion-item {
+    border: unset;
+}

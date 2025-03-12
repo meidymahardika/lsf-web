@@ -81,3 +81,85 @@
 .bg-blue-1{
     background-color: #141470;
 }
+
+.breadcrumb {
+    gap: 8px;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #B3B3B3;
+    text-decoration: none;
+}
+
+.breadcrumb-icon i {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #B3B3B3;
+}
+
+.breadcrumb-item.active {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #39399D !important;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #52575C;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    background-color: #f6f8ff;
+    border-color: #f6f8ff #f6f8ff #39399D #f6f8ff;
+    border-bottom: 2px solid #39399D;
+}
+
+.nav-tabs .nav-link {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    color: #B3B3B3;
+    line-height: 40px;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    color: #52575C;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #f6f8ff #f6f8ff #39399D #f6f8ff;
+    border-bottom: 2px solid #39399D;
+    isolation: unset;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn-custom-xl {
+        width: 11.938rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    .breadcrumb {
+        gap: 4px;
+    }
+    .breadcrumb-item a {
+        font-size: 0.875rem;
+    }
+
+    .breadcrumb-icon i {
+        font-size: 0.875rem;
+    }
+
+    .breadcrumb-item.active {
+        font-size: 0.875rem;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        font-size: 1rem;
+    }
+    .nav-tabs .nav-link {
+        font-size: 0.75rem;
+    }
+}

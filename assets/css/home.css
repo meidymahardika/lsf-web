@@ -388,7 +388,7 @@ body {
 
 /* .swiper-button-next {
     position: absolute;
-    background-image: url('/assets/img/home/icon/icon-slider-right.svg'); 
+    background-image: url('assets/img/home/icon/icon-slider-right.svg'); 
 }
 
 .swiper-button-prev {
@@ -552,6 +552,3 @@ body {
         max-width: fit-content;
     }
 }
-
-
-

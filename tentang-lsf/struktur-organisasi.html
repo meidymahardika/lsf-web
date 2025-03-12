@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="../assets/css/navbar-custom.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/tentang/struktur-organisasi.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <!-- Navbar Desktop -->
+    <nav class="navbar navbar-expand-lg d-none d-md-flex fixed-top bg-white">
         <div class="container-fluid d-flex justify-content-center align-items-center">
-          <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
             <div class="d-flex justify-content-center flex-grow-1">
                 <a class="navbar-brand" href="#">
-                  <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
                 </a>
                 <div class="age d-flex flex-column justify-content-start">
                     <div class="age d-flex justify-content-between align-items-center w-100">
@@ -35,7 +38,7 @@
                             <select class="language-select">
                                 <option value="id">🇮🇩 Indonesia</option>
                                 <option value="en">🇬🇧 English</option>
-                              </select>
+                            </select>
                             <label class="switch d-flex align-items-center justify-content-center gap-1">
                                 <input type="checkbox" id="themeToggle" checked>
                                 <span class="slider round"></span>
@@ -59,10 +62,9 @@
                             <div class="position-relative">
                                 <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                                 <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                                          🔍
-                                                      </span>
+                                            🔍
+                                        </span>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -70,181 +72,252 @@
         </div>
     </nav>
 
+    <!-- Navbar Mobile -->
+    <nav class="navbar navbar-expand-lg d-block d-md-none fixed-top bg-white shadow pt-2">
+        <div class="container-fluid px-0">
+            <!-- Logo Section and Toggle Button -->
+            <div class="d-flex justify-content-between align-items-center w-100 px-3">
+                <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
+                    <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/umur.png" class="img-fluid" style="max-width: 65%;" alt="Age Rating">
+                </a>
+
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Search Form - Outside the collapse menu -->
+            <form class="d-flex px-3 py-2 border-bottom w-100">
+                <div class="position-relative w-100">
+                    <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                </div>
+            </form>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+
+                    <!-- Language Select -->
+                    <li class="nav-item w-100">
+                        <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
+                        <select id="languageSelect" class="form-select">
+                            <option value="id">🇮🇩 Indonesia</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item w-100 d-flex align-items-center gap-2">
+                        <label class="switch d-flex align-items-center">
+                            <input type="checkbox" id="themeToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="themeText" class="fw-normal">Light</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container-fluid bg-light-blue">
-        <div class="container py-5">
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <div class="container py-5 mt-5">
+            <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Struktur Organisas Tugas & Fungsi</li>
+                    <li class="breadcrumb-item active" aria-current="page">Struktur Organisasi Tugas & Fungsi</li>
                 </ol>
             </nav>
 
-            <p class="color-grey fs-26 fw-600 text-center">Struktur Organisasi</p>
-            <div class="row">
-                <div class="col-md-4 offset-md-4 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-header text-white text-center fw-bold fs-20 fw-500">
-                            KETUA:
-                            <div class="fw-normal fs-16 fw-600">Naswardi</div>
-                        </div>
-                        <div class="card-body text-center">
-                            <p class="fs-12 fw-400 mb-1">Tenaga Sensor:</p>
-                            <p class="fs-12 fw-400 mb-1">Agung Irfan Rachmadi, Nandyto Widyanto.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 offset-md-4 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-header text-white text-center fw-bold fs-20 fw-500">
-                            KETUA:
-                            <div class="fw-normal fs-16 fw-600">Naswardi</div>
-                        </div>
-                        <div class="card-body text-center">
-                            <p class="fs-12 fw-400 mb-1">Tenaga Sensor:</p>
-                            <p class="fs-12 fw-400 mb-1">Agung Irfan Rachmadi, Nandyto Widyanto.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
+            <ul class="nav nav-tabs my-4" id="historyTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="struktur-tab" data-bs-toggle="tab" data-bs-target="#struktur" type="button" role="tab">Struktur Organisasi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tugas-fungsi-tab" data-bs-toggle="tab" data-bs-target="#tugas-fungsi" type="button" role="tab">Tugas dan Fungsi</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="historyTabsContent">
+                <div class="tab-pane fade show active" id="struktur" role="tabpanel">
+                    <p class="color-grey fs-26 fw-600 text-center title-struktur-tugas">Struktur Organisasi</p>
                     <div class="row">
-                        <div class="col-md-3 mb-4">
+                        <div class="col-md-4 offset-md-4 mb-4">
                             <div class="card card-custom">
-                                <div class="card-header text-white text-center fw-bold fs-20">
-                                    KOMISI I
+                                <div class="card-header text-white text-center fw-bold fs-20 fw-500">
+                                    KETUA:
+                                    <div class="fw-normal fs-16 fw-600">Naswardi</div>
                                 </div>
                                 <div class="card-body text-center">
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua:</p>
-                                            <p class="fs-14 fw-600 mb-1">Tri Widyastuti Setyaningsih</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Penyensoran:</p>
-                                            <p class="fs-14 fw-600 mb-1">Hadi Artomo</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Dialog:</p>
-                                            <p class="fs-14 fw-600 mb-1">Widayat S. Noeswa</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Data dan Informasi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Dewi Rahmarini</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Teknologi Penyensoran:</p>
-                                            <p class="fs-14 fw-600 mb-1">Satya Pratama</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
-                                            <p class="fs-14 fw-600 mb-1">
-                                                Anshori, Noni Marlianingsih, Rizki Indra Sofa, Carla Helsi Andina, Aniqa Fathina,
-                                                Dita Ramayani, Suhartini, Refilia Nur Arafiana, Dhany Kurniawan, Fatkhurrozaq.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <p class="fs-12 fw-400 mb-1">Tenaga Sensor:</p>
+                                    <p class="fs-12 fw-400 mb-1">Agung Irfan Rachmadi, Nandyto Widyanto.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 mb-4">
+                        <div class="col-md-4 offset-md-4 mb-4">
                             <div class="card card-custom">
-                                <div class="card-header text-white text-center fw-bold fs-20">
-                                    KOMISI II
+                                <div class="card-header text-white text-center fw-bold fs-20 fw-500">
+                                    WAKIL KETUA:
+                                    <div class="fw-normal fs-16 fw-600">Noorca M. Massardi</div>
                                 </div>
                                 <div class="card-body text-center">
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua:</p>
-                                            <p class="fs-14 fw-600 mb-1">Ervan Ismail</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Pemantauan:</p>
-                                            <p class="fs-14 fw-600 mb-1">Erlan Basri</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Apresiasi dan Promosi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Gustav Aulia</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Kerjasama Antar Lembaga:</p>
-                                            <p class="fs-14 fw-600 mb-1">Imam Safe'i</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Hukum dan Advokasi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Saptari Novia Stri</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
-                                            <p class="fs-14 fw-600 mb-1">
-                                                Ibnatul Wadhiyyah, Febi Christine Siahaan, Putri Octaviani, Nurrohman Efendi,
-                                                M Iqbal, Arinda Purbasari Adlinaputri, Waroqotul Lukman Taim, Rudiyanto,
-                                                Atika Zahra, Azizul Hakim Muhamad.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <p class="fs-12 fw-400 mb-1">Tenaga Sensor:</p>
+                                    <p class="fs-12 fw-400 mb-1">Indri Ariefiandi, Milla Setiawati.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card card-custom">
-                                <div class="card-header text-white text-center fw-bold fs-20">
-                                    KOMISI III
-                                </div>
-                                <div class="card-body text-center">
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua:</p>
-                                            <p class="fs-14 fw-600 mb-1">Kuat Prihatin</p>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="card card-custom">
+                                        <div class="card-header text-white text-center fw-bold fs-20">
+                                            KOMISI I
                                         </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Sosialisasi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Titin Setiawati</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Penelitian dan Pengembangan:</p>
-                                            <p class="fs-14 fw-600 mb-1">Zaqia Ramallah</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Publikasi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Nusantara Husnul Khatim Mulkan</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Desa Sensor Mandiri dan Komunitas:</p>
-                                            <p class="fs-14 fw-600 mb-1">Hairus Salim</p>
-                                        </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
-                                            <p class="fs-14 fw-600 mb-1">
-                                                Talitha Rahma, Arafat Rizki Rivai, Yeni Puspita Sari, Tanto Wardoyo,
-                                                Niken Larasati, Gilang Ramadan, Eka Kartika, Wahyu Oktana,
-                                                Hendra, Fuadzan Akbar Sailan, Hendri Susanto.
-                                            </p>
+                                        <div class="card-body text-center">
+                                            <div class="d-flex flex-column gap-3">
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Tri Widyastuti Setyaningsih</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Penyensoran:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Hadi Artomo</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Dialog:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Widayat S. Noeswa</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Data dan Informasi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Dewi Rahmarini</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Teknologi Penyensoran:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Satya Pratama</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
+                                                    <p class="fs-14 fw-600 mb-1">
+                                                        Anshori, Noni Marlianingsih, Rizki Indra Sofa, Carla Helsi Andina, Aniqa Fathina,
+                                                        Dita Ramayani, Suhartini, Refilia Nur Arafiana, Dhany Kurniawan, Fatkhurrozaq.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card card-custom">
-                                <div class="card-header text-white text-center fw-bold fs-20">
-                                    SEKRETARIAT LSF
+                                <div class="col-md-3 mb-4">
+                                    <div class="card card-custom">
+                                        <div class="card-header text-white text-center fw-bold fs-20">
+                                            KOMISI II
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="d-flex flex-column gap-3">
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Ervan Ismail</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Pemantauan:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Erlan Basri</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Apresiasi dan Promosi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Gustav Aulia</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Kerjasama Antar Lembaga:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Imam Safe'i</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Hukum dan Advokasi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Saptari Novia Stri</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
+                                                    <p class="fs-14 fw-600 mb-1">
+                                                        Ibnatul Wadhiyyah, Febi Christine Siahaan, Putri Octaviani, Nurrohman Efendi,
+                                                        M Iqbal, Arinda Purbasari Adlinaputri, Waroqotul Lukman Taim, Rudiyanto,
+                                                        Atika Zahra, Azizul Hakim Muhamad.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body text-center">
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Sekretaris LSF:</p>
-                                            <p class="fs-14 fw-600 mb-1">Titik Umi Kurniawati</p>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card card-custom">
+                                        <div class="card-header text-white text-center fw-bold fs-20">
+                                            KOMISI III
                                         </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Kepala Subbagian Tata Usaha:</p>
-                                            <p class="fs-14 fw-600 mb-1">Ridwan Fahrudin</p>
+                                        <div class="card-body text-center">
+                                            <div class="d-flex flex-column gap-3">
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Kuat Prihatin</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Sosialisasi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Titin Setiawati</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Penelitian dan Pengembangan:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Zaqia Ramallah</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Publikasi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Nusantara Husnul Khatim Mulkan</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Subkomisi Desa Sensor Mandiri dan Komunitas:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Hairus Salim</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Tenaga Sensor:</p>
+                                                    <p class="fs-14 fw-600 mb-1">
+                                                        Talitha Rahma, Arafat Rizki Rivai, Yeni Puspita Sari, Tanto Wardoyo,
+                                                        Niken Larasati, Gilang Ramadan, Eka Kartika, Wahyu Oktana,
+                                                        Hendra, Fuadzan Akbar Sailan, Hendri Susanto.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Tim Kerja Layanan Penyensoran:</p>
-                                            <p class="fs-14 fw-600 mb-1">Intan Rukma Isriana</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card card-custom">
+                                        <div class="card-header text-white text-center fw-bold fs-20">
+                                            SEKRETARIAT LSF
                                         </div>
-                                        <div class="position">
-                                            <p class="fs-16 fw-300 mb-1">Ketua Tim Kerja Layanan Administrasi:</p>
-                                            <p class="fs-14 fw-600 mb-1">Octaviana Atiek Sulistyani</p>
+                                        <div class="card-body text-center">
+                                            <div class="d-flex flex-column gap-3">
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Sekretaris LSF:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Titik Umi Kurniawati</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Kepala Subbagian Tata Usaha:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Ridwan Fahrudin</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Tim Kerja Layanan Penyensoran:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Intan Rukma Isriana</p>
+                                                </div>
+                                                <div class="position">
+                                                    <p class="fs-16 fw-300 mb-1">Ketua Tim Kerja Layanan Administrasi:</p>
+                                                    <p class="fs-14 fw-600 mb-1">Octaviana Atiek Sulistyani</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -252,28 +325,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="py-4">
-                <p class="color-grey fs-26 fw-600 text-center">Tugas dan Fungsi LSF</p>
-                <div class="col-md-12">
-                    <div class="tugas-fungsi">
-                        <p class="m-0">Tugas LSF</p>
+                <div class="tab-pane fade" id="tugas-fungsi" role="tabpanel">
+                    <div class="">
+                        <p class="color-grey fs-26 fw-600 text-center title-struktur-tugas">Tugas dan Fungsi LSF</p>
+                        <div class="col-md-12">
+                            <div class="tugas-fungsi">
+                                <p class="m-0">Tugas LSF</p>
+                            </div>
+                            <ol class="desc-list">
+                                <li>Melakukan penyensoran film dan iklan film sebelum diedarkan dan/atau dipertunjukkan kepada khalayak umum.</li>
+                                <li>Melakukan penelitian dan penilaian judul, tema, gambar, adegan, suara, dan teks terjemahan suatu film dan iklan filmyang akan diedarkan dan/atau dipertunjukkan kepada khalayak umum.</li>
+                            </ol>
+                            <div class="tugas-fungsi">
+                                <p class="m-0">Fungsi LSF</p>
+                            </div>
+                            <ol class="desc-list">
+                                <li>Perlindungan terhadap masyarakat dari dampak negatif yang timbul dari peredaran dan pertunjukan film dan iklan film yang tidak sesuai dengan dasar, arah, dan tujuan perfilman Indonesia;</li>
+                                <li>Penyusunan pedoman penerbitan dan pembatalan surat tanda lulus sensor.</li>
+                                <li>Sosialisasi secara intensif pedoman dan kriteria sensor kepada pemilik film dan iklan film agar dapat menghasilkan film dan iklan film yang bermutu;</li>
+                                <li>Pemberian kemudahan masyarakat dalam memilih dan menikmati pertunjukan film dan iklan film yang bermutu serta memahami pengaruh film dan iklan film;</li>
+                                <li>Pembantuan pemilik film dan iklan film dalam memberi informasi yang benar dan lengkap kepada masyarakat agar dapat memilih dan menikmati film yang bermutu; dan</li>
+                                <li>Pemantauan apresiasi masyarakat terhadap film dan iklan film yang diedarkan, dipertunjukkan dan menganalisis hasil pemantauan tersebut untuk dijadikan sebagai bahan pertimbangan dalam melakukan tugas penyensoran berikutnya dan/atau disampaikan kepada Menteri sebagai bahan pengambilan kebijakan kearah pengembangan perfilman di Indonesia</li>
+                            </ol>
+                        </div>
                     </div>
-                    <ol class="desc-list">
-                        <li>Melakukan penyensoran film dan iklan film sebelum diedarkan dan/atau dipertunjukkan kepada khalayak umum.</li>
-                        <li>Melakukan penelitian dan penilaian judul, tema, gambar, adegan, suara, dan teks terjemahan suatu film dan iklan filmyang akan diedarkan dan/atau dipertunjukkan kepada khalayak umum.</li>
-                    </ol>
-                    <div class="tugas-fungsi">
-                        <p class="m-0">Fungsi LSF</p>
-                    </div>
-                    <ol class="desc-list">
-                        <li>Perlindungan terhadap masyarakat dari dampak negatif yang timbul dari peredaran dan pertunjukan film dan iklan film yang tidak sesuai dengan dasar, arah, dan tujuan perfilman Indonesia;</li>
-                        <li>Penyusunan pedoman penerbitan dan pembatalan surat tanda lulus sensor.</li>
-                        <li>Sosialisasi secara intensif pedoman dan kriteria sensor kepada pemilik film dan iklan film agar dapat menghasilkan film dan iklan film yang bermutu;</li>
-                        <li>Pemberian kemudahan masyarakat dalam memilih dan menikmati pertunjukan film dan iklan film yang bermutu serta memahami pengaruh film dan iklan film;</li>
-                        <li>Pembantuan pemilik film dan iklan film dalam memberi informasi yang benar dan lengkap kepada masyarakat agar dapat memilih dan menikmati film yang bermutu; dan</li>
-                        <li>Pemantauan apresiasi masyarakat terhadap film dan iklan film yang diedarkan, dipertunjukkan dan menganalisis hasil pemantauan tersebut untuk dijadikan sebagai bahan pertimbangan dalam melakukan tugas penyensoran berikutnya dan/atau disampaikan kepada Menteri sebagai bahan pengambilan kebijakan kearah pengembangan perfilman di Indonesia</li>
-                    </ol>
                 </div>
             </div>
         </div>
