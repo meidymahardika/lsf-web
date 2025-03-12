@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembaga Sensor Film - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/navbar-custom.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fonts-nunito.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                </a>
+                <div class="age d-flex flex-column justify-content-start">
+                    <div class="age d-flex justify-content-between align-items-center w-100">
+                        <div class="age d-flex">
+                            <div class="border-blue"></div>
+                            <div class="rating-icons d-flex justify-content-start">
+                                <img src="assets/img/navbar/su.png" alt="">
+                                <img src="assets/img/navbar/13.png" alt="">
+                                <img src="assets/img/navbar/17.png" alt="">
+                                <img src="assets/img/navbar/21.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Dropdown Language Select & Switch -->
+                        <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                            <select class="language-select">
+                                <option value="id">🇮🇩 Indonesia</option>
+                                <option value="en">🇬🇧 English</option>
+                            </select>
+                            <label class="switch d-flex align-items-center justify-content-center gap-1">
+                                <input type="checkbox" id="themeToggle" checked>
+                                <span class="slider round"></span>
+                                <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                            </label>
+                            
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
+                        </ul>
+                        <form class="d-flex" style="width: 265px">
+                            <div class="position-relative">
+                                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                    🔍
+                                </span>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-0 m-0 bg-light-blue">
+        <div class="container">
+            <div class="row">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="d-flex justify-content-center align-item-center gap-1">
+                                    <div class="undang-undang my-auto color-blue">
+                                        <p class="fs-32 fw-300">Menurut</p>
+                                        <p class="fs-42 fw-800">PERMENDIKBUD</p>
+                                        <p class="fs-25 fw-400 bg-slider-p text-white text-center">Nomor 17 Tahun 2019</p>
+                                    </div>
+                                    <div class="d-flex flex-column p-4">
+                                        <p class="fs-25 fw-400 color-blue text-center">Film dan Iklan Film yang telah disensor disertai pencantuman kode penggolongan usia penonton berupa :</p>
+                                        <div class="parent-golongan-umur">
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">SU</p>
+                                                <img src="assets/img/golongan-umur/su.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">R13</p>
+                                                <img src="assets/img/golongan-umur/13.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D17</p>
+                                                <img src="assets/img/golongan-umur/17.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D21</p>
+                                                <img src="assets/img/golongan-umur/21.png" class="mt-auto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="d-flex justify-content-center align-item-center gap-1">
+                                    <div class="undang-undang my-auto color-blue">
+                                        <p class="fs-32 fw-300">Menurut</p>
+                                        <p class="fs-42 fw-800">PERMENDIKBUD</p>
+                                        <p class="fs-25 fw-400 bg-slider-p text-white text-center">Nomor 17 Tahun 2019</p>
+                                    </div>
+                                    <div class="d-flex flex-column p-4">
+                                        <p class="fs-25 fw-400 color-blue text-center">Film dan Iklan Film yang telah disensor disertai pencantuman kode penggolongan usia penonton berupa :</p>
+                                        <div class="parent-golongan-umur">
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">SU</p>
+                                                <img src="assets/img/golongan-umur/su.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">R13</p>
+                                                <img src="assets/img/golongan-umur/13.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D17</p>
+                                                <img src="assets/img/golongan-umur/17.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D21</p>
+                                                <img src="assets/img/golongan-umur/21.png" class="mt-auto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="d-flex justify-content-center align-item-center gap-1">
+                                    <div class="undang-undang my-auto color-blue">
+                                        <p class="fs-32 fw-300">Menurut</p>
+                                        <p class="fs-42 fw-800">PERMENDIKBUD</p>
+                                        <p class="fs-25 fw-400 bg-slider-p text-white text-center">Nomor 17 Tahun 2019</p>
+                                    </div>
+                                    <div class="d-flex flex-column p-4">
+                                        <p class="fs-25 fw-400 color-blue text-center">Film dan Iklan Film yang telah disensor disertai pencantuman kode penggolongan usia penonton berupa :</p>
+                                        <div class="parent-golongan-umur">
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">SU</p>
+                                                <img src="assets/img/golongan-umur/su.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">R13</p>
+                                                <img src="assets/img/golongan-umur/13.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D17</p>
+                                                <img src="assets/img/golongan-umur/17.png" class="mt-auto">
+                                            </div>
+                                            <div class="golongan-umur text-center d-flex flex-column">
+                                                <p class="fs-30 color-blue fw-800">D21</p>
+                                                <img src="assets/img/golongan-umur/21.png" class="mt-auto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigasi panah -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <!-- Custom Pagination -->
+                    <div class="custom-pagination"></div>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="d-flex justify-content-between gap-3">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="layanan">
+                                <p class="fs-32 color-blue fw-600">Layanan</p>
+                                <p class="fs-20 color-grey fw-600">Layanan resmi LSF</p>
+                            </div>
+                            <div class="d-flex justify-flex-end gap-2">
+                                <div class="previous">
+                                    <img class="" data-id="1:93" src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid.svg" anima-src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid.svg" alt="mynaui:chevron-up-solid">
+                                </div>
+                                <div class="next">
+                                    <img class="" data-id="1:97" src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid-1.svg" anima-src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid-1.svg" alt="mynaui:chevron-up-solid">
+                                </div>
+                            </div>
+                        </div>
+                        <img src="assets/img/e-sias.png" class="img-layanan">
+                        <p class="fs-18 color-grey fw-400 m-0 pe-5">Aplikasi Administrasi Sensor Berbasis Elektronik (e-SiAS) merupakan langkah nyata untuk meningkatkan pelayanan publik...</p>
+                        <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18">
+                            DETAIL INFORMASI <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="video-container">
+                        <div class="video-overlay">
+                            <p class="video-title">Iklan Layanan Masyarakat</p>
+                        </div>
+                        <video src="https://cdn.animaapp.com/projects/60d876f00b85a9c710f9b3a3/files/pexels-yaroslav-shuraev-9632184.mp4" anima-src="https://cdn.animaapp.com/projects/60d876f00b85a9c710f9b3a3/files/pexels-yaroslav-shuraev-9632184.mp4" loop="" controls="" autoplay="autoplay" playsinline="" muted=""></video>
+                        <button class="play-button" onclick="togglePlay()">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container pt-5">
+            <div class="d-flex justify-content-between align-items-center gap-3">
+                <p class="fs-32 color-blue fw-600 m-0">Panduan Film</p>
+                <div class="line-bottom"></div>
+                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18">
+                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            <p class="fs-28 color-grey m-0">Informasi Film terbaru</p>
+        </div>
+        <div class="container-fluid p-5">
+            <div class="d-flex justify-content-between align-items-center film-container">
+                <div class="banner-film">
+                    <img src="assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
+                    <img src="assets/img/navbar/su.png" class="range-age" alt="SU">
+                </div>
+                <div class="banner-film">
+                    <img src="assets/img/film/modal-nekad.jpeg" class="film" alt="">
+                    <img src="assets/img/navbar/13.png" class="range-age" alt="13+">
+                </div>
+                <div class="banner-film">
+                    <img src="assets/img/film/merindu-cahaya.jpeg" class="film" alt="">
+                    <img src="assets/img/navbar/17.png" class="range-age" alt="17+">
+                </div>
+                <div class="banner-film">
+                    <img src="assets/img/film/vina.jpeg" class="film" alt="">
+                    <img src="assets/img/navbar/21.png" class="range-age" alt="21+">
+                </div>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="ms-auto">
+                <div class="d-flex justify-content-end gap-2">
+                    <div class="previous">
+                        <img class="" data-id="1:93" src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid.svg" anima-src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid.svg" alt="mynaui:chevron-up-solid">
+                    </div>
+                    <div class="next">
+                        <img class="" data-id="1:97" src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid-1.svg" anima-src="https://cdn.animaapp.com/projects/67c2dd912929bf682240636e/releases/67c2ddb5aa773de4cdd38daf/img/mynaui-chevron-up-solid-1.svg" alt="mynaui:chevron-up-solid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light-blue">
+        <div class="container pt-5">
+            <div class="d-flex justify-content-between align-items-center gap-3">
+                <p class="fs-32 color-blue fw-600 m-0">Berita</p>
+                <div class="line-bottom"></div>
+                <button class="btn btn-custom-xl btn-gold color-blue fw-500 fs-18">
+                    SELENGKAPNYA <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            <div class="row py-5">
+                <!-- Berita Utama -->
+                <div class="col-md-7">
+                    <div class="main-news">
+                        <img src="assets/img/news/7a51bbd2d87c176b13b7bab734b278ba.jpeg" class="main-image" alt="Berita Utama">
+                        <div class="news-overlay d-flex flex-column gap-2">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="news-date">Selasa, 17/01/2025</span>
+                                <span class="news-tag">Terkini</span>
+                            </div>
+                            <h2 class="news-title">Sineas Lokal Kritik Ide Fadli Zon Bangun Bioskop Di Aceh</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berita Lainnya -->
+                <div class="col-md-5">
+                    <div class="side-news">
+                        <div class="news-item">
+                            <img src="assets/img/news/31e53a57af0468ecc4d631d16c37fc2f.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="assets/img/news/7df48228a561a139b71f224311e377f7.jpeg" class="news-thumb" alt="Film Mama">
+                            <div class="news-content">
+                                <span class="news-date color-green">Selasa, 17/01/2025</span>
+                                <h4 class="news-title fs-20 fw-600">Film Mama, Teror Ibu Palsu yang Menyeramkan</h4>
+                                <p class="news-desc">Menteri Kebudayaan Fadli Zon merespons kritik yang datang terkait...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="container pt-5">
+            <div class="d-flex justify-content-between align-items-center gap-3">
+                <p class="fs-32 color-blue fw-600 m-0">Kontak Info</p>
+            </div>
+            <div class="pt-5">
+                <div class="row">
+                    <div class="col-4">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control bg-light-blue" id="name" placeholder="Nama">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="email" class="form-control bg-light-blue" id="email" placeholder="Email">
+                            </div>
+
+                            <div class="mb-3">
+                                <textarea class="form-control bg-light-blue" id="message" rows="6" placeholder="Pesan.."></textarea>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary btn-kirim-kontak">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4017.939764944299!2d106.80014167504946!3d-6.224740693763333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1b8e4d34bfb%3A0xafaf497a99e6af45!2sLembaga%20Sensor%20Film%20RI!5e1!3m2!1sen!2sid!4v1741112890751!5m2!1sen!2sid" width="400" height="335" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-envelope fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>sekretariat@lsf.go.id</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-telephone fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>(021) 2524845</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-browser-chrome fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>lsf_ri</span>
+                            </div>
+                        </div>
+                        <p class="pt-3">Media Social:</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-instagram fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>lsf_ri</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-twitter-x fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>lsf_ri</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-tiktok fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>lsf_ri</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-youtube fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>lsf_rid</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="color-blue bi bi-facebook fs-4"></i> <!-- Bootstrap Icon -->
+                            <div class="d-flex flex-column">
+                                <span>Lembaga Sensor Film Republik Indonesia</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#"><i class="text-white bi bi-globe"></i></a>
+                <a href="#"><i class="text-white bi bi-instagram"></i></a>
+                <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
+                <a href="#"><i class="text-white bi bi-tiktok"></i></a>
+                <a href="#"><i class="text-white bi bi-youtube"></i></a>
+                <a href="#"><i class="text-white bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById("themeToggle").addEventListener("change", function() {
+            let themeText = document.getElementById("themeText");
+            if (this.checked) {
+                themeText.textContent = "light";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.right = "8px"; // Add 'px' to make it work
+                themeText.style.left = ""; // Correct way to remove 'left' style
+    
+    
+            } else {
+                themeText.textContent = "dark";
+                themeText.style.zIndex = "1"; // Ensure it's a string
+                themeText.style.position = "relative";
+                themeText.style.left = "5px"; // Add 'px' to make it work
+    
+            }
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                slideChange: function () {
+                    document.querySelector(".custom-pagination").innerHTML = (this.realIndex + 1) + " / " + this.slides.length;
+                }
+            }
+        });
+
+        document.querySelector(".custom-pagination").innerHTML = "1 / " + swiper.slides.length;
+    </script>
+</body>
+</html>
