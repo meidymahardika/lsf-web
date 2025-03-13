@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
 </head>
 <body>
-    <!-- Navbar Desktop -->
     <nav class="navbar navbar-expand-lg d-none d-lg-flex fixed-top bg-white pb-4">
         <div class="container d-flex justify-content-center align-items-center">
             <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
@@ -24,14 +23,14 @@
                 </a>
                 <div class="age d-flex flex-column justify-content-start w-100">
                     <div class="age d-flex justify-content-between align-items-center w-100">
-                       <div class="border-blue"></div>
-                       <div class="rating-icons d-flex justify-content-start">
+                        <div class="border-blue"></div>
+                        <div class="rating-icons d-flex justify-content-start">
                             <img src="../assets/img/navbar/su.png" alt="SU" data-bs-toggle="modal" data-bs-target="#modalSU" style="cursor: pointer;">
                             <img src="../assets/img/navbar/13.png" alt="13+" data-bs-toggle="modal" data-bs-target="#modal13Plus" style="cursor: pointer;">
                             <img src="../assets/img/navbar/17.png" alt="17+" data-bs-toggle="modal" data-bs-target="#modal17Plus" style="cursor: pointer;">
                             <img src="../assets/img/navbar/21.png" alt="21+" data-bs-toggle="modal" data-bs-target="#modal21Plus" style="cursor: pointer;">
                         </div>
-                    
+
                         <!-- Dropdown Language Select & Switch -->
                         <div class="d-flex align-items-center justify-content-end gap-4 w-100">
                             <select class="language-select">
@@ -59,7 +58,7 @@
                                     <li><a class="dropdown-item" href="/tentang-lsf/profil-anggota.html">Profile Anggota</a></li>
                                 </ul>
                             </li>
-                    
+
                             <!-- Layanan Dropdown -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,7 +75,7 @@
                                     <li><a class="dropdown-item" href="/layanan/siaran-pers.html">Siaran Pers</a></li>
                                 </ul>
                             </li>
-                    
+
                             <!-- Sekretariat Dropdown -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,31 +90,31 @@
                                     <li><a class="dropdown-item" href="#">PPID</a></li>
                                 </ul>
                             </li>
-                    
+
                         </ul>
-                    
+
                         <form class="d-flex justify-content-end rounded-pill w-25">
                             <div class="position-relative">
                                 <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                                 <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </span>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
                             </div>
                         </form>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <!-- Navbar Mobile -->
     <nav class="navbar navbar-expand-lg d-block d-lg-none fixed-top bg-white shadow pt-2">
         <div class="container-fluid px-0">
             <!-- Logo Section and Toggle Button -->
             <div class="d-flex justify-content-between align-items-center w-100 px-3">
                 <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
-                    <img src="./assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
                     <div class="d-flex justify-content-start" style="max-width: 65%;" >
                         <img src="../assets/img/navbar/su.png" alt="SU" class="w-25" data-bs-toggle="modal" data-bs-target="#modalSU" >
                         <img src="../assets/img/navbar/13.png" alt="13+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal13Plus" >
@@ -123,29 +122,29 @@
                         <img src="../assets/img/navbar/21.png" alt="21+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal21Plus" >
                     </div>
                 </a>
-                
+
                 <!-- Navbar Toggle Button -->
-                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-    
+
             <!-- Search Form - Outside the collapse menu -->
             <form class="d-flex px-3 py-2 border-bottom w-100">
                 <div class="position-relative w-100">
                     <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                     <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
                 </div>
             </form>
-    
+
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
                 <ul class="navbar-nav w-100">
                     <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
-            
+
                     <!-- Tentang Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -157,7 +156,7 @@
                             <li><a class="dropdown-item" href="/tentang-lsf//profil-anggota.html">Profile Anggota</a></li>
                         </ul>
                     </li>
-            
+
                     <!-- Layanan Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -174,7 +173,7 @@
                             <li><a class="dropdown-item" href="/layanan/siaran-pers.html">Siaran Pers</a></li>
                         </ul>
                     </li>
-            
+
                     <!-- Sekretariat Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -189,7 +188,7 @@
                             <li><a class="dropdown-item" href="#">PPID</a></li>
                         </ul>
                     </li>
-            
+
                     <!-- Language Select -->
                     <li class="nav-item w-100 mt-2">
                         <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
@@ -198,7 +197,7 @@
                             <option value="en">🇬🇧 English</option>
                         </select>
                     </li>
-            
+
                     <!-- Theme Toggle -->
                     <li class="nav-item w-100 d-flex align-items-center gap-2 mt-3">
                         <label class="switch d-flex align-items-center">
@@ -209,8 +208,6 @@
                     </li>
                 </ul>
             </div>
-            
-            
         </div>
     </nav>
 
@@ -453,8 +450,25 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var navbarToggler = document.querySelector(".navbar-toggler");
+        var navbarCollapse = document.querySelector("#navbarNav");
+
+        navbarToggler.addEventListener("click", function() {
+            navbarCollapse.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function(event) {
+            if (!navbarToggler.contains(event.target) && !navbarCollapse.contains(event.target)) {
+                navbarCollapse.classList.remove("show");
+            }
+        });
+    });
+
     document.getElementById("themeToggle").addEventListener("change", function() {
         let themeText = document.getElementById("themeText");
         if (this.checked) {
