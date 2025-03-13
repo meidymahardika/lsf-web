@@ -11,327 +11,602 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
+    <style>
+        /* Responsive Pagination Container */
+        .pagination-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+        }
+
+        .pagination-info {
+            color: #2F2E7B;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .pagination-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pagination-list {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pagination-list li a {
+            text-decoration: none;
+            color: #2F2E7B;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .pagination-list li a.active {
+            background-color: #2F2E7B;
+            color: white;
+        }
+
+        .pagination-btn {
+            border: 1px solid #2F2E7B;
+            background: none;
+            color: #2F2E7B;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pagination-btn:hover {
+            background-color: #2F2E7B;
+            color: white;
+        }
+
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border: 1px solid #ccc;
+            color: #ccc;
+        }
+
+        .pagination-btn.btn-next, .pagination-btn.prev {
+            width: 2.188rem;
+            height: 2.188rem;
+            border: 1.5px solid #39399D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .dots {
+            color: #aaa;
+            font-weight: bold;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            
+            .pagination-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .pagination-list {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.875rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pagination-btn {
+                padding: 0.4rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pagination-list {
+                gap: 0.2rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .pagination-btn {
+                padding: 0.3rem;
+                font-size: 0.75rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid d-flex justify-content-center align-items-center">
-        <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
-        <div class="d-flex justify-content-center flex-grow-1">
-            <a class="navbar-brand" href="#">
-                <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
-            </a>
-            <div class="age d-flex flex-column justify-content-start">
-                <div class="age d-flex justify-content-between align-items-center w-100">
-                    <div class="age d-flex">
-                        <div class="border-blue"></div>
-                        <div class="rating-icons d-flex justify-content-start">
-                            <img src="../assets/img/navbar/su.png" alt="">
-                            <img src="../assets/img/navbar/13.png" alt="">
-                            <img src="../assets/img/navbar/17.png" alt="">
-                            <img src="../assets/img/navbar/21.png" alt="">
+    <!-- Navbar Desktop -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-flex fixed-top bg-white pb-4">
+        <div class="container d-flex justify-content-center align-items-center">
+            <!-- Logo Garuda & Age (Rating Icons) dalam satu div -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila">
+                </a>
+                <div class="age d-flex flex-column justify-content-start w-100">
+                    <div class="age d-flex justify-content-between align-items-center w-100">
+                    <div class="border-blue"></div>
+                    <div class="rating-icons d-flex justify-content-start">
+                            <img src="../assets/img/navbar/su.png" alt="SU" data-bs-toggle="modal" data-bs-target="#modalSU" style="cursor: pointer;">
+                            <img src="../assets/img/navbar/13.png" alt="13+" data-bs-toggle="modal" data-bs-target="#modal13Plus" style="cursor: pointer;">
+                            <img src="../assets/img/navbar/17.png" alt="17+" data-bs-toggle="modal" data-bs-target="#modal17Plus" style="cursor: pointer;">
+                            <img src="../assets/img/navbar/21.png" alt="21+" data-bs-toggle="modal" data-bs-target="#modal21Plus" style="cursor: pointer;">
+                        </div>
+                    
+                        <!-- Dropdown Language Select & Switch -->
+                        <div class="d-flex align-items-center justify-content-end gap-4 w-100">
+                            <select class="language-select">
+                                <option value="id">🇮🇩 Indonesia</option>
+                                <option value="en">🇬🇧 English</option>
+                            </select>
+                            <label class="switch d-flex align-items-center justify-content-center gap-1">
+                                <input type="checkbox" id="themeToggle" checked>
+                                <span class="slider round"></span>
+                                <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
+                            </label>
                         </div>
                     </div>
-                    <!-- Dropdown Language Select & Switch -->
-                    <div class="d-flex align-items-center justify-content-end gap-4 w-100">
-                        <select class="language-select">
+                    <div class="collapse navbar-collapse d-flex justify-content-between w-100 pt-1 ps-4 relative" id="navbarNav" >
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                            <!-- Tentang Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tentang LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="tentangDropdown">
+                                    <li><a class="dropdown-item" href="#">Sejarah dan Dasar Hukum</a></li>
+                                    <li><a class="dropdown-item" href="#">Struktur Organisasi, Tugas dan Fungsi LSF</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Anggota</a></li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Layanan Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Layanan LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="layananDropdown">
+                                    <li><a class="dropdown-item" href="#">Mekanisme Penyensoran (Web ESIAS)Dasar Hukum</a></li>
+                                    <li><a class="dropdown-item" href="#">Panduan Film</a></li>
+                                    <li><a class="dropdown-item" href="#">Film Lulus Sensor</a></li>
+                                    <li><a class="dropdown-item" href="#">Data dan Informasi Film</a></li>
+                                    <li><a class="dropdown-item" href="#">Publikasi dan Penelitian</a></li>
+                                    <li><a class="dropdown-item" href="#">Majalah</a></li>
+                                    <li><a class="dropdown-item" href="#">Berita</a></li>
+                                    <li><a class="dropdown-item" href="#">Siaran Pers</a></li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Sekretariat Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sekretariat LSF
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="sekretariatDropdown">
+                                    <li><a class="dropdown-item" href="#">Laporan Kinerja Sekretariat</a></li>
+                                    <li><a class="dropdown-item" href="#">Perjanjian Kinerja</a></li>
+                                    <li><a class="dropdown-item" href="#">Rencana Strategis</a></li>
+                                    <li><a class="dropdown-item" href="#">Electronik LHKPN</a></li>
+                                    <li><a class="dropdown-item" href="#">Zi - WBK/WBBM</a></li>
+                                    <li><a class="dropdown-item" href="#">PPID</a></li>
+                                </ul>
+                            </li>
+                    
+                        </ul>
+                    
+                        <form class="d-flex justify-content-end rounded-pill w-25">
+                            <div class="position-relative">
+                                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Mobile -->
+    <nav class="navbar navbar-expand-lg d-block d-lg-none fixed-top bg-white shadow pt-2">
+        <div class="container-fluid px-0">
+            <!-- Logo Section and Toggle Button -->
+            <div class="d-flex justify-content-between align-items-center w-100 px-3">
+                <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
+                    <img src="../assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <div class="d-flex justify-content-start" style="max-width: 65%;" >
+                        <img src="../assets/img/navbar/su.png" alt="SU" class="w-25" data-bs-toggle="modal" data-bs-target="#modalSU" >
+                        <img src="../assets/img/navbar/13.png" alt="13+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal13Plus" >
+                        <img src="../assets/img/navbar/17.png" alt="17+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal17Plus" >
+                        <img src="../assets/img/navbar/21.png" alt="21+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal21Plus" >
+                    </div>
+                </a>
+                
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Search Form - Outside the collapse menu -->
+            <form class="d-flex px-3 py-2 border-bottom w-100">
+                <div class="position-relative w-100">
+                    <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
+                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+            </form>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+            
+                    <!-- Tentang Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tentangDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Sejarah dan Dasar Hukum</a></li>
+                            <li><a class="dropdown-item" href="#">Struktur Organisasi, Tugas dan Fungsi LSF</a></li>
+                            <li><a class="dropdown-item" href="#">Profile Anggota</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Layanan Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="layananDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Mekanisme Penyensoran (Web ESIAS)</a></li>
+                            <li><a class="dropdown-item" href="#">Panduan Film</a></li>
+                            <li><a class="dropdown-item" href="#">Film Lulus Sensor</a></li>
+                            <li><a class="dropdown-item" href="#">Data dan Informasi Film</a></li>
+                            <li><a class="dropdown-item" href="#">Publikasi dan Penelitian</a></li>
+                            <li><a class="dropdown-item" href="#">Majalah</a></li>
+                            <li><a class="dropdown-item" href="#">Berita</a></li>
+                            <li><a class="dropdown-item" href="#">Siaran Pers</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Sekretariat Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sekretariatDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sekretariat LSF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="sekretariatDropdown" data-bs-auto-close="outside">
+                            <li><a class="dropdown-item" href="#">Laporan Kinerja Sekretariat</a></li>
+                            <li><a class="dropdown-item" href="#">Perjanjian Kinerja</a></li>
+                            <li><a class="dropdown-item" href="#">Rencana Strategis</a></li>
+                            <li><a class="dropdown-item" href="#">Elektronik LHKPN</a></li>
+                            <li><a class="dropdown-item" href="#">Zi - WBK/WBBM</a></li>
+                            <li><a class="dropdown-item" href="#">PPID</a></li>
+                        </ul>
+                    </li>
+            
+                    <!-- Language Select -->
+                    <li class="nav-item w-100 mt-2">
+                        <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
+                        <select id="languageSelect" class="form-select">
                             <option value="id">🇮🇩 Indonesia</option>
                             <option value="en">🇬🇧 English</option>
                         </select>
-                        <label class="switch d-flex align-items-center justify-content-center gap-1">
+                    </li>
+            
+                    <!-- Theme Toggle -->
+                    <li class="nav-item w-100 d-flex align-items-center gap-2 mt-3">
+                        <label class="switch d-flex align-items-center">
                             <input type="checkbox" id="themeToggle" checked>
                             <span class="slider round"></span>
-                            <span id="themeText" class="fw-normal" style="z-index: 1; position: relative; right: 8px">light</span>
                         </label>
+                        <span id="themeText" class="fw-normal">Light</span>
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </nav>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                            <span class="navbar-toggler-icon"></span>
+    <div class="container-fluid bg-light-blue">
+        <div class="container py-5 mt-5">
+            <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data dan Informasi Film</li>
+                </ol>
+            </nav>
+
+            <!-- Modal Filter -->
+            <div class="modal fade" id="modal-filter" tabindex="-1" aria-labelledby="largeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="container d-flex justify-content-end">
+                                        <span class="me-3"><span class="fs-12">Hasil pencarian 64 film didaptkan</span></span> 
+                                        <span class="bi bi-gear"> <span class="fs-12">Setelan Awal</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container mt-3">
+                                        <form>
+                                            <div class="position-relative">
+                                                <input class="form-control pe-5" type="search" placeholder="Cari judul film..." aria-label="Search" style="border-radius: 20px">
+                                                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                                    🔍
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="container mt-5">
+                                        <p>Sortir berdasarkan:</p>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn-outline-filter active">Semua</button>
+                                            <button type="button" class="btn-outline-filter">Terbaru</button>
+                                            <button type="button" class="btn-outline-filter">Populer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="container mt-5">
+                                        <p>Penggolongan:</p>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button type="button" class="btn-outline-filter">Semua</button>
+                                            <button type="button" class="btn-outline-filter">&nbsp; SU &nbsp;</button>
+                                            <button type="button" class="btn-outline-filter active">R13</button>
+                                            <button type="button" class="btn-outline-filter">D17</button>
+                                            <button type="button" class="btn-outline-filter">D21</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container my-5">
+                                        <p>Genre:</p>
+                                        
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button type="button" class="btn-outline-filter flex-fill">Semua</button>
+                                            <button type="button" class="btn-outline-filter flex-fill active">Horor</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Romantis</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Aksi</button>
+                                        </div>
+                            
+                                        <div class="d-flex flex-wrap gap-2 mt-3">
+                                            <button type="button" class="btn-outline-filter flex-fill">Semua</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Horor</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Romantis</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Aksi</button>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2 mt-3">
+                                            <button type="button" class="btn-outline-filter flex-fill">Semua</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Horor</button>
+                                            <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
+                                            <button type="button" class="btn-outline-filter flex-fill invisible">Romantis</button>
+                                            <button type="button" class="btn-outline-filter flex-fill invisible">Aksi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="container ps-0 pt-2 pe-2 pb-5 ps-xl-5 pt-xl-5 pe-xl-5 pb-xl-5">
+                    <div class="d-flex align-items-center">
+                        <!-- <p class="fs-32 color-blue fw-600 m-0">Panduan Film</p> -->
+                        <div class="divider-to-filter me-4"></div>
+                        <button class="btn-filter-panduan bg-blue-1 text-white" data-bs-toggle="modal" data-bs-target="#modal-filter">
+                            Filter <i class="bi bi-caret-down"></i>
                         </button>
                     </div>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 5px; position: relative; left: 25px;">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
-                    </ul>
-                    <form class="d-flex" style="width: 265px">
-                        <div class="position-relative">
-                            <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
-                            <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                                          🔍
-                                                      </span>
+                <div class="row pb-0 pb-xl-5">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/pasutri-gaje.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
                         </div>
-
-                    </form>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
+                        </div>
+                    </div>
                 </div>
+                <div class="row pb-0 pb-xl-5">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/pasutri-gaje.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-0 pb-xl-5">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/pasutri-gaje.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-0 pb-xl-5">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/pasutri-gaje.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xl-3 pt-5 pt-xl-0">
+                        <div class="banner-film">
+                            <img src="../assets/img/film/modal-nekad.jpeg" class="w-100 w-xl-auto" alt="">
+                            <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-container pt-5">
+                    <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
+                    <nav class="pagination-nav">
+                        <button class="pagination-btn prev disabled">
+                            <i class="bi bi-caret-left-fill"></i>
+                        </button>
+                        <ul class="pagination-list">
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="dots">...</li>
+                            <li><a href="#">20</a></li>
+                        </ul>
+                        <button class="pagination-btn btn-next">
+                            <i class="bi bi-caret-right-fill"></i>
+                        </button>
+                    </nav>
+                </div>
+                
             </div>
+                
         </div>
     </div>
-</nav>
-
-<div class="container-fluid bg-light-blue">
-    <div class="container py-5">
-        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Layanan LSF</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Panduan Film</li>
-            </ol>
-        </nav>
-
-        <!-- Modal Filter -->
-        <div class="modal fade" id="modal-filter" tabindex="-1" aria-labelledby="largeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <div class="container d-flex justify-content-end">
-                                    <span class="me-3"><span class="fs-12">Hasil pencarian 64 film didaptkan</span></span> 
-                                    <span class="bi bi-gear"> <span class="fs-12">Setelan Awal</span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="container mt-3">
-                                    <form>
-                                        <div class="position-relative">
-                                            <input class="form-control pe-5" type="search" placeholder="Cari judul film..." aria-label="Search" style="border-radius: 20px">
-                                            <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                                🔍
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="container mt-5">
-                                    <p>Sortir berdasarkan:</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button type="button" class="btn-outline-filter active">Semua</button>
-                                        <button type="button" class="btn-outline-filter">Terbaru</button>
-                                        <button type="button" class="btn-outline-filter">Populer</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <div class="container mt-5">
-                                    <p>Penggolongan:</p>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <button type="button" class="btn-outline-filter">Semua</button>
-                                        <button type="button" class="btn-outline-filter">&nbsp; SU &nbsp;</button>
-                                        <button type="button" class="btn-outline-filter active">R13</button>
-                                        <button type="button" class="btn-outline-filter">D17</button>
-                                        <button type="button" class="btn-outline-filter">D21</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="container my-5">
-                                    <p>Genre:</p>
-                                    
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <button type="button" class="btn-outline-filter flex-fill">Semua</button>
-                                        <button type="button" class="btn-outline-filter flex-fill active">Horor</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Romantis</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Aksi</button>
-                                    </div>
-                        
-                                    <div class="d-flex flex-wrap gap-2 mt-3">
-                                        <button type="button" class="btn-outline-filter flex-fill">Semua</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Horor</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Romantis</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Aksi</button>
-                                    </div>
-                                    <div class="d-flex flex-wrap gap-2 mt-3">
-                                        <button type="button" class="btn-outline-filter flex-fill">Semua</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Horor</button>
-                                        <button type="button" class="btn-outline-filter flex-fill">Komedi</button>
-                                        <button type="button" class="btn-outline-filter flex-fill invisible">Romantis</button>
-                                        <button type="button" class="btn-outline-filter flex-fill invisible">Aksi</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+    <footer class="footer py-4 text-white" style="background-color: #121865;">
+        <div class="container">
+            <div class="row align-items-center justify-content-between w-100">
+                <!-- Copyright text -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+                </div>
+                
+                <!-- Social icons -->
+                <div class="col-12 col-md-6">
+                    <div class="social-icons d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-globe fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid">
-            <div class="container p-5">
-                <div class="d-flex align-items-center">
-                    <!-- <p class="fs-32 color-blue fw-600 m-0">Panduan Film</p> -->
-                    <div class="divider-to-filter m-2"></div>
-                    <button class="btn-filter-panduan bg-blue-1 text-white" data-bs-toggle="modal" data-bs-target="#modal-filter">
-                        Filter <i class="bi bi-caret-down"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/modal-nekad.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/merindu-cahaya.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/vina.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-5">
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/modal-nekad.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/merindu-cahaya.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/vina.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-5">
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/modal-nekad.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/merindu-cahaya.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/vina.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-5">
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/pasutri-gaje.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/su.png" class="range-age" alt="SU">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/modal-nekad.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/13.png" class="range-age" alt="13+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/merindu-cahaya.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/17.png" class="range-age" alt="17+">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-3">
-                    <div class="banner-film">
-                        <img src="../assets/img/film/vina.jpeg" class="film" alt="">
-                        <img src="../assets/img/navbar/21.png" class="range-age" alt="21+">
-                    </div>
-                </div>
-            </div>
-            <div class="container p-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6 language-select">Menampilkan 1-15 dari total 789</div>
-                    <div class="col-md-6 d-flex justify-content-end">
-                        <nav>
-                            <ul class="pagination mb-0">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true" class="bi bi-caret-left"></span>
-                                    </a>
-                                </li>
-                                <!-- Manually adding pages from 1 to 20 -->
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true" class="bi bi-caret-right"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-            
-    </div>
-</div>
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
-        <div class="social-icons">
-            <a href="#"><i class="text-white bi bi-globe"></i></a>
-            <a href="#"><i class="text-white bi bi-instagram"></i></a>
-            <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
-            <a href="#"><i class="text-white bi bi-tiktok"></i></a>
-            <a href="#"><i class="text-white bi bi-youtube"></i></a>
-            <a href="#"><i class="text-white bi bi-facebook"></i></a>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -355,5 +630,22 @@
 
         }
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var navbarToggler = document.querySelector(".navbar-toggler");
+        var navbarCollapse = document.querySelector("#navbarNav");
+    
+        navbarToggler.addEventListener("click", function() {
+            navbarCollapse.classList.toggle("show");
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener("click", function(event) {
+            if (!navbarToggler.contains(event.target) && !navbarCollapse.contains(event.target)) {
+                navbarCollapse.classList.remove("show");
+            }
+        });
+    });
+    
 </script>
 </html>

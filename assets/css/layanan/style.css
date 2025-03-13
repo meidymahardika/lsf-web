@@ -13,6 +13,7 @@
 .btn-filter-panduan {
     background-color: #141470;
     color: #fff;
+    width: 95px !important;
 }
 
 #modal-filter {
