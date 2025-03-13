@@ -362,8 +362,18 @@ body {
   }
 
   .swiper-slide img {
+    display: block;
     object-fit: cover;
   }
+
+  .swiper-backface-hidden .swiper-slide{
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch; /* Ensures all slides stretch to the tallest one */
+}
 
 
 .swiper-button-next,
