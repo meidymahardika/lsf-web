@@ -356,20 +356,15 @@ body {
 
 
 /* New CSS */
-
 .swiper {
     width: 100%;
     height: 100%;
-}
+  }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  .swiper-slide img {
+    object-fit: cover;
+  }
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -513,6 +508,37 @@ body {
 .modal-body-container {
     position: relative; /* Ensures proper layering */
 }
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    /* color: white !important; */
+}
+
+.dropdown-item{
+    color: #1A1A1A !important;
+}
+
+.nav-item.dropdown.active > .nav-link {
+    color: white !important; /* Keeps the original text color */
+}
+
+.swiper-slide .row {
+    flex-grow: 1; /* Makes the row expand to fill the height */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+.swiper-slide .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures text is centered */
+}
+
+.slide-padding .container {
+    padding: 8rem;
+}
+
+
 /* mobile */
 
 @media (max-width: 767.98px) {
@@ -540,6 +566,18 @@ body {
         word-wrap: break-word !important; /* Force word wrapping */
         overflow-wrap: break-word !important; /* Ensures no overflow */
         padding: 8px 12px; /* Adjust padding for better spacing */
+    }
+
+    .slide-padding .container {
+        padding: 2rem;
+    }
+
+    .swiper-slide h1{
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide h5{
+        font-size: 1rem;
     }
 }
 
