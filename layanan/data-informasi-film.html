@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
     <style>
+
+        .search-wrapper.mobile-view {
+            display: none;
+        }
         .search-wrapper {
             display: flex;
             align-items: center;
@@ -195,6 +199,30 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+
+            .search-wrapper.mobile-view {
+                display: block;
+            }
+            
+            .search-container {
+                display: none;
+            }
+
+            .search-wrapper.desktop-view {
+                display: none;
+            }
+
+            .search-container.mobile-view {
+                display: flex;
+                align-items: center;
+                position: relative;
+                max-width: 461px;
+                width: 100%;
+                height: 34px;
+                flex-shrink: 0;
+                margin-bottom: 20px;
+            }
+            
             .search-input {
                 width: 100%;
                 padding: 4px 40px 4px 15px;
@@ -380,9 +408,16 @@
             </ol>
         </nav>
 
-        <div class="search-wrapper my-2 my-xl-5 pb-2 pb-xl-5">
+        <div class="search-wrapper desktop-view my-2 my-xl-5 pb-2 pb-xl-5">
             <div class="underlined"></div>
             <div class="search-container">
+                <input type="text" class="search-input" placeholder="Cari">
+                <i class="bi bi-search search-icon"></i>
+            </div>
+        </div>
+
+        <div class="search-wrapper mobile-view my-2 my-xl-5 pb-2 pb-xl-5">
+            <div class="search-container mobile-view">
                 <input type="text" class="search-input" placeholder="Cari">
                 <i class="bi bi-search search-icon"></i>
             </div>
@@ -591,8 +626,8 @@
     </div>
 </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script>
     document.getElementById("themeToggle").addEventListener("change", function() {

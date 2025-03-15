@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
+
+        .search-wrapper.mobile-view {
+            display: none;
+        }
+        
         .search-wrapper {
             display: flex;
             align-items: center;
@@ -28,6 +33,17 @@
             top: 30px;
             max-width: 461px;
             width: 70%;
+            height: 34px;
+            flex-shrink: 0; /* Agar tidak mengecil */
+        }
+
+        .search-container-mobile {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 30px;
+            max-width: 100%;
+            width: 100%;
             height: 34px;
             flex-shrink: 0; /* Agar tidak mengecil */
         }
@@ -78,7 +94,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 2rem 0rem;
+            padding: 1rem 0rem;
         }
 
         .pdf-title {
@@ -241,6 +257,170 @@
             width: 180px;
             font-size: 12px !important;
         }
+
+        /* Responsive Pagination Container */
+        .pagination-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+        }
+
+        .pagination-info {
+            color: #2F2E7B;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .pagination-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pagination-list {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pagination-list li a {
+            text-decoration: none;
+            color: #2F2E7B;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .pagination-list li a.active {
+            background-color: #2F2E7B;
+            color: white;
+        }
+
+        .pagination-btn {
+            border: 1px solid #2F2E7B;
+            background: none;
+            color: #2F2E7B;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pagination-btn:hover {
+            background-color: #2F2E7B;
+            color: white;
+        }
+
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border: 1px solid #ccc;
+            color: #ccc;
+        }
+
+        .pagination-btn.btn-next, .pagination-btn.prev {
+            width: 2.188rem;
+            height: 2.188rem;
+            border: 1.5px solid #39399D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .dots {
+            color: #aaa;
+            font-weight: bold;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+
+            .search-wrapper.mobile-view {
+                display: block;
+            }
+
+            .search-container.desktop-view {
+                display: none;
+            }
+
+            .pdf-download {
+                font-size: 16px;
+                font-weight: 500;
+                color: #0188CE;
+                text-decoration: none;
+            }
+    
+            .pdf-download i {
+                font-size: 16px;
+            }
+
+            .pdf-title {
+                font-size: 16px;
+                font-weight: 500;
+                color: #52575C;
+                margin-bottom: 0;
+            }
+    
+            .pdf-detail {
+                font-size: 16px;
+                font-weight: 500;
+                color: #0188CE;
+                text-decoration: none;
+            }
+            
+            .pagination-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .pagination-list {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.875rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pagination-btn {
+                padding: 0.4rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pagination-list {
+                gap: 0.2rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .pagination-btn {
+                padding: 0.3rem;
+                font-size: 0.75rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
         
     </style>
 </head>
@@ -293,8 +473,8 @@
                             <div class="position-relative">
                                 <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                                 <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                        🔍
-                                    </span>
+                                                🔍
+                                            </span>
                             </div>
                         </form>
                     </div>
@@ -325,8 +505,8 @@
                 <div class="position-relative w-100">
                     <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
                     <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
                 </div>
             </form>
 
@@ -374,7 +554,14 @@
                 </ol>
             </nav>
 
-            <div class="search-wrapper my-5">
+            <div class="search-wrapper mt-2 mb-5 mobile-view">
+                <div class="search-container-mobile">
+                    <input type="text" class="search-input" placeholder="Cari">
+                    <i class="bi bi-search search-icon"></i>
+                </div>
+            </div>            
+            
+            <div class="search-wrapper my-auto my-xl-5">
                 <!-- <div class="underlined"></div> -->
                 <ul class="nav nav-tabs my-4" id="historyTabs" role="tablist" style="width: 100%;">
                     <li class="nav-item" role="presentation">
@@ -384,7 +571,7 @@
                         <button class="nav-link" id="penelitian-tab" data-bs-toggle="tab" data-bs-target="#penelitian" type="button" role="tab">Penelitian</button>
                     </li>
                 </ul>
-                <div class="search-container">
+                <div class="search-container desktop-view">
                     <input type="text" class="search-input" placeholder="Cari">
                     <i class="bi bi-search search-icon"></i>
                 </div>
@@ -529,7 +716,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pagination-container">
+                    <div class="pagination-container pt-4">
                         <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
                         <nav class="pagination-nav">
                             <button class="pagination-btn prev disabled">
@@ -711,22 +898,31 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer py-4 text-white" style="background-color: #121865;">
         <div class="container">
-            <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
-            <div class="social-icons">
-                <a href="#"><i class="text-white bi bi-globe"></i></a>
-                <a href="#"><i class="text-white bi bi-instagram"></i></a>
-                <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
-                <a href="#"><i class="text-white bi bi-tiktok"></i></a>
-                <a href="#"><i class="text-white bi bi-youtube"></i></a>
-                <a href="#"><i class="text-white bi bi-facebook"></i></a>
+            <div class="row align-items-center justify-content-between w-100">
+                <!-- Copyright text -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+                </div>
+                
+                <!-- Social icons -->
+                <div class="col-12 col-md-6">
+                    <div class="social-icons d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-globe fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script>
     document.getElementById("themeToggle").addEventListener("change", function() {
