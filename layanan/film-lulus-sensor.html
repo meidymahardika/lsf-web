@@ -13,6 +13,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
     <style>
+
+        .search-wrapper.mobile-view {
+            display: none;
+        }
+        
+        .table-responsive {
+            max-width: 100%;
+            overflow-x: auto;
+          }
+        
+          .sticky-column {
+            position: sticky;
+            left: 0;
+            background-color: white !important;
+            z-index: 2;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2) !important;
+          }
+        
+          thead .sticky-column {
+            z-index: 3; /* Ensures the header column is above the body */
+          }
+        
         .search-wrapper {
             display: flex;
             align-items: center;
@@ -108,18 +130,21 @@
             font-size: 1.125rem;
         }
 
+        /* Responsive Pagination Container */
         .pagination-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
             font-family: Arial, sans-serif;
+            flex-wrap: wrap;
         }
 
         .pagination-info {
             color: #2F2E7B;
             font-size: 1rem;
             font-weight: 500;
+            text-align: center;
         }
 
         .pagination-nav {
@@ -134,6 +159,8 @@
             gap: 0.5rem;
             padding: 0;
             margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .pagination-list li a {
@@ -159,6 +186,9 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .pagination-btn:hover {
@@ -173,7 +203,7 @@
             color: #ccc;
         }
 
-        .pagination-btn.btn-next, .prev {
+        .pagination-btn.btn-next, .pagination-btn.prev {
             width: 2.188rem;
             height: 2.188rem;
             border: 1.5px solid #39399D;
@@ -188,8 +218,68 @@
             font-weight: bold;
         }
 
-        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-            font-size: 20px !important;
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+
+            .sticky-column {
+                position: sticky;
+                left: 0;
+                background-color: whitesmoke !important;
+                z-index: 2;
+                box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2) !important;
+              }
+
+            .search-wrapper.desktop-view {
+                display: none;
+            }
+
+            .search-wrapper.mobile-view {
+                display: flex;
+            }
+
+            .search-wrapper.mobile-view .search-container {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .pagination-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .pagination-list {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.875rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pagination-btn {
+                padding: 0.4rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pagination-list {
+                gap: 0.2rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .pagination-btn {
+                padding: 0.3rem;
+                font-size: 0.75rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -319,20 +409,59 @@
             </ol>
         </nav>
 
-        <div class="row pt-5">
+        <div class="row pt-1 pt-xl-5">
+            <div class="search-wrapper my-4 pb-1 mobile-view">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Cari">
+                    <i class="bi bi-search search-icon"></i>
+                </div>
+            </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body p-5">
 
-                        <div class="search-wrapper my-4">
+                        <div class="search-wrapper my-4 desktop-view">
                             <div class="underlined"></div>
                             <div class="search-container">
                                 <input type="text" class="search-input" placeholder="Cari">
                                 <i class="bi bi-search search-icon"></i>
                             </div>
                         </div>
+
+                        <div class="table-responsive" style="overflow-x: auto;">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th class="fs-14 text-secondary py-4 sticky-column" scope="col" style="width: 150px;">Pemilik</th>
+                                  <th class="fs-14 text-secondary py-4" scope="col">Judul</th>
+                                  <th class="fs-14 text-secondary py-4" scope="col">Penggolongan Usia</th>
+                                  <th class="fs-14 text-secondary py-4" scope="col">Genre</th>
+                                  <th class="fs-14 text-secondary py-4" scope="col">No.STLS</th>
+                                  <th class="fs-14 text-secondary py-4" scope="col">Masa Berlaku STLS</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
+                                  <td class="fs-14 py-3">AGAK LEAN</td>
+                                  <td class="fs-14 py-3">SEMUA UMUR</td>
+                                  <td class="fs-14 py-3">Horor Komedi</td>
+                                  <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                  <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                <tr>
+                                  <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
+                                  <td class="fs-14 py-3">AGAK LEAN</td>
+                                  <td class="fs-14 py-3">SEMUA UMUR</td>
+                                  <td class="fs-14 py-3">Horor Komedi</td>
+                                  <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                  <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         
-                        <table class="table">
+                        <!-- <table class="table table-responsive">
                             <thead>
                               <tr>
                                 <th class="fs-14 text-secondary py-4" scope="col" style="width: 120px;">Pemilik</th>
@@ -401,7 +530,7 @@
                                 <td class="fs-14 py-3">7-03-2025</td>
                               </tr>
                             </tbody>
-                          </table>
+                          </table> -->
 
                           <div class="pagination-container pt-5">
                             <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
@@ -445,8 +574,8 @@
     </div>
 </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script>
     document.getElementById("themeToggle").addEventListener("change", function() {

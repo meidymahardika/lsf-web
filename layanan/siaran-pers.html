@@ -20,6 +20,10 @@
             width: 100%; /* Pastikan sesuai parent */
         }
 
+        .search-wrapper.mobile-view {
+            display: none;
+        }
+
         .search-container {
             display: flex;
             align-items: center;
@@ -108,18 +112,21 @@
             font-size: 1.125rem;
         }
 
+        /* Responsive Pagination Container */
         .pagination-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
             font-family: Arial, sans-serif;
+            flex-wrap: wrap;
         }
 
         .pagination-info {
             color: #2F2E7B;
             font-size: 1rem;
             font-weight: 500;
+            text-align: center;
         }
 
         .pagination-nav {
@@ -134,6 +141,8 @@
             gap: 0.5rem;
             padding: 0;
             margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .pagination-list li a {
@@ -159,6 +168,9 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .pagination-btn:hover {
@@ -173,7 +185,7 @@
             color: #ccc;
         }
 
-        .pagination-btn.btn-next, .prev {
+        .pagination-btn.btn-next, .pagination-btn.prev {
             width: 2.188rem;
             height: 2.188rem;
             border: 1.5px solid #39399D;
@@ -188,8 +200,92 @@
             font-weight: bold;
         }
 
-        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-            font-size: 20px !important;
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+
+            .search-wrapper.mobile-view {
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Jarak antara input dan underline */
+                width: 100%; /* Pastikan sesuai parent */
+            }
+
+            .search-wrapper.mobile-view .search-container {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            .search-wrapper.desktop-view {
+                display: none;
+            }
+
+            .pdf-title {
+                font-size: 16px;
+                font-weight: 500;
+                color: #52575C;
+                margin-bottom: 0;
+            }
+    
+            .pdf-detail {
+                font-size: 16px;
+                font-weight: 500;
+                color: #0188CE;
+                text-decoration: none;
+            }
+    
+            .pdf-detail i {
+                font-size: 16px;
+            }
+    
+            .pdf-download {
+                font-size: 16px;
+                font-weight: 500;
+                color: #0188CE;
+                text-decoration: none;
+            }
+    
+            .pdf-download i {
+                font-size: 16px;
+            }
+            
+            .pagination-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .pagination-list {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.875rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .pagination-btn {
+                padding: 0.4rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pagination-list {
+                gap: 0.2rem;
+            }
+
+            .pagination-list li a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .pagination-btn {
+                padding: 0.3rem;
+                font-size: 0.75rem;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -319,16 +415,40 @@
             </ol>
         </nav>
 
-        <div class="search-wrapper my-5">
+        <div class="search-wrapper my-5 desktop-view">
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Cari">
                 <i class="bi bi-search search-icon"></i>
             </div>
             <div class="underlined"></div>
         </div>
+        
+        <div class="search-wrapper my-5 mobile-view">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Cari">
+                <i class="bi bi-search search-icon"></i>
+            </div>
+        </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
+                <div class="pdf-wrapper">
+                    <div class="pdf-image">
+                        <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                    </div>
+                    <div class="box-pdf-description">
+                        <div class="d-flex flex-column gap-2">
+                            <p class="pdf-title">SIARAN PERS RAKORNAS LSF 2024 TAHUN 2024</p>
+                            <a class="pdf-detail" href="./siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <a class="pdf-download mt-auto" href="#">
+                            Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -345,7 +465,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -362,7 +482,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -379,7 +499,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -396,7 +516,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -413,7 +533,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -430,24 +550,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="pdf-wrapper">
-                    <div class="pdf-image">
-                        <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
-                    </div>
-                    <div class="box-pdf-description">
-                        <div class="d-flex flex-column gap-2">
-                            <p class="pdf-title">SIARAN PERS RAKORNAS LSF 2024 TAHUN 2024</p>
-                            <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                        <a class="pdf-download mt-auto" href="#">
-                            Unduh <i class="bi bi-file-earmark-arrow-down"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="pdf-wrapper">
                     <div class="pdf-image">
                         <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
@@ -464,7 +567,7 @@
                 </div>
             </div>
         </div>
-        <div class="pagination-container">
+        <div class="pagination-container pt-5">
             <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
             <nav class="pagination-nav">
                 <button class="pagination-btn prev disabled">
@@ -500,8 +603,8 @@
     </div>
 </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script>
     document.getElementById("themeToggle").addEventListener("change", function() {
