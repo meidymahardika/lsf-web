@@ -479,8 +479,6 @@
                     </li>
                 </ul>
             </div>
-            
-            
         </div>
     </nav>
 
@@ -493,183 +491,128 @@
                 </ol>
             </nav>
 
-            <div class="row pt-5">
+            <div class="row pt-1 pt-xl-5">
+                <div class="search-wrapper my-4 pb-1 mobile-view">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Cari">
+                        <i class="bi bi-search search-icon"></i>
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body p-5">
 
-        <!-- Search Form - Outside the collapse menu -->
-        <form class="d-flex px-3 py-2 border-bottom w-100">
-            <div class="position-relative w-100">
-                <input class="form-control pe-5" type="search" placeholder="Cari..." aria-label="Search">
-                <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </span>
-            </div>
-        </form>
-
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse pt-3 px-3 pb-4" id="navbarNav">
-            <ul class="navbar-nav w-100">
-                <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tentang LSF</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Layanan LSF</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sekretariat LSF</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">PPID LSF</a></li>
-
-                <!-- Language Select -->
-                <li class="nav-item w-100">
-                    <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
-                    <select id="languageSelect" class="form-select">
-                        <option value="id">🇮🇩 Indonesia</option>
-                        <option value="en">🇬🇧 English</option>
-                    </select>
-                </li>
-
-                <!-- Theme Toggle -->
-                <li class="nav-item w-100 d-flex align-items-center gap-2">
-                    <label class="switch d-flex align-items-center">
-                        <input type="checkbox" id="themeToggle" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <span id="themeText" class="fw-normal">Light</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="container-fluid bg-light-blue">
-    <div class="container py-5 mt-5">
-        <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Film Lulus Sensor</li>
-            </ol>
-        </nav>
-
-        <div class="row pt-1 pt-xl-5">
-            <div class="search-wrapper my-4 pb-1 mobile-view">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Cari">
-                    <i class="bi bi-search search-icon"></i>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body p-5">
-
-                        <div class="search-wrapper my-4 desktop-view">
-                            <div class="underlined"></div>
-                            <div class="search-container">
-                                <input type="text" class="search-input" placeholder="Cari">
-                                <i class="bi bi-search search-icon"></i>
+                            <div class="search-wrapper my-4 desktop-view">
+                                <div class="underlined"></div>
+                                <div class="search-container">
+                                    <input type="text" class="search-input" placeholder="Cari">
+                                    <i class="bi bi-search search-icon"></i>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="table-responsive" style="overflow-x: auto;">
-                            <table class="table">
-                              <thead>
+                            <div class="table-responsive" style="overflow-x: auto;">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th class="fs-14 text-secondary py-4 sticky-column" scope="col" style="width: 150px;">Pemilik</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Judul</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Penggolongan Usia</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Genre</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">No.STLS</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Masa Berlaku STLS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                    </tr>
+                                    <tr>
+                                    <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- <table class="table table-responsive">
+                                <thead>
                                 <tr>
-                                  <th class="fs-14 text-secondary py-4 sticky-column" scope="col" style="width: 150px;">Pemilik</th>
-                                  <th class="fs-14 text-secondary py-4" scope="col">Judul</th>
-                                  <th class="fs-14 text-secondary py-4" scope="col">Penggolongan Usia</th>
-                                  <th class="fs-14 text-secondary py-4" scope="col">Genre</th>
-                                  <th class="fs-14 text-secondary py-4" scope="col">No.STLS</th>
-                                  <th class="fs-14 text-secondary py-4" scope="col">Masa Berlaku STLS</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col" style="width: 120px;">Pemilik</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Judul</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Penggolongan Usia</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Genre</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">No.STLS</th>
+                                    <th class="fs-14 text-secondary py-4" scope="col">Masa Berlaku STLS</th>
                                 </tr>
-                              </thead>
-                              <tbody>
+                                </thead>
+                                <tbody>
                                 <tr>
-                                  <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
-                                  <td class="fs-14 py-3">AGAK LEAN</td>
-                                  <td class="fs-14 py-3">SEMUA UMUR</td>
-                                  <td class="fs-14 py-3">Horor Komedi</td>
-                                  <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                  <td class="fs-14 py-3">7-03-2025</td>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
                                 </tr>
                                 <tr>
-                                  <td class="fs-14 py-3 sticky-column">PT Citaprima Jakarta Televisi</td>
-                                  <td class="fs-14 py-3">AGAK LEAN</td>
-                                  <td class="fs-14 py-3">SEMUA UMUR</td>
-                                  <td class="fs-14 py-3">Horor Komedi</td>
-                                  <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                  <td class="fs-14 py-3">7-03-2025</td>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
                                 </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        
-                        <!-- <table class="table table-responsive">
-                            <thead>
-                              <tr>
-                                <th class="fs-14 text-secondary py-4" scope="col" style="width: 120px;">Pemilik</th>
-                                <th class="fs-14 text-secondary py-4" scope="col">Judul</th>
-                                <th class="fs-14 text-secondary py-4" scope="col">Penggolongan Usia</th>
-                                <th class="fs-14 text-secondary py-4" scope="col">Genre</th>
-                                <th class="fs-14 text-secondary py-4" scope="col">No.STLS</th>
-                                <th class="fs-14 text-secondary py-4" scope="col">Masa Berlaku STLS</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                              <tr>
-                                <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
-                                <td class="fs-14 py-3">AGAK LEAN</td>
-                                <td class="fs-14 py-3">SEMUA UMUR</td>
-                                <td class="fs-14 py-3">Horor Komedi</td>
-                                <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
-                                <td class="fs-14 py-3">7-03-2025</td>
-                              </tr>
-                            </tbody>
-                          </table> -->
+                                <tr>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 py-3">PT Citaprima Jakarta Televisi</td>
+                                    <td class="fs-14 py-3">AGAK LEAN</td>
+                                    <td class="fs-14 py-3">SEMUA UMUR</td>
+                                    <td class="fs-14 py-3">Horor Komedi</td>
+                                    <td class="fs-14 py-3">8109/SU/J1/P2.I/12.2027/2025</td>
+                                    <td class="fs-14 py-3">7-03-2025</td>
+                                </tr>
+                                </tbody>
+                            </table> -->
 
                             <div class="pagination-container pt-5">
                                 <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
@@ -691,38 +634,40 @@
                                     </button>
                                 </nav>
                             </div>
-                            
+                                
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer py-4 text-white" style="background-color: #121865;">
         <div class="container">
-            <p>© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
-            <div class="social-icons">
-                <a href="#"><i class="text-white bi bi-globe"></i></a>
-                <a href="#"><i class="text-white bi bi-instagram"></i></a>
-                <a href="#"><i class="text-white bi bi-twitter-x"></i></a>
-                <a href="#"><i class="text-white bi bi-tiktok"></i></a>
-                <a href="#"><i class="text-white bi bi-youtube"></i></a>
-                <a href="#"><i class="text-white bi bi-facebook"></i></a>
+            <div class="row align-items-center justify-content-between w-100">
+                <!-- Copyright text -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">© 2025 Lembaga Sensor Film Republik Indonesia. All Rights Reserved</p>
+                </div>
+                
+                <!-- Social icons -->
+                <div class="col-12 col-md-6">
+                    <div class="social-icons d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-globe fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 </body>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-=======
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> a284e73 (update navbar)
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var navbarToggler = document.querySelector(".navbar-toggler");
