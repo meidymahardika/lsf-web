@@ -1,5 +1,9 @@
 .bg-light-blue {
-    background-color: #f6f8ff;
+    background-color: var(--bg-light-blue);
+}
+
+.text-color-reguler {
+    color: var(--color-text);
 }
 
 .fw-800{
@@ -90,14 +94,14 @@
 .breadcrumb-item a {
     font-size: 1rem;
     font-weight: 600;
-    color: #B3B3B3;
+    color: var(--color-breadcumb-icon);
     text-decoration: none;
 }
 
 .breadcrumb-icon i {
     font-size: 1rem;
     font-weight: 600;
-    color: #B3B3B3;
+    color: var(--color-breadcumb-icon);
 }
 
 .breadcrumb-item.active {
@@ -106,10 +110,14 @@
     color: #39399D !important;
 }
 
+.breadcrumb-item + .breadcrumb-item::before {
+    content: none !important;
+}
+
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #52575C;
-    font-size: 28px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
@@ -119,7 +127,7 @@
 }
 
 .nav-tabs .nav-link {
-    font-size: 28px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     color: #B3B3B3;
@@ -134,6 +142,10 @@
     border-color: #f6f8ff #f6f8ff #39399D #f6f8ff;
     border-bottom: 2px solid #39399D;
     isolation: unset;
+}
+
+.accordion-item {
+    background-color: var(--bg-accordion);
 }
 
 @media only screen and (max-width: 768px) {
@@ -157,9 +169,12 @@
         font-size: 0.875rem;
     }
     .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
     .nav-tabs .nav-link {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
+    }
+    .m-hidden {
+        display: none;
     }
 }
