@@ -8,190 +8,12 @@
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="../assets/css/navbar-custom.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/tokens.css">
     <link rel="stylesheet" href="../assets/css/sekretariat/styles.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
-    <style>
-        .search-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px; /* Jarak antara input dan underline */
-            width: 100%; /* Pastikan sesuai parent */
-        }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            position: relative;
-            max-width: 461px;
-            width: 70%;
-            height: 34px;
-            flex-shrink: 0; /* Agar tidak mengecil */
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 10px 40px 10px 15px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            outline: none;
-            font-size: 16px;
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 15px;
-            color: #2C2E83; /* Warna icon sesuai contoh */
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .underlined {
-            flex-grow: 1; /* Supaya ukurannya dinamis */
-            height: 1px; /* Ketebalan garis */
-            background-color: #D9D9D9; /* Warna garis */
-        }
-
-        .pdf-wrapper {
-            width: 100%;
-            height: auto;
-            max-height: 253.33px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .pdf-image img {
-            width: 200px;
-            height: auto;
-            max-height: 253.33px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .box-pdf-description {
-            height: 253.33px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 2rem 0rem;
-        }
-
-        .pdf-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: #52575C;
-            margin-bottom: 0;
-        }
-
-        .pdf-detail {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #0188CE;
-            text-decoration: none;
-        }
-
-        .pdf-detail i {
-            font-size: 1.125rem;
-        }
-
-        .pdf-download {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #0188CE;
-            text-decoration: none;
-        }
-
-        .pdf-download i {
-            font-size: 1.125rem;
-        }
-
-        .pagination-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            font-family: Arial, sans-serif;
-        }
-
-        .pagination-info {
-            color: #2F2E7B;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .pagination-nav {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .pagination-list {
-            display: flex;
-            list-style: none;
-            gap: 0.5rem;
-            padding: 0;
-            margin: 0;
-        }
-
-        .pagination-list li a {
-            text-decoration: none;
-            color: #2F2E7B;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.4rem 0.8rem;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .pagination-list li a.active {
-            background-color: #2F2E7B;
-            color: white;
-        }
-
-        .pagination-btn {
-            border: 1px solid #2F2E7B;
-            background: none;
-            color: #2F2E7B;
-            padding: 0.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .pagination-btn:hover {
-            background-color: #2F2E7B;
-            color: white;
-        }
-
-        .pagination-btn.disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            border: 1px solid #ccc;
-            color: #ccc;
-        }
-
-        .pagination-btn.btn-next, .prev {
-            width: 2.188rem;
-            height: 2.188rem;
-            border: 1.5px solid #39399D;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-        }
-
-        .dots {
-            color: #aaa;
-            font-weight: bold;
-        }
-
-        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-            font-size: 20px !important;
-        }
-    </style>
 </head>
 <body>
     <div id="header-container"></div>
@@ -201,6 +23,7 @@
             <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-icon"><i class="bi bi-chevron-right"></i></li>
                     <li class="breadcrumb-item active" aria-current="page">Laporan Kinerja Sekretariat</li>
                 </ol>
             </nav>
@@ -220,129 +43,78 @@
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="pdf-wrapper">
                         <div class="pdf-image">
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="pdf-wrapper">
                         <div class="pdf-image">
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="pdf-wrapper">
                         <div class="pdf-image">
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="pdf-wrapper">
                         <div class="pdf-image">
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="pdf-wrapper">
                         <div class="pdf-image">
                             <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                         </div>
                         <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                            <a class="pdf-download mt-auto" href="#">
-                                Unduh <i class="bi bi-file-earmark-arrow-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="pdf-wrapper">
-                        <div class="pdf-image">
-                            <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
-                        </div>
-                        <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                            <a class="pdf-download mt-auto" href="#">
-                                Unduh <i class="bi bi-file-earmark-arrow-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="pdf-wrapper">
-                        <div class="pdf-image">
-                            <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
-                        </div>
-                        <div class="box-pdf-description">
-                            <div class="d-flex flex-column gap-2">
-                                <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
-                                <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                            </div>
+                            <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                            <a class="pdf-detail" href="/sekretariat/view-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <a class="pdf-download mt-auto" href="#">
                                 Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                             </a>
@@ -351,7 +123,7 @@
                 </div>
             </div>
             <div class="pagination-container">
-                <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
+                <p class="pagination-info my-2">Menampilkan 1-8 dari total 30</p>
                 <nav class="pagination-nav">
                     <button class="pagination-btn prev disabled">
                         <i class="bi bi-caret-left-fill"></i>
@@ -360,8 +132,8 @@
                         <li><a href="#" class="active">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
+                        <li class="m-hidden"><a href="#">4</a></li>
+                        <li class="m-hidden"><a href="#">5</a></li>
                         <li class="dots">...</li>
                         <li><a href="#">20</a></li>
                     </ul>
@@ -375,6 +147,14 @@
 
     <div id="footer-container"></div>
 
+    <script !src="">
+        localStorage.setItem("theme", "dark");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        });
+    </script>
     <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

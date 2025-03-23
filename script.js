@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("themeToggle").addEventListener("change", function() {
   let themeText = document.getElementById("themeText");
+    console.log(themeText);
   if (this.checked) {
       themeText.textContent = "light";
       themeText.style.zIndex = "1"; // Ensure it's a string

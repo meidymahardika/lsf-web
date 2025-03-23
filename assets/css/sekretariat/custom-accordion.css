@@ -1,17 +1,32 @@
 .accordion-button:not(.collapsed) {
-    color: #000;
-    background-color: #f6f8ff;
+    color: var(--text-color);
+    background-color: var(--bg-accordion);
     box-shadow: unset;
 }
 
 button.accordion-button.collapsed {
-    background: #f6f8ff;
+    color: var(--text-color);
+    background: var(--bg-accordion);
 }
 
 .accordion-body {
-    background: #f6f8ff;
+    background: var(--bg-accordion);
+    color: var(--text-color);
 }
 
 .accordion-item {
     border: unset;
+}
+
+.accordion-button::after {
+    color: var(--text-color);
+}
+
+.accordion-button::after {
+    content: "\F282"; /* Bootstrap Icons chevron-down */
+    font-family: "bootstrap-icons";
+    font-size: 1rem;
+    color: var(--text-color, #000); /* Ubah warna sesuai kebutuhan */
+    margin-left: auto; /* Geser ikon ke ujung kanan */
+    transition: transform 0.3s ease; /* Animasi rotasi */
 }

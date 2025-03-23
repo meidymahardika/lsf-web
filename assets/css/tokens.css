@@ -1,0 +1,49 @@
+:root {
+    --bg-light-blue: #f6f8ff;
+    --text-color: #000000;
+    --text-pdf-title: #52575C;
+
+    --color-text: #52575C;
+
+
+    --color-breadcumb-icon: #B3B3B3;
+
+    --border-search-wrapper: ;
+
+    --bg-search-wrapper: #fff;
+
+    --pagination-disable: #ccc;
+    --pagination-info-color: #2F2E7B;
+    --pagination-list-color: #2F2E7B;
+    --pagination-list-color-dots: #aaa;
+
+
+    --color-download: #012F6D;
+
+    --bg-accordion: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light-blue: #010A27;
+        --text-color: #ffffff;
+        --text-pdf-title: #fff;
+
+        --color-text: #D1D1D1;
+
+        --color-breadcumb-icon: #B3B3B3;
+
+        --border-search-wrapper: #B3B3B3;
+
+        --bg-search-wrapper: transparent;
+
+        --pagination-disable: #D9D9D9;
+        --pagination-info-color: #39399D;
+        --pagination-list-color: #D9D9D9;
+        --pagination-list-color-dots: #D9D9D9;
+
+        --color-download: #D9D9D9;
+
+        --bg-accordion: transparent;
+    }
+}
