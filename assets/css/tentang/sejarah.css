@@ -79,14 +79,16 @@
 
 .dasar-hukum .card-header {
     background-color: #70BA92;
-    color: #fff;
+    color: var(--text-white-blue);
     padding: 2rem 2.5rem;
+    border-radius: 12px;
 }
 
 .dasar-hukum .card-body {
     background-color: #fff;
     color: #717171;
     padding: 2rem 2.5rem;
+    border-radius: 12px;
 }
 
 .modal-body.custom-scroll {
@@ -137,8 +139,7 @@
     .timeline-item {
         padding-left: 28px;
     }
-    .card-history,
-    .dasar-hukum .card {
+    .card-history{
         padding: 1.5rem;
     }
     .dasar-hukum .card-header,

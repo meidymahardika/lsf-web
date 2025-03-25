@@ -140,6 +140,10 @@
     overflow-y: auto; /* Supaya hanya bagian ini yang bisa scroll */
 }
 
+.box-collapse img {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     .fs-26 {
         font-size: 1.2rem;
@@ -177,5 +181,31 @@
 
     .modal-content .col-md-12 {
         max-height: 200px;
+    }
+
+    .jabatan {
+        margin: 0 2rem;
+    }
+    .content-collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .content-expand {
+        height: auto;
+        max-height: max-content;
+        opacity: 1;
+    }
+
+    .box-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .box-collapse img {
+        display: unset;
     }
 }

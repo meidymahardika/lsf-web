@@ -2,8 +2,28 @@
     background-color: var(--bg-light-blue);
 }
 
+.bg-card-white {
+    background-color: var(--bg-card-white) !important;
+}
+
 .text-color-reguler {
     color: var(--color-text);
+}
+
+.text-grey-1 {
+    color: var(--text-grey-1);
+}
+
+.text-grey-2 {
+    color: var(--text-grey-2);
+}
+
+.text-blue-1 {
+    color: var(--text-blue-1);
+}
+
+.text-white-blue {
+    color: var(--text-white-blue);
 }
 
 .fw-800{
@@ -74,6 +94,10 @@
     color: #141470;
 }
 
+.color-blue-2 {
+    color: var(--text-blue-2);
+}
+
 .color-grey {
     color: #717171;
 }
@@ -116,31 +140,32 @@
 
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #52575C;
+    color: var(--text-nav-tabs);
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
-    background-color: #f6f8ff;
-    border-color: #f6f8ff #f6f8ff #39399D #f6f8ff;
-    border-bottom: 2px solid #39399D;
+    background-color: transparent;
+    border-color: transparent transparent #39399D transparent;
+    border-bottom: 2px solid var(--border-nav-tabs-before-active);
 }
 
 .nav-tabs .nav-link {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    color: #B3B3B3;
+    color: var(--text-nav-tabs);
     line-height: 40px;
+    border: 0;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    color: #52575C;
+    color: var(--text-nav-tabs-active);
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
     border-color: #f6f8ff #f6f8ff #39399D #f6f8ff;
-    border-bottom: 2px solid #39399D;
+    border-bottom: 2px solid var(--border-nav-tabs-active);
     isolation: unset;
 }
 
