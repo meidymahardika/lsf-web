@@ -508,10 +508,9 @@ body {
 }
 
 .modal-body-content {
-    border-radius: 1.5rem;
     height: 30vh; /* Fixed height */
     overflow-y: auto; /* Enables vertical scrolling */
-    padding: 1rem; /* Adds padding inside the border */
+    margin: 16px 4px; /* Adds padding inside the border */
     background-color: white;
 }
 

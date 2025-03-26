@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const currentPath = window.location.pathname;
   const  pathLength = currentPath.split("/").length
-  console.log(9, pathLength);
-  
   const basePath = pathLength === 3 ? '../' : '';
 
   // Fetch the header content
@@ -124,8 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function highlightCurrentPage() {
     // Get current page filename
     const currentSection = window.location.pathname.split('/')[1];
-    
-    console.log(1, currentSection);
     
     // Set active class based on current page
     if (currentSection === 'index.html' || currentSection === '') {
