@@ -22,13 +22,19 @@
         .toggle-button.rotate {
             transform: rotate(180deg);
         }
+
+        .underlined {
+            flex-grow: 1; /* Supaya ukurannya dinamis */
+            height: 1px; /* Ketebalan garis */
+            background-color: #D9D9D9; /* Warna garis */
+        }
     </style>
 </head>
 <body>
     <div id="header-container"></div>
 
     <div class="container-fluid bg-light-blue">
-        <div class="container py-5 mt-5">
+        <div class="container py-80 md:py-48 mt-48 sm:mt-8">
             <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -297,7 +303,7 @@
         </div>
         <div class="modal fade" id="detailProfile" tabindex="-1" aria-labelledby="detailProfileLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" style="">
-                <div class="modal-content rounded-4 p-5 modal-profile">
+                <div class="modal-content rounded-4 p-5 bg-card-white modal-profile">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="profile-card mx-auto" style="">
@@ -306,10 +312,25 @@
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <p class="fs-30 fw-600 color-grey m-0 modal-name">Naswardi</p>
-                            <p class="fs-20 fw-400 color-blue m-0 modal-position">Ketua LSF</p>
+                            <p class="fs-30 fw-600 text-grey-2 m-0 modal-name">Naswardi</p>
+                            <p class="fs-20 fw-400 color-blue-2 m-0 modal-position">Ketua LSF</p>
                             <div class="col-md-12 mt-2">
-                                <p class="fs-18 fw-400 m-0 color-grey modal-desc">Lahir di Balimbing, Sumatera Barat, pada 16 Juli 1983, Dr. Naswardi, MM, ME, adalah Ketua Lembaga Sensor Film Republik Indonesia (LSF RI) periode 2024-2028. Terpilih untuk periode kedua sebagai anggota LSF dari unsur masyarakat, dengan keahlian pada bidang perlindungan anak, Uda Nas, demikian panggilan akrabnya, memiliki visi dan gagasan pada upaya pemajuan film anak, serta menghadirkan tontonan yang ramah anak. Lulus dan menyelesaikan pendidikan doktor pada Program Studi Ilmu Manajemen di Universitas Negeri Jakarta dalam usia 34 tahun, selama sepuluh tahun ia bekerja sebagai analis dan tenaga ahli di Komisi Perlindungan Anak Indonesia (KPAI). Terlibat aktif dalam perumusan kebijakan, pengawasan, advokasi, penanganan pengaduan dan mediasi sengketa pelanggaran hak anak, ia memiliki sertifikat kompetensi sebagai mediator ahli dalam bidang perlindungan anak. Aktif menulis dan meneliti isu film dan tontonan ramah anak yang dipublikasikan melalui jurnal dan opini, antara lain, Pelatihan penggunaan aplikasi e-learning untuk meningkatkan Technological Knowledge di SMA Negeri 02 Tambun Utara (Jurnal Surya Abdimas: 2022), The fulfillment of standards on child cares (Taman Penitipan Anak dan Taman Anak Sejahtera) for the quality improvement of alternative care with the child protection perspective (Journal Of Social Studies: 2021), dan Sistem Klasifikasi Usia Film di Korea Selatan (Majalah Sensor: 2022). Buku dari hasil penelitian yang dipublikasikannya antara lain, Persepsi Masyarakat tentang Perfilman, Penyensoran dan Budaya Sensor Mandiri (2023). Kriteria Penyensoran dalam Perspektif Perlindungan Anak (2022), dan Survei Nasional tentang Perfilman dan Budaya Sensor Mandiri (2021).</p>
+                                <p class="fs-18 fw-400 m-0 text-grey-2 modal-desc">Lahir di Balimbing, Sumatera Barat, pada 16 Juli 1983, Dr. Naswardi, MM, ME, adalah Ketua Lembaga Sensor Film Republik Indonesia (LSF RI) periode 2024-2028. Terpilih untuk periode kedua sebagai anggota LSF dari unsur masyarakat, dengan keahlian pada bidang perlindungan anak, Uda Nas, demikian panggilan akrabnya, memiliki visi dan gagasan pada upaya pemajuan film anak, serta menghadirkan tontonan yang ramah anak. Lulus dan menyelesaikan pendidikan doktor pada Program Studi Ilmu Manajemen di Universitas Negeri Jakarta dalam usia 34 tahun, selama sepuluh tahun ia bekerja sebagai analis dan tenaga ahli di Komisi Perlindungan Anak Indonesia (KPAI). Terlibat aktif dalam perumusan kebijakan, pengawasan, advokasi, penanganan pengaduan dan mediasi sengketa pelanggaran hak anak, ia memiliki sertifikat kompetensi sebagai mediator ahli dalam bidang perlindungan anak. Aktif menulis dan meneliti isu film dan tontonan ramah anak yang dipublikasikan melalui jurnal dan opini, antara lain, Pelatihan penggunaan aplikasi e-learning untuk meningkatkan Technological Knowledge di SMA Negeri 02 Tambun Utara (Jurnal Surya Abdimas: 2022), The fulfillment of standards on child cares (Taman Penitipan Anak dan Taman Anak Sejahtera) for the quality improvement of alternative care with the child protection perspective (Journal Of Social Studies: 2021), dan Sistem Klasifikasi Usia Film di Korea Selatan (Majalah Sensor: 2022). Buku dari hasil penelitian yang dipublikasikannya antara lain, Persepsi Masyarakat tentang Perfilman, Penyensoran dan Budaya Sensor Mandiri (2023). Kriteria Penyensoran dalam Perspektif Perlindungan Anak (2022), dan Survei Nasional tentang Perfilman dan Budaya Sensor Mandiri (2021).</p>
+                                <div class="underlined my-16"></div>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                        <div class="box-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <p class="m-0 fs-18 text-grey-2">naswardi@lsf.id</p>
+                                    </div>
+                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                        <div class="box-icon">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </div>
+                                        <p class="m-0 fs-18 text-grey-2">naswardi</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
