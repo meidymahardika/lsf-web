@@ -1,11 +1,11 @@
 .accordion-button:not(.collapsed) {
-    color: var(--text-color);
+    color: var(--color-accordion);
     background-color: var(--bg-accordion);
     box-shadow: unset;
 }
 
 button.accordion-button.collapsed {
-    color: var(--text-color);
+    color: var(--color-accordion);
     background: var(--bg-accordion);
 }
 
@@ -19,7 +19,13 @@ button.accordion-button.collapsed {
 }
 
 .accordion-button::after {
-    color: var(--text-color);
+    content: none !important;
+    color: var(--color-accordion);
+}
+
+.accordion-button {
+    content: none !important;
+    color: var(--color-accordion);
 }
 
 .accordion-button::after {
@@ -29,4 +35,8 @@ button.accordion-button.collapsed {
     color: var(--text-color, #000); /* Ubah warna sesuai kebutuhan */
     margin-left: auto; /* Geser ikon ke ujung kanan */
     transition: transform 0.3s ease; /* Animasi rotasi */
+}
+
+.accordion-button:focus {
+    box-shadow: unset;
 }
