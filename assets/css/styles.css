@@ -2,8 +2,20 @@
     background-color: var(--bg-light-blue);
 }
 
+.bg-light-blue-2 {
+    background-color: var(--bg-light-blue-2);
+}
+
+.bg-light-blue-3 {
+    background-color: var(--bg-light-blue-3);
+}
+
 .bg-card-white {
     background-color: var(--bg-card-white) !important;
+}
+
+.bg-nav-item{
+    background-color: var(--bg-nav-item);
 }
 
 .text-color-reguler {

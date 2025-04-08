@@ -87,7 +87,13 @@
 
 :root[data-theme="light"] {
     --bg-light-blue: #f6f8ff;
+    --bg-light-blue-2: #f6f8ff;
+    --bg-light-blue-3: #f6f8ff;
+    --bg-nav-item: #000080;
+    --bg-nav-text: #ffff;
+    --bg-input: #ffff;
     --text-color: #000000;
+    --text-blue: #000080;
     --text-pdf-title: #52575C;
     --color-text: #52575C;
     --color-breadcumb-icon: #B3B3B3;
@@ -116,14 +122,28 @@
     --text-blue-2: #141470;
 
     --text-white-blue: #ffffff;
+    --text-color-nav: #141470;
 
     --bg-card-custom: #ffffff;
     --bg-card-custom-header: #4C45A0;
+
+    --bg-age: #F0F2F1;
+
 }
 
 :root[data-theme="dark"] {
     --bg-light-blue: #010A27;
+    --bg-light-blue-2: #121865;
+    --bg-light-blue-3: #031449;
+
+    --bg-nav-item: #ffff;
+    --bg-nav-text: #000080;
+    --bg-age: #031449;
+
+
     --text-color: #ffffff;
+    --text-blue: #ffffff;
+
     --text-pdf-title: #fff;
     --color-text: #D1D1D1;
     --color-breadcumb-icon: #B3B3B3;
@@ -153,6 +173,8 @@
     --text-blue-2: #ffffff;
 
     --text-white-blue: #031449;
+    --text-color-nav: #ffffff;
+
 
     --bg-card-custom: #03037C;
     --bg-card-custom-header: #000080;
