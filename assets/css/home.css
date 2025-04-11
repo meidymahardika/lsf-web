@@ -517,7 +517,7 @@ body {
 }
 
 .nav-item.dropdown.active > .nav-link {
-    color: white !important; /* Keeps the original text color */
+    color: white; /* Keeps the original text color */
 }
 
 .swiper-slide .row {
