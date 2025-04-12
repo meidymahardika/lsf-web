@@ -450,14 +450,7 @@ body {
     right: 0;
     transform: translate(20%, -20%);
 }
-.navbar-toggler{
-    padding: 8px;
-    border: none;
-    color: black;
-}
-.navbar-toggler:focus{
-    box-shadow: none;
-}
+
 
 
 .navbar-collapse {
