@@ -62,11 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
       let dataTheme = localStorage.getItem("theme") || "light"; // Default to light if null
       const themeToggle = document.getElementById("themeToggle");
       const themeText = document.getElementById("themeText");
+      const logo = document.getElementById("logo");
+      const logoDark = document.getElementById("logo-dark");
 
       if (dataTheme === "light") {
+        logo.style.display = "block";
+        logoDark.style.display = "none";
         themeText.style.right = "8px";
         themeText.style.left = "";
       } else {
+        logo.style.display = "none";
+        logoDark.style.display = "block";
         themeText.style.left = "5px";
         themeText.style.right = "-5px";
       }
@@ -78,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       themeToggle.addEventListener("change", function () {
         let newTheme = themeToggle.checked ? "light" : "dark"; // Determine new theme
+        const logo = document.getElementById("logo");
+      const logoDark = document.getElementById("logo-dark");
 
         localStorage.setItem("theme", newTheme);
         document.documentElement.setAttribute("data-theme", newTheme);
@@ -87,9 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
         themeText.style.zIndex = "1";
         themeText.style.position = "relative";
         if (newTheme === "light") {
+          logo.style.display = "block";
+          logoDark.style.display = "none";
           themeText.style.right = "8px";
           themeText.style.left = "";
         } else {
+          logo.style.display = "none";
+          logoDark.style.display = "block";
           themeText.style.left = "5px";
           themeText.style.right = "-5px";
         }
@@ -142,8 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let themeText = document.getElementById("themeText");
     let themeToggle = document.getElementById("themeToggle");
+    const logo = document.getElementById("logo");
+    const logoDark = document.getElementById("logo-dark");
 
     if (theme === "light") {
+      logo.style.display = "block";
+      logoDark.style.display = "none";
       themeText.textContent = "light";
       themeText.style.zIndex = "1";
       themeText.style.position = "relative";
@@ -151,6 +167,8 @@ document.addEventListener('DOMContentLoaded', function() {
       themeText.style.left = "";
       themeToggle.checked = true; // Ensure toggle is checked
     } else {
+      logo.style.display = "none";
+      logoDark.style.display = "block";
       themeText.textContent = "dark";
       themeText.style.zIndex = "1";
       themeText.style.position = "relative";
