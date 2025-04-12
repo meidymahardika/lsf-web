@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="../assets/css/navbar-custom.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/sekretariat/styles.css">
     <link rel="stylesheet" href="../assets/css/tokens.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/tentang/sejarah.css">
@@ -429,7 +430,7 @@
     <div id="header-container"></div>
 
     <div class="container-fluid bg-light-blue">
-        <div class="container py-5 mt-5">
+        <!-- <div class="container py-5 mt-5">
             <nav class="mt-5 pt-2" aria-label="breadcrumb">
                 <ol class="breadcrumb mb-xl">
                     <li class="breadcrumb-item">
@@ -438,6 +439,15 @@
                     <li class="breadcrumb-icon">
                         <i class="ti ti-chevron-right"></i>
                     </li>
+                    <li class="breadcrumb-item active" aria-current="page">Publikasi dan Penelitian</li>
+                </ol>
+            </nav> -->
+
+        <div class="container py-80 md:py-48 mt-48 sm:mt-8">
+            <nav class="mt-5 pt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-icon"><i class="bi bi-chevron-right"></i></li>
                     <li class="breadcrumb-item active" aria-current="page">Publikasi dan Penelitian</li>
                 </ol>
             </nav>
@@ -465,138 +475,107 @@
                 </div>
             </div>
 
-            <div class="tab-content" id="historyTabsContent">
+            <div class="tab-content" id="publikasi-tab">
                 <div class="tab-pane fade show active" id="publikasi" role="tabpanel">
+                    <div class="row mb-16">
+                        <div class="col-md-8 mx-auto">
+                            <div class="top-pdf-wrapper">
+                                <div class="top-pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="top-box-pdf-description">
+                                    <p class="pdf-title mb-16">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
+                                    <div class="link-pdf">
+                                        <a class="pdf-detail mb-48" href="#" data-bs-toggle="modal" data-bs-target="#detailModal">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                        <a class="pdf-download" href="#" data-bs-toggle="modal" data-bs-target="#unduhModal">
+                                            Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
                     <div class="row">
+                        <p class="text-color-reguler fs-28 md:fs-14 mb-16">Perjanjian Kinerja Lainnya</p>
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#" data-bs-toggle="modal" data-bs-target="#detailModal">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <a class="pdf-download mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#unduhModal">
-                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="col-md-6">
-                            <div class="pdf-wrapper">
-                                <div class="pdf-image">
-                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
-                                </div>
-                                <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <a class="pdf-download mt-auto" href="#">
-                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="col-md-6">
-                            <div class="pdf-wrapper">
-                                <div class="pdf-image">
-                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
-                                </div>
-                                <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
@@ -604,8 +583,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pagination-container pt-4">
-                        <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
+                    <div class="pagination-container">
+                        <p class="pagination-info my-2">Menampilkan 1-8 dari total 30</p>
                         <nav class="pagination-nav">
                             <button class="pagination-btn prev disabled">
                                 <i class="bi bi-caret-left-fill"></i>
@@ -614,8 +593,8 @@
                                 <li><a href="#" class="active">1</a></li>
                                 <li><a href="#">2</a></li>
                                 <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
+                                <li class="m-hidden"><a href="#">4</a></li>
+                                <li class="m-hidden"><a href="#">5</a></li>
                                 <li class="dots">...</li>
                                 <li><a href="#">20</a></li>
                             </ul>
@@ -627,44 +606,114 @@
                 </div>
 
                 <div class="tab-pane fade" id="penelitian" role="tabpanel">
+                    <div class="row mb-16">
+                        <div class="col-md-8 mx-auto">
+                            <div class="top-pdf-wrapper">
+                                <div class="top-pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="top-box-pdf-description">
+                                    <p class="pdf-title mb-16">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
+                                    <div class="link-pdf">
+                                        <a class="pdf-detail mb-48" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                        <a class="pdf-download" href="#">
+                                            Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
                     <div class="row">
+                        <p class="text-color-reguler fs-28 md:fs-14 mb-16">Perjanjian Kinerja Lainnya</p>
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-            
                         <div class="col-md-6">
                             <div class="pdf-wrapper">
                                 <div class="pdf-image">
                                     <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
                                 </div>
                                 <div class="box-pdf-description">
-                                    <div class="d-flex flex-column gap-2">
-                                        <p class="pdf-title">Riset LSF: Selera Penonton Indonesia Condong Genre Horor</p>
-                                        <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                                     <a class="pdf-download mt-auto" href="#">
                                         Unduh <i class="bi bi-file-earmark-arrow-down"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="pdf-wrapper">
+                                <div class="pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="box-pdf-description">
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                    <a class="pdf-download mt-auto" href="#">
+                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pdf-wrapper">
+                                <div class="pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="box-pdf-description">
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                    <a class="pdf-download mt-auto" href="#">
+                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pdf-wrapper">
+                                <div class="pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="box-pdf-description">
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                    <a class="pdf-download mt-auto" href="#">
+                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pdf-wrapper">
+                                <div class="pdf-image">
+                                    <img src="../assets/img/pdf/pdf-cover.png" alt="PDF Cover">
+                                </div>
+                                <div class="box-pdf-description">
+                                    <p class="pdf-title">Laporan Tahunan Kinerja Sekretariat LSF Tahun 2024</p>
+                                    <a class="pdf-detail" href="/layanan/siaran-pers-detail.html">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                                    <a class="pdf-download mt-auto" href="#">
+                                        Unduh <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="pagination-container">
-                        <p class="pagination-info">Menampilkan 1-8 dari total 30</p>
+                        <p class="pagination-info my-2">Menampilkan 1-8 dari total 30</p>
                         <nav class="pagination-nav">
                             <button class="pagination-btn prev disabled">
                                 <i class="bi bi-caret-left-fill"></i>
@@ -673,8 +722,8 @@
                                 <li><a href="#" class="active">1</a></li>
                                 <li><a href="#">2</a></li>
                                 <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
+                                <li class="m-hidden"><a href="#">4</a></li>
+                                <li class="m-hidden"><a href="#">5</a></li>
                                 <li class="dots">...</li>
                                 <li><a href="#">20</a></li>
                             </ul>
