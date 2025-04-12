@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
           themeText.style.right = "8px";
           themeText.style.left = "";
         } else {
+          logo.style.display = "none";
+          logoDark.style.display = "block";
           themeText.style.left = "5px";
           themeText.style.right = "-5px";
         }
