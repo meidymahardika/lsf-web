@@ -97,12 +97,13 @@
     </nav>
     
     <!-- Navbar Mobile -->
-    <nav class="navbar navbar-expand-lg d-block d-lg-none fixed-top bg-white shadow py-2">
+    <nav class="navbar navbar-expand-lg d-block d-lg-none fixed-top bg-light-blue-2 shadow py-2">
         <div class="container-fluid px-0">
             <!-- Logo Section and Toggle Button -->
             <div class="d-flex justify-content-between align-items-center w-100 px-3">
                 <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
-                    <img src="assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <!-- <img src="assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila"> -->
+                    <img src="/assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
                     <div class="d-flex justify-content-start" style="max-width: 65%;" >
                         <img src="assets/img/navbar/su.png" alt="SU" class="w-25" data-bs-toggle="modal" data-bs-target="#modalSU" >
                         <img src="assets/img/navbar/13.png" alt="13+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal13Plus" >
@@ -112,9 +113,13 @@
                 </a>
                 
                 <!-- Navbar Toggle Button -->
-                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                <!-- <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="custom-toggler-icon"></span>
                 </button>
             </div>
     
@@ -142,7 +147,7 @@
                         <ul class="dropdown-menu" aria-labelledby="tentangDropdown" data-bs-auto-close="outside">
                             <li><a class="dropdown-item" href="/tentang/sejarah.html">Sejarah dan Dasar Hukum</a></li>
                             <li><a class="dropdown-item" href="/tentang/struktur-organisasi.html">Struktur Organisasi, Tugas dan Fungsi LSF</a></li>
-                            <li><a class="dropdown-item" href="/tentang/profil-anggota.html">Profile Anggota</a></li>
+                            <li><a class="dropdown-item" href="/tentang/struktur-organisasi.html">Profile Anggota</a></li>
                         </ul>
                     </li>
             
@@ -193,7 +198,7 @@
                             <input type="checkbox" id="themeToggleMobile" checked>
                             <span class="slider round"></span>
                         </label>
-                        <span id="themeText" class="fw-normal">light</span>
+                        <span id="themeText" class="fw-normal text-grey-2">Light</span>
                     </li>
                 </ul>
             </div>
