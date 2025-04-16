@@ -166,4 +166,27 @@ input:checked + .slider:before {
     -webkit-mask-size: contain;
     mask-size: contain;
   }
+
+  .flag{
+    width: 1rem;
+    border: 1px solid var(--pagination-disable);
+  }
+
+  .dropdown-toggle{
+    background-color: var(--bg-light-blue) !important;
+    box-shadow: none;
+    color: var(--text-color);
+
+  }
   
+  .dropdown-toggle:hover{
+    color: var(--text-color);
+  }
+
+  .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    color: var(--text-color);
+  }
+
+  .dropdown .btn{
+    text-transform: none;
+  }

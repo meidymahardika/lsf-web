@@ -21,10 +21,15 @@
                     
                         <!-- Dropdown Language Select & Switch -->
                         <div class="d-flex align-items-center justify-content-end gap-4 w-100">
-                            <select class="language-select">
-                                <option value="id">🇮🇩 Indonesia</option>
-                                <option value="en">🇬🇧 English</option>
-                            </select>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="/assets/img/navbar/id.svg" class="me-2 flag" alt=""> Indonesia</a>
+                                </button>
+                                <ul class="dropdown-menu text-gray-2" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item text-gray-2" href="#"> <img src="/assets/img/navbar/id.svg" class="flag me-2" alt=""> Indonesia</a></li>
+                                  <li><a class="dropdown-item text-gray-2" href="#"> <img src="/assets/img/navbar/eng.svg" class="flag me-2" alt=""> English</a></li>
+                                </ul>
+                              </div>
                             <label class="switch d-flex align-items-center justify-content-center gap-1">
                                 <input type="checkbox" id="themeToggle" checked>
                                 <span class="slider round"></span>
@@ -186,10 +191,16 @@
                     <!-- Language Select -->
                     <li class="nav-item w-100 mt-2">
                         <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
-                        <select id="languageSelect" class="form-select">
-                            <option value="id">🇮🇩 Indonesia</option>
-                            <option value="en">🇬🇧 English</option>
-                        </select>
+                        <div class="dropdown w-100">
+                            <button class="btn btn-secondary dropdown-toggle w-100 text-start d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="/assets/img/navbar/id.svg" class="me-2 flag" alt=""> Indonesia
+                            </button>
+                            <ul class="dropdown-menu text-gray-2" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item text-gray-2" href="#"><img src="/assets/img/navbar/id.svg" class="flag me-2" alt=""> Indonesia</a></li>
+                              <li><a class="dropdown-item text-gray-2" href="#"><img src="/assets/img/navbar/eng.svg" class="flag me-2" alt=""> English</a></li>
+                            </ul>
+                          </div>
+                          
                     </li>
             
                     <!-- Theme Toggle -->
