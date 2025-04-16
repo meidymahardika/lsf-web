@@ -91,7 +91,7 @@ input:checked + .slider:before {
 
 .navbar-nav li.active a {
     position: relative;
-    color: var(--bg-nav-text);
+    color: var(--bg-nav-text) !important;
 }
 
 .navbar-nav li.active::before {

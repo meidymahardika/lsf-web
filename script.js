@@ -59,44 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
       //   }
       // });
 
-      let dataTheme = localStorage.getItem("theme") || "light"; // Default to light if null
-      const themeToggle = document.getElementById("themeToggle");
-      const themeText = document.getElementById("themeText");
-      const logo = document.getElementById("logo");
-      const logoDark = document.getElementById("logo-dark");
+      // Apply theme styles
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        themeText.textContent = theme;
 
-      if (dataTheme === "light") {
-        logo.style.display = "block";
-        logoDark.style.display = "none";
-        themeText.style.right = "8px";
-        themeText.style.left = "";
-      } else {
-        logo.style.display = "none";
-        logoDark.style.display = "block";
-        themeText.style.left = "5px";
-        themeText.style.right = "-5px";
-      }
-
-      // Apply stored theme on page load
-      document.documentElement.setAttribute("data-theme", dataTheme);
-      themeText.textContent = dataTheme;
-      themeToggle.checked = dataTheme === "light"; // Sync toggle with theme
-
-      themeToggle.addEventListener("change", function () {
-        let newTheme = themeToggle.checked ? "light" : "dark"; // Determine new theme
-        const logo = document.getElementById("logo");
-      const logoDark = document.getElementById("logo-dark");
-
-        localStorage.setItem("theme", newTheme);
-        document.documentElement.setAttribute("data-theme", newTheme);
-        themeText.textContent = newTheme;
-
-        // Adjust text positioning
+        // Position text
         themeText.style.zIndex = "1";
         themeText.style.position = "relative";
-        if (newTheme === "light") {
-          logo.style.display = "block";
-          logoDark.style.display = "none";
+        if (theme === "light") {
           themeText.style.right = "8px";
           themeText.style.left = "";
         } else {
@@ -105,6 +76,63 @@ document.addEventListener('DOMContentLoaded', function() {
           themeText.style.left = "5px";
           themeText.style.right = "-5px";
         }
+
+        // Sync all toggles
+        themeToggles.forEach(toggle => {
+          toggle.checked = theme === "light";
+        });
+      }
+
+      let dataTheme = localStorage.getItem("theme") || "light"; // Default to light
+      const themeToggles = [
+        document.getElementById("themeToggle"),
+        document.getElementById("themeToggleMobile")
+      ].filter(Boolean); // remove nulls
+
+      const themeTexts = document.querySelectorAll("#themeText"); // target all themeText elements
+
+      // Apply theme styles to all
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+      
+        // Update toggle switches
+        themeToggles.forEach(toggle => {
+          toggle.checked = theme === "light";
+        });
+      
+        // Update text and position styles
+        themeTexts.forEach(text => {
+          text.textContent = theme;
+          text.style.zIndex = "1";
+          text.style.position = "relative";
+      
+          // Apply positioning styles only for desktop screen
+          if (window.innerWidth >= 992) {
+            if (theme === "light") {
+              text.style.right = "8px";
+              text.style.left = "";
+            } else {
+              text.style.left = "5px";
+              text.style.right = "-5px";
+            }
+          } else {
+            // Reset on mobile
+            text.style.right = "";
+            text.style.left = "";
+          }
+        });
+      }
+
+      // Initial setup
+      applyTheme(dataTheme);
+
+      // Add toggle listeners
+      themeToggles.forEach(toggle => {
+        toggle.addEventListener("change", () => {
+          const newTheme = toggle.checked ? "light" : "dark";
+          localStorage.setItem("theme", newTheme);
+          applyTheme(newTheme);
+        });
       });
       
       // Highlight current page in navbar
@@ -148,32 +176,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Function to apply the theme
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+  // function applyTheme(theme) {
+  //   document.documentElement.setAttribute("data-theme", theme);
+  //   localStorage.setItem("theme", theme);
     
-    let themeText = document.getElementById("themeText");
-    let themeToggle = document.getElementById("themeToggle");
-    const logo = document.getElementById("logo");
-    const logoDark = document.getElementById("logo-dark");
+  //   let themeText = document.getElementById("themeText");
+  //   let themeToggle = document.getElementById("themeToggle");
 
-    if (theme === "light") {
-      logo.style.display = "block";
-      logoDark.style.display = "none";
-      themeText.textContent = "light";
-      themeText.style.zIndex = "1";
-      themeText.style.position = "relative";
-      themeText.style.right = "8px";
-      themeText.style.left = "";
-      themeToggle.checked = true; // Ensure toggle is checked
-    } else {
-      logo.style.display = "none";
-      logoDark.style.display = "block";
-      themeText.textContent = "dark";
-      themeText.style.zIndex = "1";
-      themeText.style.position = "relative";
-      themeText.style.left = "5px";
-      themeToggle.checked = false; // Ensure toggle is unchecked
-    }
-  }
+  //   if (theme === "light") {
+  //     themeText.textContent = "light";
+  //     themeText.style.zIndex = "1";
+  //     themeText.style.position = "relative";
+  //     themeText.style.right = "8px";
+  //     themeText.style.left = "";
+  //     themeToggle.checked = true; // Ensure toggle is checked
+  //   } else {
+  //     themeText.textContent = "dark";
+  //     themeText.style.zIndex = "1";
+  //     themeText.style.position = "relative";
+  //     themeText.style.left = "5px";
+  //     themeToggle.checked = false; // Ensure toggle is unchecked
+  //   }
+  // }
 });
