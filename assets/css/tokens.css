@@ -129,6 +129,9 @@
 
     --bg-age: #F0F2F1;
 
+    --display-light: block;
+    --display-dark: none;
+
 }
 
 :root[data-theme="dark"] {
@@ -178,6 +181,9 @@
 
     --bg-card-custom: #03037C;
     --bg-card-custom-header: #000080;
+
+    --display-light: none;
+    --display-dark: block;
 }
 
 

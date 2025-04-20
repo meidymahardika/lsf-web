@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   
   const currentPath = window.location.pathname;
-  const  pathLength = currentPath.split("/").length
+  const pathLength = currentPath.split("/").length
   const basePath = pathLength === 3 ? '../' : '';
 
   // Fetch the header content
@@ -34,30 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
       
-      // let dataTheme = localStorage.getItem("theme");
-      // console.log(dataTheme, "dataTheme");
-      
-      // document.getElementById("themeToggle").addEventListener("change", function() {
+      document.getElementById("themeToggle").addEventListener("change", function() {
+        const logo = document.getElementById("logo");
+        const logoDark = document.getElementById("logo-dark");
+        const dataTheme = localStorage.getItem("theme") || "light";
         
-      //   let themeText = document.getElementById("themeText");
-        
-      //   if (dataTheme === "light") {
-      //     localStorage.setItem("theme", "light");
-      //     document.documentElement.setAttribute("data-theme", "light");
-      //     themeText.textContent = "light";
-      //     themeText.style.zIndex = "1"; // Ensure it's a string
-      //     themeText.style.position = "relative";
-      //     themeText.style.right = "8px"; // Add 'px' to make it work
-      //     themeText.style.left = ""; // Correct way to remove 'left' style
-      //   } else {
-      //     localStorage.setItem("theme", "dark");
-      //     document.documentElement.setAttribute("data-theme", "dark");
-      //     themeText.textContent = "dark";
-      //     themeText.style.zIndex = "1"; // Ensure it's a string
-      //     themeText.style.position = "relative";
-      //     themeText.style.left = "5px"; // Add 'px' to make it work
-      //   }
-      // });
+        if (dataTheme === "light") {
+          logo.style.display = "none";
+          logoDark.style.display = "block";
+        }
+        if (dataTheme === "dark") {
+          logo.style.display = "block";
+          logoDark.style.display = "none";
+        }
+      });
 
       // Apply theme styles
       function applyTheme(theme) {
@@ -71,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
           themeText.style.right = "8px";
           themeText.style.left = "";
         } else {
-          logo.style.display = "none";
-          logoDark.style.display = "block";
           themeText.style.left = "5px";
           themeText.style.right = "-5px";
         }
@@ -174,28 +162,4 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('sec-sekretariat')?.classList.add('active');
     }
   }
-
-  // Function to apply the theme
-  // function applyTheme(theme) {
-  //   document.documentElement.setAttribute("data-theme", theme);
-  //   localStorage.setItem("theme", theme);
-    
-  //   let themeText = document.getElementById("themeText");
-  //   let themeToggle = document.getElementById("themeToggle");
-
-  //   if (theme === "light") {
-  //     themeText.textContent = "light";
-  //     themeText.style.zIndex = "1";
-  //     themeText.style.position = "relative";
-  //     themeText.style.right = "8px";
-  //     themeText.style.left = "";
-  //     themeToggle.checked = true; // Ensure toggle is checked
-  //   } else {
-  //     themeText.textContent = "dark";
-  //     themeText.style.zIndex = "1";
-  //     themeText.style.position = "relative";
-  //     themeText.style.left = "5px";
-  //     themeToggle.checked = false; // Ensure toggle is unchecked
-  //   }
-  // }
 });

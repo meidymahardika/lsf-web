@@ -5,9 +5,14 @@ body {
 .logo {
     width: 14rem;
     height: auto;
+    display: var(--display-light)
 }
 
-
+.logo-dark {
+    width: 14rem;
+    height: auto;
+    display: var(--display-dark)
+}
 
 .undang-undang {
     /*display: flex;*/
@@ -544,6 +549,14 @@ body {
 	width:150px;
 	bottom:40px;
 	right:40px;
+    z-index:100;
+}
+
+.float-mobile{
+	position:fixed;
+	width:200px;
+	bottom:20px;
+	right:-30px;
     z-index:100;
 }
 
