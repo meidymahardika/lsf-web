@@ -185,6 +185,14 @@
     background-color: var(--bg-accordion);
 }
 
+.logo {
+    display: var(--display-light)
+}
+
+.logo-dark {
+    display: var(--display-dark)
+}
+
 @media only screen and (max-width: 768px) {
     .btn-custom-xl {
         width: 11.938rem;

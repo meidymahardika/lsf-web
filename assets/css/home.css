@@ -5,9 +5,14 @@ body {
 .logo {
     width: 14rem;
     height: auto;
+    display: var(--display-light)
 }
 
-
+.logo-dark {
+    width: 14rem;
+    height: auto;
+    display: var(--display-dark)
+}
 
 .undang-undang {
     /*display: flex;*/
