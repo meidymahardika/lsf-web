@@ -22,7 +22,7 @@
                         <!-- Dropdown Language Select & Switch -->
                         <div class="d-flex align-items-center justify-content-end gap-4 w-100">
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
                                     <img src="/assets/img/navbar/id.svg" class="me-2 flag" alt=""> Indonesia</a>
                                 </button>
                                 <ul class="dropdown-menu text-gray-2" aria-labelledby="dropdownMenuButton1">
@@ -58,7 +58,7 @@
                                     Layanan LSF
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="layananDropdown">
-                                    <li><a class="dropdown-item" href="/layanan/mekanisme-penyensoran.html">Mekanisme Penyensoran (Web ESIAS)Dasar Hukum</a></li>
+                                    <li><a class="dropdown-item" href="/layanan/mekanisme-penyensoran.html">Mekanisme Penyensoran</a></li>
                                     <li><a class="dropdown-item" href="/layanan/panduan-film.html">Panduan Film</a></li>
                                     <li><a class="dropdown-item" href="/layanan/film-lulus-sensor.html">Film Lulus Sensor</a></li>
                                     <li><a class="dropdown-item" href="/layanan/data-informasi-film.html">Data dan Informasi Film</a></li>
@@ -108,7 +108,9 @@
             <div class="d-flex justify-content-between align-items-center w-100 px-3">
                 <a class="navbar-brand d-flex align-items-center gap-3 justify-content-start" href="#">
                     <!-- <img src="assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila"> -->
-                    <img src="/assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila">
+                    <!-- <img src="/assets/img/navbar/garuda-mobile.png" class="img-fluid" style="max-width: 35%;" alt="Garuda Pancasila"> -->
+                    <img id="logo" src="assets/img/navbar/garuda.png" class="logo" alt="Garuda Pancasila" style="width: 150px; margin: -16px;">
+                    <img id="logo-dark" src="assets/img/navbar/garuda-dark.png" class="logo-dark" alt="Garuda Pancasila" style="width: 150px; margin: -16px;">
                     <div class="d-flex justify-content-start" style="max-width: 65%;" >
                         <img src="assets/img/navbar/su.png" alt="SU" class="w-25" data-bs-toggle="modal" data-bs-target="#modalSU" >
                         <img src="assets/img/navbar/13.png" alt="13+" class="w-25" data-bs-toggle="modal" data-bs-target="#modal13Plus" >
@@ -162,7 +164,7 @@
                             Layanan LSF
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="layananDropdown" data-bs-auto-close="outside">
-                            <li><a class="dropdown-item" href="/layanan/mekanisme-penyensoran.html">Mekanisme Penyensoran (Web ESIAS)</a></li>
+                            <li><a class="dropdown-item" href="/layanan/mekanisme-penyensoran.html">Mekanisme Penyensoran</a></li>
                             <li><a class="dropdown-item" href="/layanan/panduan-film.html">Panduan Film</a></li>
                             <li><a class="dropdown-item" href="/layanan/film-lulus-sensor.html">Film Lulus Sensor</a></li>
                             <li><a class="dropdown-item" href="/layanan/data-informasi-film.html">Data dan Informasi Film</a></li>
@@ -192,7 +194,7 @@
                     <li class="nav-item w-100 mt-2">
                         <label for="languageSelect" class="nav-link">Pilih Bahasa</label>
                         <div class="dropdown w-100">
-                            <button class="btn btn-secondary dropdown-toggle w-100 text-start d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-link dropdown-toggle w-100 text-start d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
                               <img src="/assets/img/navbar/id.svg" class="me-2 flag" alt=""> Indonesia
                             </button>
                             <ul class="dropdown-menu text-gray-2" aria-labelledby="dropdownMenuButton1">
@@ -327,6 +329,10 @@
     </div>
 </div>
 
-<a href="https://wa.me/1XXXXXXXXXX" class="float" target="_blank">
-    <img src="assets/img/btn-wa.png" class="w-100 img-fluid d-none d-lg-block" alt="">
+<a href="https://wa.me/1XXXXXXXXXX" class="float d-none d-lg-block" target="_blank">
+    <img src="assets/img/btn-wa.png" class="w-100 img-fluid" alt="">
+</a>
+
+<a href="https://wa.me/1XXXXXXXXXX" class="float-mobile d-block d-lg-none" target="_blank">
+    <img src="assets/img/btn-wa.png" class="w-75 img-fluid" alt="">
 </a>
