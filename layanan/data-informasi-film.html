@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/fonts/fonts-nunito.css">
+    <link rel="stylesheet" href="../assets/css/tentang/sejarah.css">
     <style>
 
         .search-wrapper.mobile-view {
@@ -84,7 +85,7 @@
         .pdf-title {
             font-size: 1.25rem;
             font-weight: 500;
-            color: #52575C;
+            
             margin-bottom: 0;
         }
 
@@ -335,16 +336,16 @@
                         <div class="ms-0 ms-md-3 p-3 p-md-5 text-md-start">
                             <p class="pdf-title">Pasutri Gaje</p>
                             <br>
-                            <p class="fs-14 text-secondary d-none d-xl-block">
+                            <p class="fs-14 text-grey-1 d-none d-xl-block">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
                             </p>
-                            <p class="fs-14 text-secondary d-block d-xl-none">
+                            <p class="fs-14 text-grey-1 d-block d-xl-none">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                             </p>
-                            <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                            <a class="pdf-detail" href="#" data-bs-toggle="modal" data-bs-target="#detailModal">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <br><br><br><br>
                             <p class="d-flex justify-content-between">
-                                <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                                <span class="fw-bold text-grey-1 fs-12">RAW Data</span>
                                 <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                             </p>
                         </div>
@@ -368,16 +369,16 @@
                         <div class="ms-0 ms-md-3 p-3 p-md-5 text-md-start">
                             <p class="pdf-title">Pasutri Gaje</p>
                             <br>
-                            <p class="fs-14 text-secondary d-none d-xl-block">
+                            <p class="fs-14 text-grey-1 d-none d-xl-block">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
                             </p>
-                            <p class="fs-14 text-secondary d-block d-xl-none">
+                            <p class="fs-14 text-grey-1 d-block d-xl-none">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                             </p>
-                            <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                            <a class="pdf-detail" href="#" data-bs-toggle="modal" data-bs-target="#detailModal">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <br><br><br><br>
                             <p class="d-flex justify-content-between">
-                                <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                                <span class="fw-bold text-grey-1 fs-12">RAW Data</span>
                                 <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                             </p>
                         </div>
@@ -401,16 +402,16 @@
                         <div class="ms-0 ms-md-3 p-3 p-md-5 text-md-start">
                             <p class="pdf-title">Pasutri Gaje</p>
                             <br>
-                            <p class="fs-14 text-secondary d-none d-xl-block">
+                            <p class="fs-14 text-grey-1 d-none d-xl-block">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
                             </p>
-                            <p class="fs-14 text-secondary d-block d-xl-none">
+                            <p class="fs-14 text-grey-1 d-block d-xl-none">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ...
                             </p>
-                            <a class="pdf-detail" href="#">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                            <a class="pdf-detail" href="#" data-bs-toggle="modal" data-bs-target="#detailModal">Lihat Detail <i class="bi bi-arrow-right"></i></a>
                             <br><br><br><br>
                             <p class="d-flex justify-content-between">
-                                <span class="fw-bold text-secondary fs-12">RAW Data</span>
+                                <span class="fw-bold text-grey-1 fs-12">RAW Data</span>
                                 <a href="#" class="text-decoration-none fs-14">Unduh <i class="bi bi-download"></i></a>
                             </p>
                         </div>
@@ -437,6 +438,47 @@
                         <i class="bi bi-caret-right-fill"></i>
                     </button>
                 </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal detail -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 p-4">
+                <div class="modal-header border-0">
+                    <!-- <div class="custom-fieldset">
+                        <span class="custom-legend">Your Label</span>
+                        <input type="text" class="custom-input">
+                    </div> -->
+                    <h5 class="modal-title fw-bold fs-25 color-blue" id="detailModalLabel">
+                        Contoh Judul “Film Komedi #1 Indonesia
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-scroll">
+                    <div class="d-flex justify-content-center">
+                        <img src="../assets/img/informasi-film/chart-info-film.png" class="img-fluid rounded mb-3" alt="Sejarah">
+                    </div>
+                    <p class="fs-14 text-secondary">
+                        Masa penjajahan Belanda yang cukup lama di Indonesia meninggalkan pengaruh besar. Salah satunya di bidang kebudayaan, terutama film. Ordonansi Film 1916 pada 14 Maret 1916 merupakan undang-undang film yang mengatur tentang film dan penyelenggaraan usaha bioskop seiring dengan semakin banyaknya gambar idoep di Indonesia masa itu.
+                    </p>
+                    <p class="fs-14 text-secondary">
+                        Dalam buku Bunga Rampai 100 Tahun Sensor Film di Indonesia (2016:26-27), dijelaskan bahwa pemerintah kolonial Belanda kemudian membentuk Komisi Pemeriksaan Film (Commissie voor de Keuring van Films), untuk menanggulangi pertunjukan gambar idoep yang tidak bermutu.
+                    </p>
+                    <p class="fs-14 text-secondary">
+                        Pembentukan Komisi Pemeriksaan Film tersebut sesuai dengan Ordonansi Film 1916 yang menyebutkan: “Gubernur Jenderal dapat menunjuk tempat di Hindia Belanda bagi pendirian Komisi Sensor Film dan Lembaga Komisi Sensor Film..."
+                    </p>
+                    <p class="fs-14 text-secondary">
+                        Masa penjajahan Belanda yang cukup lama di Indonesia meninggalkan pengaruh besar. Salah satunya di bidang kebudayaan, terutama film. Ordonansi Film 1916 pada 14 Maret 1916 merupakan undang-undang film yang mengatur tentang film dan penyelenggaraan usaha bioskop seiring dengan semakin banyaknya gambar idoep di Indonesia masa itu.
+                    </p>
+                    <p class="fs-14 text-secondary">
+                        Dalam buku Bunga Rampai 100 Tahun Sensor Film di Indonesia (2016:26-27), dijelaskan bahwa pemerintah kolonial Belanda kemudian membentuk Komisi Pemeriksaan Film (Commissie voor de Keuring van Films), untuk menanggulangi pertunjukan gambar idoep yang tidak bermutu.
+                    </p>
+                    <p class="fs-14 text-secondary">
+                        Pembentukan Komisi Pemeriksaan Film tersebut sesuai dengan Ordonansi Film 1916 yang menyebutkan: “Gubernur Jenderal dapat menunjuk tempat di Hindia Belanda bagi pendirian Komisi Sensor Film dan Lembaga Komisi Sensor Film..."
+                    </p>
+                </div>
             </div>
         </div>
     </div>
